@@ -1,17 +1,17 @@
 return {
 	{
 		"EdenEast/nightfox.nvim",
-	--	    config = function()
-	--	      vim.cmd.colorscheme "nightfox"
-	--	    end
+		    config = function()
+		      vim.cmd.colorscheme "nightfox"
+		    end
 	},
 	{
 		"catppuccin/nvim",
 		name = "catppuccin",
 		priority = 1000,
-		    config = function()
-		      vim.cmd.colorscheme "catppuccin-macchiato"
-		    end
+--		    config = function()
+--		      vim.cmd.colorscheme "catppuccin-macchiato"
+--		    end
 	},
 	{
 		"scottmckendry/cyberdream.nvim",
