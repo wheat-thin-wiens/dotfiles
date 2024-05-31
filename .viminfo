@@ -11,6 +11,8 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
+:q
+|2,0,1717123557,,"q"
 :wqa
 |2,0,1716606258,,"wqa"
 
@@ -29,6 +31,8 @@
 |4,48,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
 
 # Jumplist (newest first):
+-'  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
+|4,39,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
 -'  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
 |4,39,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
 
