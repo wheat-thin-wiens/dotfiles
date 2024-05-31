@@ -1,3 +1,5 @@
+# mySQL
+
 To connect run:
 mysql -u root
 mysql -u root -p
