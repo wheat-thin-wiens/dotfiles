@@ -28,10 +28,9 @@ config files in the appropriate directory.
 - If you have made changes to any configurations within the `dotfiles`
 directory, you can commit them to github with the following commands:
     1. `cd ~/dotfiles`
-    2. `git init`
-    3. `git add .`
-    4. `git commit -m "your message here"`
-    5. `git push -u -f origin main`
+    2. `git add .`
+    3. `git commit -m "your message here"`
+    4. `git push -u -f origin main`
 
 ## Changing Terminal Theme
 
