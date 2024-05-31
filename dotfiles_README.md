@@ -21,10 +21,17 @@ Using this repository requires the following dependencies:
 
 ## Using Stow
 
-1. Use the `git clone` command to copy all of the files into the home directory.
-2. When you're ready to apply the configuration for a specific program, use  
+- Use the `git clone` command to copy all of the files into the home directory.
+- When you're ready to apply the configuration for a specific program, use  
 the `stow [program name]`command. This will create symlinks for the related  
 config files in the appropriate directory.
+- If you have made changes to any configurations within the `dotfiles`
+directory, you can commit them to github with the following commands:
+    1. `cd ~/dotfiles`
+    2. `git init`
+    3. `git add .`
+    4. `git commit -m "your message here"`
+    5. `git push -u -f origin main`
 
 ## Changing Terminal Theme
 
