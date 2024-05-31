@@ -74,3 +74,15 @@ reopening neovim.
 color schemes. They are named accordingly. Simply make a copy of one of
 these files, name it `startship.toml`, and place it in the
 `dotfiles/.config` directory.
+
+## Python Libraries
+
+- BeautifulSoup4
+- bext
+- django
+- numpy
+- pandas
+- pygame
+- pyinstaller
+- pyqt5
+- spotipy
