@@ -161,6 +161,29 @@ prior to making any configurations:
 - Neofetch
 - Neovim
 - Python
+- Starship
 - Stow
 - tmux
 - ttf-meslo-nerd
+
+## macOS
+
+If restoring all configurations on a mac, begin by installing [Homebrew](https://brew.sh/).
+All of the following packages can be installed via homebrew by running the
+`brew install [package name]` command.
+
+- Alacritty
+- Git
+- lua
+- Neofetch
+- Neovim
+- PowerLevel10k (if desired, starship is better)
+- Starship
+- Stow
+- tmux
+- zsh-autocomplete
+- zsh-autosuggestions
+- zsh-syntax-highlighting
+
+Python can be installed using Homebrew, but it is recommended that it is
+installed according to the method detailed on [Python's website](https://www.python.org/)
