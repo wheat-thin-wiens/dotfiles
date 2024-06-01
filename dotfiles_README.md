@@ -135,4 +135,32 @@ I have also configured most of my keymaps in
 ``/lua/vim.options.lua``
 which I have set to be loaded on startup in my init.lua file.
 
+## Configuring tmux
+
+1. In order to get tmux working properly, tpm must first be cloned from the
+[tpm github](https://github.com/tmux-plugins/tpm).
+2. Add the appropriate lines of code as laid out in the tpm documentation.
+3. Run the `tmux source ~/.tmux.conf` command.
+4. Once tmux has reloaded, press `<leader> + I` to install tmux plugins.
+All other plugins may have to be cloned as well. All of my other plugins
+are listed below:
+
+    - [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
+
 ## Linux
+
+Upon first installing Linux, ensure the following packages are installed
+prior to making any configurations:
+
+- Alacritty
+- Firefox
+- Git
+- Hyprland
+- i3
+- Lua
+- Neofetch
+- Neovim
+- Python
+- Stow
+- tmux
+- ttf-meslo-nerd
