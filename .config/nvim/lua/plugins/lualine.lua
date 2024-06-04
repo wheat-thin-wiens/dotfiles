@@ -4,7 +4,9 @@ return {
   config = function()
     require('lualine').setup({
       options = {
-        theme = 'auto'
+        theme = 'auto',
+        component_separators = '',
+        section_separators = { left = '', right = '' },
       }
     })
 --  return require "catppuccin.utils.lualine" "macchiato"
