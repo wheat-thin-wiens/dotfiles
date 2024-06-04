@@ -1,0 +1,4 @@
+ENTRY "Home" URL "/home/ewiens"
+ENTRY "Downloads" URL "/home/ewiens/Downloads"
+ENTRY "dotfiles" URL "/home/ewiens/dotfiles"
+ENTRY "Python" URL "/home/ewiens/python"

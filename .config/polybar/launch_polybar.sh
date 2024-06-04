@@ -5,3 +5,10 @@ if type "xrandr"; then
 else
   polybar --reload toph &
 fi
+
+polybar-msg cmd quit
+
+echo "---" | tee -a /tmp/polybar.log
+polybar main 2>&1 | tee -a /tmp/polybar.log & disown
+
+echo "Bars launched..."
