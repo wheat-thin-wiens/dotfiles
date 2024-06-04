@@ -78,14 +78,23 @@ these files, name it `startship.toml`, and place it in the
 ## Python Libraries
 
 - BeautifulSoup4
-- bext
+- bext (not available from arch repository)
 - django
+- mysql.connector (`sudo pacman -S python-mysql-connector`)
 - numpy
 - pandas
 - pygame
-- pyinstaller
+- pyinstaller (not available from arch repository)
 - pyqt5
-- spotipy
+- spotipy (not available from arch repository)
+
+To install in arch linux, ensure python and pip are installed via pacman
+using the following commands:
+`sudo pacman -S python`
+`sudo pacman -S python-pip`
+
+To install packages on arch, the following command must be used:
+`sudo pacman -S python-[package name]`
 
 ## NeoVim Configuration
 

@@ -30,6 +30,7 @@ source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zs
 
 eval "$(starship init zsh)"
 
+tmux
 neofetch
 
 export NVM_DIR="$HOME/.nvm"
