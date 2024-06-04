@@ -10,7 +10,7 @@ TERM = "alacritty"
 padding.x = 10
 padding.y = 5
 
-#decorations = "Buttonless"
+decorations = "Buttonless"
 
 opacity = 0.8
 blur = true
