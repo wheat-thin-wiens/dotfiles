@@ -189,6 +189,19 @@ mode "resize" {
         bindsym $mod+r mode "default"
 }
 
+# Borders
+default_border pixel
+#hide_edge_borders 
+
+# class                 border  backgr. text    indicator child_border
+client.focused          #8AADF4 #8AADF4 #ffffff #8AADF4   #8AADF4
+client.focused_inactive #CAD3F5 #CAD3F5 #ffffff #CAD3F5   #CAD3F5
+client.unfocused        #333333 #222222 #888888 #CAD3F5   #CAD3F5
+client.urgent           #2f343a #900000 #ffffff #900000   #900000
+client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
+
+client.background       #ffffff
+
 bindsym $mod+r mode "resize"
 
 # Start i3bar to display a workspace bar (plus the system information i3status
