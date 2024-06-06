@@ -13,4 +13,4 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "catppuccin-macchiato"
+@theme "~/dotfiles/.config/rofi/rounded-blue-dark.rasi"
