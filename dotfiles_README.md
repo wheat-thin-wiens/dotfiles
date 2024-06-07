@@ -1,14 +1,15 @@
-# dotfiles README
+# macOS dotfiles README
 
 This repository contains the configuration files for the following programs:
 
 - Alacritty
+- midnight commander
 - neofetch
 - neovim
 - starship
 - tmux
 - zsh
-- zsh-autocomplete0plugin
+- zsh-autocomplete-plugin
 - zsh-autosuggestions
 - zsh-syntax-highlighting
 
@@ -17,7 +18,15 @@ Ensure all of these are installed before using stow to create any symlinks.
 Using this repository requires the following dependencies:
 
 - git
+- Homebrew
 - stow
+
+## Using Homebrew
+
+Homebrew is the macOS package manager responsible for managing all of programs whose configurations live in this repository.
+Ensure Homebrew is installed before attempting to use this repository. Follow the in instructions on the 
+[Homebrew website](https://brew.sh/) to get Homebrew installed. Python is also installed via Homebrew, which requires that a virtual
+environment be set up to manage additional Python libraries. Check the README file in the Python repository for more details.
 
 ## Using Stow
 
@@ -27,6 +36,7 @@ the `stow [program name]`command. This will create symlinks for the related
 config files in the appropriate directory.
 - If you have made changes to any configurations within the `dotfiles`
 directory, you can commit them to github with the following commands:
+
     1. `cd ~/dotfiles`
     2. `git add .`
     3. `git commit -m "your message here"`
@@ -37,6 +47,7 @@ directory, you can commit them to github with the following commands:
 The following programs are configured to use the same theme:
 
 - Alacritty
+- midnight commander
 - Neovim
 - Startship
 
@@ -55,6 +66,11 @@ the `import` block.
 4. Changes should take effect immediately upon saving the file.  
 If not, simply quit and reopen alacritty.
 5. Neofetch will automatically adopt the new colorscheme that was just set for alacritty.
+
+### midnight commander
+
+1. Place theme files in `~/.local/share/mc/skins`
+2. Change theme in mc config in the `~/dotfiles/.config/mc/ini` file. Simply change the name of the theme on line 86.
 
 ### Neovim
 
@@ -156,43 +172,3 @@ are listed below:
 
     - [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 
-## Linux
-
-Upon first installing Linux, ensure the following packages are installed
-prior to making any configurations:
-
-- Alacritty
-- Firefox
-- Git
-- Hyprland
-- i3
-- Lua
-- Neofetch
-- Neovim
-- Python
-- Starship
-- Stow
-- tmux
-- ttf-meslo-nerd
-
-## macOS
-
-If restoring all configurations on a mac, begin by installing [Homebrew](https://brew.sh/).
-All of the following packages can be installed via homebrew by running the
-`brew install [package name]` command.
-
-- Alacritty
-- Git
-- lua
-- Neofetch
-- Neovim
-- PowerLevel10k (if desired, starship is better)
-- Starship
-- Stow
-- tmux
-- zsh-autocomplete
-- zsh-autosuggestions
-- zsh-syntax-highlighting
-
-Python can be installed using Homebrew, but it is recommended that it is
-installed according to the method detailed on [Python's website](https://www.python.org/)
