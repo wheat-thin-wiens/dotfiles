@@ -19,6 +19,9 @@ source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 eval "$(starship init zsh)"
 
+alias mc="mc --nosubshell"
+alias launch_python=". ~/python/launch_python.sh"
+
 tmux
 neofetch
 

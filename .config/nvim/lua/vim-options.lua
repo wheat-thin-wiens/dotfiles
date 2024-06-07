@@ -8,8 +8,8 @@ vim.opt.number = true
 vim.opt.numberwidth = 2
 vim.opt.ruler = false
 
-vim.cmd("set textwidth=75")
-vim.opt.wrap=true
+--vim.cmd("set textwidth=75")
+--vim.opt.wrap=true
 
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
