@@ -3,7 +3,7 @@
 This repository contains the configuration files for the following programs:
 
 - Alacritty
-- midnight commander
+- midnight-commander
 - neofetch
 - neovim
 - starship
@@ -27,6 +27,18 @@ Homebrew is the macOS package manager responsible for managing all of programs w
 Ensure Homebrew is installed before attempting to use this repository. Follow the in instructions on the 
 [Homebrew website](https://brew.sh/) to get Homebrew installed. Python is also installed via Homebrew, which requires that a virtual
 environment be set up to manage additional Python libraries. Check the README file in the Python repository for more details.
+
+The following additional programs have been installed using Homebrew"
+
+- bash
+- fd
+- lua
+- mysql
+- mysql workbench
+- node
+- Python
+- raycast
+- ripgrep
 
 ## Using Stow
 
