@@ -13,6 +13,9 @@ return {
           hide_dotfiles = false,
           hide_hidden = false,
         }
+      },
+      window = {
+        width = 30
       }
     })
     vim.keymap.set('n', 'C-n', ':Neotree toggle<CR>', {})

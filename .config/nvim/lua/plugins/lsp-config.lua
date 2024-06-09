@@ -32,6 +32,10 @@ return {
       lspconfig.eslint.setup({
         capabilities = capabilities
       })
+      lspconfig.omnisharp.setup({
+        capabilities = capabilities,
+        cmd = { "dotnet", "/Users/ethanwiens/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"},
+      })
 
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})

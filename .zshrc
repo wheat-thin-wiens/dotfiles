@@ -18,7 +18,7 @@ eval "$(starship init zsh)"
 alias mc="mc --nosubshell"
 alias launch_python=". ~/python/launch_python.sh"
 
-tmux
+# tmux
 neofetch
 
 export NVM_DIR="$HOME/.nvm"

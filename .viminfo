@@ -11,10 +11,10 @@
 # hlsearch on (H) or off (h):
 ~h
 # Command Line History (newest to oldest):
-:q
-|2,0,1717123557,,"q"
 :wqa
-|2,0,1716606258,,"wqa"
+|2,0,1717907479,,"wqa"
+:q
+|2,0,1717786781,,"q"
 
 # Search String History (newest to oldest):
 
@@ -27,16 +27,41 @@
 # Registers:
 
 # File marks:
-'0  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
-|4,48,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
+'0  11  3  ~/dotfiles/.config/nvim/lua/plugins/alpha.lua
+|4,48,11,3,1717907479,"~/dotfiles/.config/nvim/lua/plugins/alpha.lua"
+'1  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
+|4,49,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
 
 # Jumplist (newest first):
+-'  11  3  ~/dotfiles/.config/nvim/lua/plugins/alpha.lua
+|4,39,11,3,1717907479,"~/dotfiles/.config/nvim/lua/plugins/alpha.lua"
+-'  1  0  ~/dotfiles/.config/nvim/lua/plugins/alpha.lua
+|4,39,1,0,1717907461,"~/dotfiles/.config/nvim/lua/plugins/alpha.lua"
+-'  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
+|4,39,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
+-'  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
+|4,39,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
+-'  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
+|4,39,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
+-'  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
+|4,39,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
+-'  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
+|4,39,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
+-'  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
+|4,39,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
 -'  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
 |4,39,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
 -'  1  0  /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
 |4,39,1,0,1716606258,"/private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK"
 
 # History of marks within files (newest to oldest):
+
+> ~/dotfiles/.config/nvim/lua/plugins/alpha.lua
+	*	1717907478	0
+	"	11	3
+	^	11	4
+	.	11	4
+	+	11	4
 
 > /private/var/folders/nb/644kx65n5bl4y_f_550fl9xm0000gn/T/sqlPanqyK
 	*	1716606257	0
