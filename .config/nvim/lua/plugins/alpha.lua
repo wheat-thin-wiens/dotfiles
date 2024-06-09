@@ -6,9 +6,10 @@ return {
 
   config = function()
     local alpha = require('alpha')
-    local dashboard = require('alpha.themes.startify')
+    local startify = require('alpha.themes.startify')
+    startify.section.mru.val = { { type = "padding", val = 0 } }
 
-    dashboard.section.header.val = {
+    startify.section.header.val = {
 
        ' ███╗   ██╗ ███████╗ ██████╗  ██╗   ██╗ ██╗ ███╗   ███╗',
        ' ████╗  ██║ ██╔════╝██╔═══██╗ ██║   ██║ ██║ ████╗ ████║',
@@ -17,9 +18,8 @@ return {
        ' ██║ ╚████║ ███████╗╚██████╔╝  ╚████╔╝  ██║ ██║ ╚═╝ ██║',
        ' ╚═╝  ╚═══╝ ╚══════╝ ╚═════╝    ╚═══╝   ╚═╝ ╚═╝     ╚═╝',
 
-
     }
 
-    alpha.setup(dashboard.opts)
+    alpha.setup(startify.opts)
   end
 }

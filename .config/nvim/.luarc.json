@@ -17,6 +17,7 @@
         "sm",
         "blinkon175",
         "blinkoff150",
-        "blinkwait175"
+        "blinkwait175",
+        "opts"
     ]
 }
