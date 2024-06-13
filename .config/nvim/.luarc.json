@@ -20,6 +20,7 @@
         "blinkwait175",
         "opts",
         "omnisharp_server_location",
-        "pid"
+        "pid",
+        "main"
     ]
 }

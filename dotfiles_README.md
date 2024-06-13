@@ -28,17 +28,29 @@ Ensure Homebrew is installed before attempting to use this repository. Follow th
 [Homebrew website](https://brew.sh/) to get Homebrew installed. Python is also installed via Homebrew, which requires that a virtual
 environment be set up to manage additional Python libraries. Check the README file in the Python repository for more details.
 
-The following additional programs have been installed using Homebrew"
+The following additional programs have been installed using Homebrew
 
+- alacritty
 - bash
+- bat
+- dotnet
+- dotnet-sdk
 - fd
+- font-meslo-lg-nerd-font
 - lua
+- mono
 - mysql
 - mysql workbench
+- neofetch
+- neovim
 - node
 - Python
+- qt
 - raycast
 - ripgrep
+- sketchybar
+- skhd
+- yabai
 
 ## Using Stow
 
