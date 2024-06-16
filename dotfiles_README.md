@@ -28,16 +28,19 @@ Ensure Homebrew is installed before attempting to use this repository. Follow th
 [Homebrew website](https://brew.sh/) to get Homebrew installed. Python is also installed via Homebrew, which requires that a virtual
 environment be set up to manage additional Python libraries. Check the README file in the Python repository for more details.
 
-The following additional programs have been installed using Homebrew
+The following additional programs have been installed using Homebrew:
 
 - alacritty
 - bash
 - bat
+- chruby
 - dotnet
 - dotnet-sdk
 - fd
+- firefox
 - font-meslo-lg-nerd-font
 - lua
+- mc
 - mono
 - mysql
 - mysql workbench
@@ -48,8 +51,12 @@ The following additional programs have been installed using Homebrew
 - qt
 - raycast
 - ripgrep
+- ruby
 - sketchybar
 - skhd
+- thefuck
+- tmux
+- wget
 - yabai
 
 ## Using Stow
@@ -196,3 +203,14 @@ are listed below:
 
     - [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator)
 
+## Installing Ruby
+
+Installing Ruby is a huge pain in the ass. macos comes with a version of Ruby pre-installed,
+but it's very old and doesn't give you permission to install gem packages. 
+What you'll want to do is install chruby to manage your installed versions of Ruby.
+This will allow you to change the default Ruby package macos uses as well as fall back on
+whatever version of Ruby is needed for a given project. 
+Follow [this guide](https://mac.install.guide/ruby/12) and 
+[this guide](https://mac.install.guide/ruby/12) to get there. It mostly consists of installing
+a few packages via Homebrew, then adding a few lines to the `.zshrc` file, whcih are already 
+present in the version stored in this repository.
