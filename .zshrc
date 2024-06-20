@@ -1,5 +1,4 @@
 HISTFILE=$HOME/.zhistory
-06/15/24 11:42 - 
 SAVEHIST=1000
 HISTSIZE=999
 setopt share_history
@@ -19,6 +18,7 @@ eval "$(starship init zsh)"
 alias gogogo="~/dotnet/C#.sh"
 alias mc="mc --nosubshell"
 alias launch_python=". ~/python/launch_python.sh"
+alias matrix=". ~/dotfiles/matrix.sh"
 
 # tmux
 neofetch

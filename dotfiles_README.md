@@ -51,7 +51,6 @@ The following additional programs have been installed using Homebrew:
 - qt
 - raycast
 - ripgrep
-- ruby
 - sketchybar
 - skhd
 - thefuck
@@ -205,12 +204,23 @@ are listed below:
 
 ## Installing Ruby
 
-Installing Ruby is a huge pain in the ass. macos comes with a version of Ruby pre-installed,
-but it's very old and doesn't give you permission to install gem packages. 
-What you'll want to do is install chruby to manage your installed versions of Ruby.
-This will allow you to change the default Ruby package macos uses as well as fall back on
-whatever version of Ruby is needed for a given project. 
-Follow [this guide](https://mac.install.guide/ruby/12) and 
-[this guide](https://mac.install.guide/ruby/12) to get there. It mostly consists of installing
-a few packages via Homebrew, then adding a few lines to the `.zshrc` file, whcih are already 
-present in the version stored in this repository.
+Ruby is a huge pain in the ass. macos comes with a version of ruby installed that's outdated
+and does not provide you with any write permissions. This means you cannot use it to develop
+ruby applications, or even install a ruby LSP in neovim until another version is installed
+and added to your $PATH. To do this, run `brew install ruby-install chruby`. This will install
+both ruby-install and chruby. Ruby-install is responsible for installing versions of ruby and gem,
+both of which are required to develop in ruby. Chruby is responsible for managing the different
+versions of ruby you have installed. To install ruby, first run `ruby-install --latest ruby` or
+specify the version of ruby you'd like to have installed. This will install both ruby and the
+corresponding version of gem. Now, add the following lines to your `.zshrc` file:
+
+>`source /opt/homebrew/Cellar/chruby/0.3.9/share/chruby/auto.sh`
+>`source /opt/homebrew/Cellar/chruby/0.3.9/share/chruby/chruby.sh`
+>`chruby 3.3.3 [or other version]`
+
+This sets up chruby to set ruby on the correct $PATH. If in the future you ever want to change
+what version of ruby you're using, simply change it in the `.zshrc` file. Or I'm sure there's a
+way to do it with shell scripts on a per-project basis but I haven't even started learning ruby
+yet so I don't know.
+
+If you get lost, you can refer to [this guide](https://mac.install.guide/ruby/12).
