@@ -18,9 +18,12 @@ return {
     lazy = false,
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local lspconfig = require("lspconfig")
 
-			local lspconfig = require("lspconfig")
-      lspconfig.ast_grep.setup({
+      lspconfig.cssls.setup({
+        capabilities = capabilities
+      })
+      lspconfig.html.setup({
         capabilities = capabilities
       })
 			lspconfig.lua_ls.setup({
@@ -39,6 +42,15 @@ return {
 --			lspconfig.rubocop.setup({
 --				capabilities = capabilities
 --			})
+      lspconfig.sourcekit.setup({
+        capabilities = {
+          workspace = {
+            didChangeWatchedFiles = {
+              dynamicRegistration = true,
+            },
+          },
+        },
+      })
       lspconfig.tsserver.setup({
         capabilities = capabilities,
         init_options = {

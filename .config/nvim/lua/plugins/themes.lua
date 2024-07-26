@@ -1,21 +1,21 @@
 return {
 	{
 		"EdenEast/nightfox.nvim",
---		    config = function()
---		      vim.cmd.colorscheme "nightfox"
---		    end
+		    config = function()
+		      vim.cmd.colorscheme "nightfox"
+		    end
 	},
 	{
-		"catppuccin/nvim",
-		name = "catppuccin",
-		priority = 1000,
-		    config = function()
-          require("catppuccin").setup({
-            flavor = "mocha",
-            transparent_background = true
-          })
-          vim.cmd.colorscheme "catppuccin"
-		    end
+--		"catppuccin/nvim",
+--		name = "catppuccin",
+--		priority = 1000,
+--		    config = function()
+--          require("catppuccin").setup({
+--            flavor = "mocha",
+--            transparent_background = true
+--          })
+--          vim.cmd.colorscheme "catppuccin"
+--		    end
 	},
 	{
 		"scottmckendry/cyberdream.nvim",

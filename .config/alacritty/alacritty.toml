@@ -1,5 +1,5 @@
 import = [
-  "~/dotfiles/.config/alacritty/themes/catppuccin-mocha.toml"
+  "~/dotfiles/.config/alacritty/themes/nightfox.toml"
 ]
 
 [env]
@@ -12,7 +12,7 @@ padding.y = 5
 
 decorations = "Buttonless"
 
-opacity = 0.8
+opacity = 1
 blur = true
 
 option_as_alt = "Both"
