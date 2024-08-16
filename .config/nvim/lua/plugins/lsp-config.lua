@@ -20,6 +20,9 @@ return {
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
 
+      lspconfig.ast_grep.setup({
+        capabilities = capabilities
+      })
       lspconfig.cssls.setup({
         capabilities = capabilities
       })
@@ -32,10 +35,10 @@ return {
 			lspconfig.markdown_oxide.setup({
 				capabilities = capabilities
 			})
---      lspconfig.omnisharp.setup({
---        capabilities = capabilities,
---        cmd = { "dotnet", "/Users/ethanwiens/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"},
---      })
+      lspconfig.omnisharp.setup({
+        capabilities = capabilities,
+        cmd = { "dotnet", "/Users/ethanwiens/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"},
+      })
 			lspconfig.pyright.setup({
 				capabilities = capabilities
 			})
@@ -63,6 +66,7 @@ return {
 			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
 			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
 			vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
+      vim.keymap.set({ "n" }, "<leader>rn", vim.lsp.buf.rename, {})
 		end,
 	},
 }

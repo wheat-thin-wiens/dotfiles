@@ -119,28 +119,28 @@ format = '[[](fg:color_white bg:color_purple)]($style)'
 
 [c]
 symbol = " "
-style = "bg:color_blue"
+style = "bg:color_aqua"
 format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
 
 [rust]
 symbol = ""
-style = "bg:color_blue"
+style = "bg:color_aqua"
 format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
 
 [golang]
 symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+style = "bg:color_aqua"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_aqua)]($style)'
 
 [php]
 symbol = ""
-style = "bg:color_blue"
+style = "bg:color_aqua"
 format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
 
 [java]
 symbol = " "
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+style = "bg:color_aqua"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_aqua)]($style)'
 
 [kotlin]
 symbol = ""
@@ -154,8 +154,8 @@ format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
 
 [python]
 symbol = ""
-style = "bg:color_blue"
-format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_blue)]($style)'
+style = "bg:color_aqua"
+format = '[[ $symbol( $version) ](fg:color_fg0 bg:color_aqua)]($style)'
 
 [docker_context]
 symbol = ""
