@@ -1,5 +1,5 @@
 import = [
-  "~/dotfiles/.config/alacritty/themes/night-owl.toml"
+  "~/dotfiles/.config/alacritty/themes/rose-pine.toml"
 ]
 
 [env]
