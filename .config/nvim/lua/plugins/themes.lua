@@ -1,13 +1,13 @@
 return {
 	{
 		"EdenEast/nightfox.nvim",
-		    config = function()
-		      vim.cmd.colorscheme "nightfox"
-		    end
+--		    config = function()
+--		      vim.cmd.colorscheme "nightfox"
+--		    end
 	},
 	{
---		"catppuccin/nvim",
---		name = "catppuccin",
+		"catppuccin/nvim",
+  	name = "catppuccin",
 --		priority = 1000,
 --		    config = function()
 --          require("catppuccin").setup({
@@ -19,8 +19,8 @@ return {
 	},
 	{
 		"scottmckendry/cyberdream.nvim",
-		lazy = false,
-		priority = 1000,
+--		lazy = false,
+--		priority = 1000,
 --		    config = function ()
 --		      require("cyberdream").setup({
 --		        transparent = true,
@@ -45,4 +45,23 @@ return {
 --			vim.cmd("colorscheme rasmus")
 --		end,
 	},
+  {
+    "oxfist/night-owl.nvim",
+    lazy = false,
+    priority = 1000,
+    config = function ()
+      require("night-owl").setup()
+      vim.cmd.colorscheme("night-owl")
+    end,
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+--    config = function ()
+--      require("rose-pine").setup({
+--        variant = "main"
+--      })
+--      vim.cmd.colorscheme("rose-pine")
+--    end,
+  }
 }

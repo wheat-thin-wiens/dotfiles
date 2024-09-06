@@ -8,6 +8,8 @@ vim.opt.number = true
 vim.opt.numberwidth = 2
 vim.opt.ruler = false
 
+vim.wo.fillchars='eob: '
+
 --vim.cmd("set textwidth=75")
 --vim.opt.wrap=true
 
