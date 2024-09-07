@@ -13,7 +13,11 @@ vim.wo.fillchars='eob: '
 --vim.cmd("set textwidth=75")
 --vim.opt.wrap=true
 
+-- NVIM / TMUX Navigator
 vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
 vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
 vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
+
+-- Command Keymaps
+vim.keymap.set('n', '<leader>ct', vim.cmd.Colortils)
