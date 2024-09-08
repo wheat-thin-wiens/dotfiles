@@ -25,7 +25,7 @@ alias mc="mc --nosubshell"
 alias matrix=". ~/dotfiles/matrix.sh"
 alias run-ladybird="open -W --stdout $(tty) --stderr $(tty) .~/ladybird/Build/ladybird/bin/Ladybird.app"
 
-# tmux
+#tmux
 neofetch
 
 export NVM_DIR="$HOME/.nvm"
