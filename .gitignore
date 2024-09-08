@@ -1,2 +1,5 @@
 .zsh_history
 .zhistory
+.DS_Store
+/.config/.DS_Store
+/.config/nvim/.DS_Store

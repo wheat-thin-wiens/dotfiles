@@ -5,11 +5,10 @@ vim.cmd("set shiftwidth=2")
 vim.g.mapleader = " "
 
 vim.opt.number = true
+--vim.opt.relativenumber = true
 vim.opt.numberwidth = 2
 vim.opt.ruler = false
-
-vim.wo.fillchars='eob: '
-
+--vim.wo.fillchars='eob: '
 --vim.cmd("set textwidth=75")
 --vim.opt.wrap=true
 
@@ -21,3 +20,4 @@ vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
 
 -- Command Keymaps
 vim.keymap.set('n', '<leader>ct', vim.cmd.Colortils)
+vim.keymap.set('n', 'ZZ', vim.cmd.wqa)
