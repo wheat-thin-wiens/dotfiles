@@ -15,10 +15,13 @@ source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 
 eval "$(starship init zsh)"
 
+source ~/dev/python/launch_python.sh
+source ~/dotfiles/theme-picker.sh
+
 alias avocado="~/dev/java/java.sh"
 alias gogogo="~/dev/dotnet/C#.sh"
 alias mc="mc --nosubshell"
-alias launch_python=". ~/dev/python/launch_python.sh"
+# alias launch_python=". ~/dev/python/launch_python.sh"
 alias matrix=". ~/dotfiles/matrix.sh"
 alias run-ladybird="open -W --stdout $(tty) --stderr $(tty) .~/ladybird/Build/ladybird/bin/Ladybird.app"
 

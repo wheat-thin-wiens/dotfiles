@@ -8,7 +8,7 @@ function ColorPick(color)
 
 end
 
-ColorPick("rose-pine-main")
+ColorPick("night-owl")
 
 -- carbonfox
 -- catppuccin-frappe
