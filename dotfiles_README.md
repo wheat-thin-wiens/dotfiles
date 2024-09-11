@@ -39,6 +39,7 @@ The following additional programs have been installed using Homebrew:
 - fd
 - firefox
 - font-meslo-lg-nerd-font
+- lazygit
 - lua
 - mc
 - mono
@@ -48,29 +49,40 @@ The following additional programs have been installed using Homebrew:
 - neovim
 - node
 - Python
-- qt
 - raycast
 - ripgrep
 - sketchybar
 - skhd
 - thefuck
 - tmux
+- wezterm
 - wget
 - yabai
+- yazi
+- zen browser
+
 
 ## Using Stow
 
-- Use the `git clone` command to copy all of the files into the home directory.
-- When you're ready to apply the configuration for a specific program, use  
-the `stow [program name]`command. This will create symlinks for the related  
-config files in the appropriate directory.
-- If you have made changes to any configurations within the `dotfiles`
-directory, you can commit them to github with the following commands:
+~~- Use the `git clone` command to copy all of the files into the home directory.~~
+~~- When you're ready to apply the configuration for a specific program, use~~
+~~the `stow [program name]`command. This will create symlinks for the related~~  
+~~config files in the appropriate directory.~~
+~~- If you have made changes to any configurations within the `dotfiles`~~
+~~directory, you can commit them to github with the following commands:~~
 
     1. `cd ~/dotfiles`
     2. `git add .`
     3. `git commit -m "your message here"`
     4. `git push -u -f origin main`
+
+As of 9/8/24, the file structure for the dotfiles repository has been updated to be more stow-friendly.
+Now, 
+
+    1. `cd ~/dotfiles`
+    2. `stow [package name]`
+
+This will save each respective package's dotfiles in the correct directory with the correct structure.
 
 ## Changing Terminal Theme
 
