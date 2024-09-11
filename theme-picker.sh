@@ -10,6 +10,6 @@ function colorpick {
 
   nvim ~/.config/nvim/lua/theme-picker.lua
 
-  nvim ~/.config/alacritty/alacritty.toml
+  nvim ~/.wezterm.lua
 }
 
