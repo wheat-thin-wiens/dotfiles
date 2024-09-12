@@ -80,7 +80,7 @@ format = '[ $user ]($style)'
 [directory]
 style = "fg:color_bg1 bg:color_blue"
 format = "[ $path ]($style)"
-truncation_length = 3
+truncation_length = 1
 truncation_symbol = "…/"
 
 [directory.substitutions]
