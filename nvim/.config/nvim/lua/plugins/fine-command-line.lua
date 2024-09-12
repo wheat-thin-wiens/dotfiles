@@ -1,6 +1,6 @@
 return {
   'VonHeikemen/fine-cmdline.nvim',
-    dependencies = {
+  dependencies = {
     'MunifTanjim/nui.nvim',
   },
   config = function ()

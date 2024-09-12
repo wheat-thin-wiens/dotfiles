@@ -3,11 +3,21 @@ return {
 		"williamboman/mason.nvim",
     lazy = false,
 		config = function()
-			require("mason").setup()
+			require("mason").setup({})
 		end,
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
+    config = function()
+      require("mason-lspconfig").setup({
+        ensure_installed = {
+          "lua_ls",
+          "markdown_oxide",
+          "pyright",
+          "tsserver"
+        }
+      })
+    end,
     lazy = false,
 		opts = {
       auto_install = true

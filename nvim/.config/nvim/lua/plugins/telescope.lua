@@ -10,6 +10,7 @@ return {
 			local builtin = require("telescope.builtin")
 			vim.keymap.set("n", "<C-p>", builtin.find_files, {})
 			vim.keymap.set("n", "<space>fg", builtin.live_grep, {})
+      vim.keymap.set('n', 'gs', builtin.git_status, {})
       require("telescope").setup({
         opts = {
           extensions = {
@@ -36,6 +37,11 @@ return {
 						require("telescope.themes").get_dropdown({}),
 					},
 				},
+        pickers = {
+          find_files = {
+            hidden = true
+          }
+        }
 			})
 			require("telescope").load_extension("ui-select")
 		end,
