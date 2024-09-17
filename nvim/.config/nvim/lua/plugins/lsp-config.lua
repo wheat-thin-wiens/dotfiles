@@ -52,6 +52,9 @@ return {
 			lspconfig.pyright.setup({
 				capabilities = capabilities
 			})
+			lspconfig.rnix.setup({
+				capabilities = capabilities
+			})
 --			lspconfig.rubocop.setup({
 --				capabilities = capabilities
 --			})

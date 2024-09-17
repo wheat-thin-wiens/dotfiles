@@ -4,17 +4,41 @@ function ColorPick(color)
   color = color or "nightfox"
   vim.cmd.colorscheme(color)
 
-  -- Transparent Background
-  vim.api.nvim_set_hl(0, "Normal", { bg = "none"})
-  vim.api.nvim_set_hl(0, "NormalFloat", { bg = "none"})
+  -- Background
+  --vim.api.nvim_set_hl(0, "Normal", { bg = "None" })
+  --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "None" })
+  --vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "None" })
+  --vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "None" })
+
+  -- Line Number Color
+  local LineNumAbove = vim.api.nvim_get_hl(0, {
+    name = "StatusLine",
+    link = true,
+  })
+  local LineNum = vim.api.nvim_get_hl(0, {
+    name = "Function",
+    link = true,
+  })
+  local LineNumBelow = vim.api.nvim_get_hl(0, {
+    name = "StatusLine",
+    link = true,
+  })
+  vim.api.nvim_set_hl(0, "LineNrAbove", { fg = LineNumAbove.fg } )
+  vim.api.nvim_set_hl(0, "LineNr", { fg = LineNum.fg } )
+  vim.api.nvim_set_hl(0, "LineNrBelow", { fg = LineNumBelow.fg } )
 
   -- EoB Character Color
-  local eobCol = vim.api.nvim_get_hl_by_name('Label', true)
+  local eobCol = vim.api.nvim_get_hl(0, {
+    name = "StatusLine",
+    link = true,
+  })
   vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = eobCol.fg } )
 
 end
 
-ColorPick("catppuccin-mocha")
+ColorPick("nightfox")
+
+-- To get names of highlight groups, run :highlight
 
 -- carbonfox
 -- catppuccin-frappe

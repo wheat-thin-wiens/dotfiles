@@ -17,6 +17,4 @@ require("vim-options")
 require("lazy").setup("plugins")
 require("theme-picker")
 
-vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>', {})
-
 -- Ignore Check Health Warnings
