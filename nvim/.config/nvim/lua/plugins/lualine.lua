@@ -186,11 +186,12 @@ return {
   config = function()
 
     local function getLspName()
+      local msg = ' '
       local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
       local clients = vim.lsp.get_active_clients()
 
       if next(clients) == nil then
-        return
+        return msg
       end
       for _, client in ipairs(clients) do
         local filetypes = client.config.filetypes
@@ -198,6 +199,7 @@ return {
           return client.name  --""
         end
       end
+      return msg
     end
 
     local lsp = {
@@ -211,7 +213,7 @@ return {
       icon_only = true,
       colored = true
     }
-    
+
     local vim_icons = {
       function()
         return ""
@@ -223,8 +225,8 @@ return {
         theme = 'auto',
         disabled_filetypes = {"neo-tree"},
         component_separators = '',
-        section_separators = { left = '', right = '' },
-        --section_separators = ''
+        --section_separators = { left = '', right = '' },
+        section_separators = ''
       },
       sections = {
         lualine_a = {vim_icons, 'mode'},
