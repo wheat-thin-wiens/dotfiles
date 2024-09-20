@@ -1,3 +1,5 @@
+# Themes
+
 ## Supported by Script
 
 - catppuccin-macchiato
@@ -12,7 +14,6 @@
 
 ## Neovim
 
-- blue moon
 - carbonfox
 - catppuccin-frappe
 - catppuccin-latte
@@ -20,7 +21,6 @@
 - catppuccin-mocha
 - nightfox
 - night-owl
-- rasmus
 - rose-pine
 
 ## Starship

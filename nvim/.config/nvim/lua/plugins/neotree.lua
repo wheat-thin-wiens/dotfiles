@@ -14,11 +14,12 @@ return {
           hide_hidden = false,
         }
       },
+      use_libuv_file_watcher = true,
       window = {
-        width = 30
+        position = "left",
+        width = 30,
       }
     })
-    vim.keymap.set('n', 'C-n', ':Neotree toggle<CR>', {})
   end
 }
 
