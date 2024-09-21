@@ -18,7 +18,6 @@ return {
     priority = 1000,
     config = function ()
       require("night-owl").setup()
-      --vim.cmd.colorscheme("night-owl")
     end,
   },
   {
@@ -28,7 +27,15 @@ return {
       require("rose-pine").setup({
         variant = "main" --(main, moon, dawn)
       })
-      --vim.cmd.colorscheme("rose-pine")
     end,
+  },
+  {
+    "rebelot/kanagawa.nvim",
+    name = "kanagawa",
+    config = function ()
+      require("kanagawa").setup({
+        theme = "wave", --(wave, dragon, lotus)
+      })
+    end
   }
 }

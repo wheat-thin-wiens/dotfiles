@@ -7,10 +7,10 @@ return {
       "debugloop/telescope-undo.nvim",
     },
 		config = function()
-			local builtin = require("telescope.builtin")
-			vim.keymap.set("n", "<C-p>", builtin.find_files, {})
-			vim.keymap.set("n", "<space>fg", builtin.live_grep, {})
-      vim.keymap.set('n', 'gs', builtin.git_status, {})
+			--local builtin = require("telescope.builtin")
+			--vim.keymap.set("n", "<C-p>", builtin.find_files, {})
+			--vim.keymap.set("n", "<space>fg", builtin.live_grep, {})
+      --vim.keymap.set('n', 'gs', builtin.git_status, {})
       require("telescope").setup({
         opts = {
           extensions = {
@@ -25,7 +25,6 @@ return {
         }
       })
       require("telescope").load_extension("undo")
-      vim.keymap.set('n', '<space>u','<cmd>Telescope undo<cr>')
     end,
 	},
 	{
@@ -39,6 +38,7 @@ return {
 				},
         pickers = {
           find_files = {
+            --theme = "dropdown",
             hidden = true
           }
         }

@@ -28,6 +28,7 @@ $time\
 $line_break$character"""
 
 palette = 'gruvbox_dark'
+command_timeout = 1000
 
 [palettes.gruvbox_dark]
 # nightfox

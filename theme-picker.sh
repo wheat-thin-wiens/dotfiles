@@ -22,6 +22,17 @@ function colorpick {
     nvim ~/.wezterm.lua
     echo "WezTerm theme updated."
 
+    cd ~/dotfiles/yazi/.config/yazi
+    rm -f theme.toml
+    cd -
+    cd ~/dotfiles/yazi/.config/yazi/themes
+    cp $1.toml ~/dotfiles/yazi/.config/theme.toml
+    cd -
+    cd ~/dotfiles
+    stow yazi
+    cd -
+    echo "Yazi theme updated"
+
     echo "Transparency options for neovim may need to be changed in themes.lua"
   fi
 }
