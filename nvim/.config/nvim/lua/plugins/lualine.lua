@@ -1,242 +1,88 @@
-local problematic = {
+local M = {
   "nvim-lualine/lualine.nvim",
-  dependencies = {
-    "nvim-tree/nvim-web-devicons",
-    "kdheepak/tabline.nvim"
-  },
-  config = function()
-    local vim_icons = {
-      function()
-        return ""
-      end,
-      separator = { left = "", right = "" }
-    }
-
-    local space = {
-      function()
-        return " "
-      end
-    }
-
-    local filename = {
-      "filename",
-      separator = { left = "", right = "" },
-    }
-
-    local filetype = {
-      "filetype",
-      icon_only = true,
-      colored = true,
-      separator = { left = "", right = "" },
-    }
-
-    local filetype_tab = {
-      "filetype",
-      icon_only = true,
-      colord = true
-    }
-
-    local buffer = {
-      require "tabline".tabline_tabs,
-      separator = { left = "", right = "" },
-    }
-
-    local tabs = {
-      require 'tabline'.tabline_tabs,
-      separator = { left = "", right = "" },
-    }
-
-    local fileformat = {
-      "fileformat",
-      separator = { left = "", right = "" },
-    }
-
-    local encoding = {
-      "encoding",
-      separator = { left = "", right = "" },
-    }
-
-    local branch = {
-      "branch",
-      separator = { left = "", right = "" },
-    }
-
-    local diff = {
-      "diff",
-      separator = { left = "", right = "" },
-    }
-
-    local modes = {
-      "mode",
-      fmt = function(str) return str:sub(1, 1) end,
-      separator = { left = "", right = "" },
-    }
-
-    local function getLspName()
-      local msg = "No active LSP"
-      local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-      local clients = vim.lsp.get_active_clients()
-
-      if next(clients) == nil then
-        return msg
-      end
-      for _, client in ipairs(clients) do
-        local filetypes = client.config.filetypes
-        if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-          return client.name  --""
-        end
-      end
-      return msg
-    end
-
-    local dia = {
-      "diagnostics",
-      separator = { left = "", right = "" },
-    }
-
-    local lsp = {
-      function()
-        return getLspName()
-      end,
-      separator = { left = "", right = "" },
-    }
-
-    require('lualine').setup {
-      options = {
-        theme = "auto",
-        icons_enabled = true,
-        component_separators = {
-          left = '',
-          right = ''
-        },
-        section_separators = {
-          left = '',
-          right = ''
-        },
-        disabled_filetypes = {
-          statusline = {},
-          winbar = {},
-        },
-        ignore_focus = {},
-        always_divide_middle = true,
-        globalstatus = true,
-        refresh = {
-          statusline = 1000,
-          tabline = 1000,
-          winbar = 1000,
-        }
-      },
-
-      sections = {
-        lualine_a = {
-          modes,
-          vim_icons,
-        },
-        lualine_b = {
-          filename,
-          space
-        },
-        lualine_c = {
-          filetype,
-          branch,
-          diff,
-        },
-        lualine_x = {
-          space
-        },
-        lualine_y = {
-          --encoding,
-          fileformat,
-          dia,
-          space,
-        },
-        lualine_z = {
-          lsp,
-        },
-        inactive_section = {
-          lualine_a = {},
-          lualine_b = {},
-          lualine_c = {},
-          lualine_x = {},
-          lualine_y = {},
-          lualine_z = {}
-        },
-        tabline = {
-          lualine_a = {},
-          lualine_b = {},
-          lualine_c = {},
-          lualine_x = {},
-          lualine_y = {},
-          lualine_z = {},
-        },
-        winbar = {},
-        inactive_winbar = {},
-      }
-    }
-  end
+  event = "VeryLazy",
 }
 
+local window = function()
+  return vim.api.nvim_win_get_number(0)
+end
 
-return {
-  'nvim-lualine/lualine.nvim',
-  dependencies = {
-    'nvim-tree/nvim-web-devicons'
-  },
+M.config = function()
+  local vim_icons = {
+    function()
+      return ""
+    end,
+  }
 
-  config = function()
+  local modes = {
+    "mode",
+    fmt = function(str) return str:sub(1, 1) end,
+  }
 
-    local function getLspName()
-      local msg = ' '
-      local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-      local clients = vim.lsp.get_active_clients()
+  local filetype = {
+    "filetype",
+    icon_only = true,
+    colored = true,
+  }
 
-      if next(clients) == nil then
-        return msg
-      end
-      for _, client in ipairs(clients) do
-        local filetypes = client.config.filetypes
-        if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-          return client.name  --""
-        end
-      end
+  local function getLspName()
+    local msg = "No active LSP"
+    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
+    local clients = vim.lsp.get_active_clients()
+
+    if next(clients) == nil then
       return msg
     end
-
-    local lsp = {
-      function()
-        return getLspName()
+    for _, client in ipairs(clients) do
+      local filetypes = client.config.filetypes
+      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+        return client.name  --""
       end
-    }
-
-    local filetype = {
-      "filetype",
-      icon_only = true,
-      colored = true
-    }
-
-    local vim_icons = {
-      function()
-        return ""
-      end,
-    }
-
-    require('lualine').setup({
-      options = {
-        theme = 'auto',
-        disabled_filetypes = {"neo-tree"},
-        component_separators = '',
-        --section_separators = { left = '', right = '' },
-        section_separators = ''
-      },
-      sections = {
-        lualine_a = {vim_icons, 'mode'},
-        lualine_b = {'branch', 'diff'},
-        lualine_c = {'filename'},
-        lualine_x = {filetype},
-        lualine_y = {'diagnostics',},
-        lualine_z = {lsp,}
-      }
-    })
+    end
+    return msg
   end
-}
 
+  local lsp = {
+    function()
+      return getLspName()
+    end
+  }
+
+  require("lualine").setup {
+    options = {
+      icons_enabled = true,
+      theme = 'auto',
+      section_separators = { left = "", right = "" },
+      -- section_separators = { left = "", right = "" },
+      component_separators = { left = "", right = "" },
+      -- component_separators = { left = "|", right = "|" },
+      disabled_filetypes = {},
+    },
+    sections = {
+      lualine_a = { vim_icons, "mode", 'filename', },
+      lualine_b = {},
+      lualine_c = { 'branch', 'diff' },
+      lualine_x = { 'diagnostics', filetype, },
+      lualine_y = {},
+      lualine_z = { lsp, },
+    },
+    inactive_sections = {
+      lualine_a = { window },
+      lualine_b = {},
+      lualine_c = { { "filename", symbols = { modified = "[*]" } } },
+      lualine_x = { "location", "progress" },
+      lualine_y = {},
+      lualine_z = {},
+    },
+    tabline = {},
+    extensions = {},
+  }
+
+  -- Better floating window colors
+  -- local normal_float_bg = vim.fn.synIDattr(vim.fn.hlID("NormalFloat"), "bg")
+  -- print(normal_float_bg)
+  -- local normal_fg = vim.fn.synIDattr(vim.fn.hlID("Normal"), "fg")
+  -- vim.cmd("highlight FloatBorder guifg=" .. normal_fg .. " guibg=" .. normal_float_bg)
+end
+
+return M

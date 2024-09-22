@@ -20,6 +20,9 @@ return {
               layout_config = {
                 preview_height = 0.8
               },
+              mappings = {
+                ["<C-r>"] = require("telescope-undo.actions").restore,
+              },
             },
           },
         }

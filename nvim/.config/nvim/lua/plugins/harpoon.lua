@@ -13,15 +13,9 @@ return {
 
     harpoon.setup({})
 
-    -- local clear = function()
-    --   harpoon:list():clear()
-    -- end
-    --
-    -- clear()
-
     vim.keymap.set('n', '<leader>a', function() harpoon:list():add() end)
-    vim.keymap.set('n', '<leader>R', function() harpoon:list():remove() end)
-    --vim.keymap.set('n', '<leader>hc', function() harpoon:list():clear() end)
+    vim.keymap.set('n', '<leader>hr', function() harpoon:list():remove() end)
+    vim.keymap.set('n', '<leader>hc', function() harpoon:list():clear() end)
     vim.keymap.set('n', '<leader>1', function() harpoon:list():select(1) end)
     vim.keymap.set('n', '<leader>2', function() harpoon:list():select(2) end)
     vim.keymap.set('n', '<leader>3', function() harpoon:list():select(3) end)
@@ -29,6 +23,12 @@ return {
     vim.keymap.set('n', '<C-e>', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
     vim.keymap.set("n", "<C-[>", function() harpoon:list():prev() end)
     vim.keymap.set("n", "<C-]>", function() harpoon:list():next() end)
+
+    -- local clear = function()
+    --   harpoon:list():clear()
+    -- end
+    --
+    -- clear()
 
     --local conf = require("telescope.config").values
     --local function toggle_telescope(harpoon_files)
