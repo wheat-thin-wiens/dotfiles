@@ -3,7 +3,7 @@ local config = wezterm.config_builder()
 local act = wezterm.action
 
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
-config.color_scheme = "catppuccin-mocha"
+config.color_scheme = "nightfox"
 
 config.font = wezterm.font(
   "MesloLGS Nerd Font Mono",

@@ -36,7 +36,7 @@ function ColorPick(color)
 
 end
 
-ColorPick("catppuccin-mocha")
+ColorPick("nightfox")
 
 -- To get names of highlight groups, run :highlight
 

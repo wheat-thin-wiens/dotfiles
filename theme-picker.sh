@@ -26,7 +26,7 @@ function colorpick {
     rm -f theme.toml
     cd -
     cd ~/dotfiles/yazi/.config/yazi/themes
-    cp $1.toml ~/dotfiles/yazi/.config/theme.toml
+    cp $1.toml ~/dotfiles/yazi/.config/yazi/theme.toml
     cd -
     cd ~/dotfiles
     stow yazi

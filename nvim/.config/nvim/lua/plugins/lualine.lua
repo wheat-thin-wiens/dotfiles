@@ -64,7 +64,7 @@ M.config = function()
       lualine_c = { 'branch', 'diff' },
       lualine_x = { 'diagnostics', filetype, },
       lualine_y = {},
-      lualine_z = { lsp, },
+      lualine_z = { lsp, 'location', },
     },
     inactive_sections = {
       lualine_a = { window },
