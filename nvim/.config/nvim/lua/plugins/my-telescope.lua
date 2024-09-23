@@ -1,3 +1,8 @@
+local telescope = require("telescope")
+local builtin = require("telescope.builtin")
+local actions = require("telescope.actions")
+local action_state = require("telescope.actions.state")
+
 local function normalize_path(path)
   return path:gsub("\\", "/")
 end
@@ -41,8 +46,6 @@ return {
       "debugloop/telescope-undo.nvim",
     },
 		config = function()
-      local telescope = require("telescope")
-      local builtin = require("telescope.builtin")
 
       -- local CallTelescope = function(input)
       --   local theme = require('telescope.themes').get_dropdown({})
@@ -58,16 +61,20 @@ return {
           prompt_prefix = "  ",
           sorting_strategy = "descending",
           path_display = path_display,
+          -- path_display = {
+          --   "tail"
+          -- },
+          dynamic_preview_title = true,
           layout_strategy = "flex",
           layout_config = {
-            flex = { flip_columns = 110 },
+            flex = { flip_columns = 120 },
             horizontal = {
               mirror = false,
               prompt_position = "top",
               width = { padding = 20 },
-              height = { padding = 3 },
+              height = { padding = 2 },
               preview_cutoff = 10,
-              preview_width = 0.6,
+              preview_width = 0.5,
               },
             vertical = {
               mirror = true,
@@ -82,6 +89,7 @@ return {
               ["<C-o>"] = require("telescope.actions.layout").toggle_preview,
               ["<C-r>"] = require("telescope-undo.actions").restore,
             },
+            n = {},
           },
         },
         opts = {
@@ -98,8 +106,6 @@ return {
 	{
 		"nvim-telescope/telescope-ui-select.nvim",
 		config = function()
-      local telescope = require("telescope")
-
 			telescope.setup({
 				extensions = {
 				},

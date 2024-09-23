@@ -52,11 +52,11 @@ M.config = function()
     options = {
       icons_enabled = true,
       theme = 'auto',
+      disabled_filetypes = {"neo-tree"},
       section_separators = { left = "", right = "" },
       -- section_separators = { left = "", right = "" },
       component_separators = { left = "", right = "" },
       -- component_separators = { left = "|", right = "|" },
-      disabled_filetypes = {},
     },
     sections = {
       lualine_a = { vim_icons, "mode", 'filename', },

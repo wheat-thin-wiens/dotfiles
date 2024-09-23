@@ -2,3 +2,8 @@
 edit = [
   { run = 'nvim $@', block = true, desc = 'nvim', for = 'unix' }
 ]
+
+[plugin]
+prepend_previewers = [
+  { name = "*.*", exec = "bat" }
+]
