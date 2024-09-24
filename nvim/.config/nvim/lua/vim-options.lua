@@ -14,7 +14,7 @@ vim.opt.numberwidth = 3
 vim.opt.ruler = false
 vim.opt.fillchars = { eob = "~" }
 --vim.cmd("set textwidth=75")
-vim.opt.wrap=false
+vim.opt.wrap = false
 
 -- NVIM Window Navigation
 -- vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
@@ -47,9 +47,9 @@ vim.keymap.set('n', '<C-l>', ':TmuxNavigateRight<CR>')
 
 vim.keymap.set('n', '<C-n>', ':Neotree toggle <CR>')
 
-vim.keymap.set('n', '<leader>ff', ':SearchBoxIncSearch<CR>', {desc = "[FF]ind", noremap = true})
-vim.keymap.set('n', '<leader>fr', ':SearchBoxReplace <CR>', {desc = "[F]ind [R]eplace", noremap = true})
-vim.keymap.set('n', '<leader>fc', ':SearchBoxReplace confirm=menu <CR>', {desc = "[F]ind [C]onfirm"})
+-- vim.keymap.set('n', '<leader>ff', ':SearchBoxIncSearch<CR>', {desc = "[FF]ind", noremap = true})
+-- vim.keymap.set('n', '<leader>fr', ':SearchBoxReplace <CR>', {desc = "[F]ind [R]eplace", noremap = true})
+-- vim.keymap.set('n', '<leader>fc', ':SearchBoxReplace confirm=menu <CR>', {desc = "[F]ind [C]onfirm"})
 
 vim.keymap.set('n', '<leader>ct', ":Colortils <CR>")
 
