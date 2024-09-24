@@ -59,7 +59,7 @@ M.config = function()
       -- component_separators = { left = "|", right = "|" },
     },
     sections = {
-      lualine_a = { vim_icons, "mode", 'filename', },
+      lualine_a = { vim_icons, 'filename', },
       lualine_b = {},
       lualine_c = { 'branch', 'diff' },
       lualine_x = { 'diagnostics', filetype, },

@@ -46,16 +46,6 @@ return {
       "debugloop/telescope-undo.nvim",
     },
 		config = function()
-
-      -- local CallTelescope = function(input)
-      --   local theme = require('telescope.themes').get_dropdown({})
-      --   input(theme)
-      -- end
-
-      -- vim.keymap.set('n', '<C-p>', function() CallTelescope(require('telescope.builtin').find_files) end)
-      -- vim.keymap.set('n', '<leader>gs', function() CallTelescope(require('telescope.builtin').git_status) end)
-      -- vim.keymap.set('n', '<leader>lg', function() CallTelescope(require('telescope.builtin').live_grep) end)
-
       telescope.setup({
         defaults = {
           prompt_prefix = "  ",

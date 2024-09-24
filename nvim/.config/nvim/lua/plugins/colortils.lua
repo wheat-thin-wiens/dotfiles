@@ -4,8 +4,8 @@ return {
   config = function ()
     require("colortils").setup({
       mappings = {
-      replace_default_format = "rdf",
-      replace_choose_format = "rcf",
+        replace_default_format = "rdf",
+        replace_choose_format = "rcf",
       }
     })
   end,

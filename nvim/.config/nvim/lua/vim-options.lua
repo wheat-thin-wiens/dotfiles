@@ -14,7 +14,7 @@ vim.opt.numberwidth = 3
 vim.opt.ruler = false
 vim.opt.fillchars = { eob = "~" }
 --vim.cmd("set textwidth=75")
---vim.opt.wrap=true
+vim.opt.wrap=false
 
 -- NVIM Window Navigation
 -- vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')

@@ -45,6 +45,7 @@ ColorPick("catppuccin-mocha")
 -- catppuccin-latte
 -- catppuccin-macchiato
 -- catppuccin-mocha
+-- kanagawa
 -- nightfox
 -- night-owl
 -- rose-pine-main

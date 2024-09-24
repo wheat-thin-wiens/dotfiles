@@ -12,29 +12,29 @@ return {
           })
 		    end
 	},
-  {
-    "oxfist/night-owl.nvim",
-    priority = 1000,
-    config = function ()
-      require("night-owl").setup()
-    end,
-  },
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function ()
-      require("rose-pine").setup({
-        variant = "main" --(main, moon, dawn)
-      })
-    end,
-  },
-  {
-    "rebelot/kanagawa.nvim",
-    name = "kanagawa",
-    config = function ()
-      require("kanagawa").setup({
-        theme = "wave", --(wave, dragon, lotus)
-      })
-    end
-  }
+  -- {
+  --   "oxfist/night-owl.nvim",
+  --   priority = 1000,
+  --   config = function ()
+  --     require("night-owl").setup()
+  --   end,
+  -- },
+  -- {
+  --   "rose-pine/neovim",
+  --   name = "rose-pine",
+  --   config = function ()
+  --     require("rose-pine").setup({
+  --       variant = "main" --(main, moon, dawn)
+  --     })
+  --   end,
+  -- },
+  -- {
+  --   "rebelot/kanagawa.nvim",
+  --   name = "kanagawa",
+  --   config = function ()
+  --     require("kanagawa").setup({
+  --       theme = "wave", --(wave, dragon, lotus)
+  --     })
+  --   end
+  -- }
 }

@@ -25,6 +25,7 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+    dependencies = {},
     lazy = false,
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -47,10 +48,10 @@ return {
 			lspconfig.markdown_oxide.setup({
 				capabilities = capabilities
 			})
-      lspconfig.omnisharp.setup({
-        capabilities = capabilities,
-        cmd = { "dotnet", "/Users/ethanwiens/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"},
-      })
+      -- lspconfig.omnisharp.setup({
+      --   capabilities = capabilities,
+      --   cmd = { "dotnet", "/Users/ethanwiens/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"},
+      -- })
 			lspconfig.pyright.setup({
 				capabilities = capabilities
 			})
