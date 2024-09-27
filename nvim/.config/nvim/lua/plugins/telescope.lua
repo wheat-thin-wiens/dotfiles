@@ -54,7 +54,6 @@ return {
       telescope.setup({
         defaults = {
           prompt_prefix = "  ",
-          dynamic_title = "UwU",
           sorting_strategy = "descending",
           path_display = path_display,
           -- path_display = {
@@ -93,6 +92,16 @@ return {
             prompt_title = get_cwd(),
             hidden = true,
             mappings = {},
+            file_ignore_patterns = {
+              "%.png",
+              "%.jpg",
+              ".DS_Store",
+              "%.class",
+              "%.idx",
+              "%.pack",
+              "^.git/",
+              "^spotify.py",
+            },
           },
         },
         opts = {},

@@ -52,7 +52,8 @@ vim.keymap.set('n', '<leader>u',':Telescope undo <CR>', {desc = "[U]ndo"})
 vim.keymap.set('n', '<leader>tb', ':Telescope buffers <CR>', {desc = "[T]elescope [B]uffers"})
 vim.keymap.set('n', '<leader>td', function() builtin.find_files { cwd = '~/dotfiles', prompt_title = "// dotfiles //" } end, {})
 vim.keymap.set('n', '<leader>tn', function() builtin.find_files { cwd = '~/dotfiles/nvim/.config/nvim', prompt_title = "// neovim //" } end, {})
-vim.keymap.set('n', '<leader>tc', function() builtin.find_files { cwd = '~/dev', prompt_title = "dev" } end, {})
+vim.keymap.set('n', '<leader>tc', function() builtin.find_files { cwd = '~/dev', prompt_title = "// dev //" } end, {})
+-- vim.keymap.set('n', '<leader>ts', ':Telescope directory <CR>', {})
 
 -- Neotree
 vim.keymap.set('n', '<C-n>', ':Neotree toggle <CR>')
