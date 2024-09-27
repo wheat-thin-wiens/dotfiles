@@ -11,11 +11,13 @@ return {
     require("neo-tree").setup({
       close_if_last_window = true,
       use_libuv_file_watcher = true,
+      enable_diagnostics = true,
       window = {
         position = "left",
         width = 30,
       },
       filesystem = {
+        bind_to_cwd = true,
         follow_current_file = {
           enabled = true,
           leave_dirs_open = true
@@ -24,6 +26,11 @@ return {
           hide_dotfiles = false,
           hide_hidden = false,
         }
+      },
+      default_component_configs = {
+        indent = {
+          with_expanders = "enabled",
+        },
       },
     })
   end

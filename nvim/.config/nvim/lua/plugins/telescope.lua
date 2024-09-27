@@ -37,18 +37,24 @@ local function path_display(_, path)
   return string.format("%s ~ %s", filename, stripped_path)
 end
 
+local function get_cwd()
+  return string.format(vim.fn.getcwd())
+end
+
 return {
 	{
 		"nvim-telescope/telescope.nvim",
 		tag = "0.1.6",
 		dependencies = {
       "nvim-lua/plenary.nvim",
+      "nvim-telescope/telescope-ui-select.nvim",
       "debugloop/telescope-undo.nvim",
     },
 		config = function()
       telescope.setup({
         defaults = {
           prompt_prefix = "  ",
+          dynamic_title = "UwU",
           sorting_strategy = "descending",
           path_display = path_display,
           -- path_display = {
@@ -71,7 +77,7 @@ return {
               prompt_position = "top",
               preview_cutoff = 10,
               preview_height = 0.4,
-            }
+            },
           },
           mappings = {
             i = {
@@ -82,30 +88,17 @@ return {
             n = {},
           },
         },
-        opts = {
-          pickers = {
-            find_files = {
-              hidden = true,
-            }
-          }
-        }
-      })
-      telescope.load_extension("undo")
-    end,
-	},
-	{
-		"nvim-telescope/telescope-ui-select.nvim",
-		config = function()
-			telescope.setup({
-				extensions = {
-				},
         pickers = {
           find_files = {
-            hidden = true
-          }
-        }
-			})
+            prompt_title = get_cwd(),
+            hidden = true,
+            mappings = {},
+          },
+        },
+        opts = {},
+      })
+      telescope.load_extension("undo")
 			telescope.load_extension("ui-select")
-		end,
-	},
+    end,
+	}
 }
