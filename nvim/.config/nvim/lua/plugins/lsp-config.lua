@@ -14,7 +14,7 @@ return {
           "lua_ls",
           "markdown_oxide",
           "pyright",
-          "tsserver"
+          "ts_ls"
         }
       })
     end,
@@ -70,7 +70,7 @@ return {
 --          },
 --        },
 --      })
-        lspconfig.tsserver.setup({
+        lspconfig.ts_ls.setup({
         capabilities = capabilities,
         init_options = {
           preferences = {

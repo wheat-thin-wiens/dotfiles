@@ -23,5 +23,3 @@ vim.opt.termguicolors = true
 require("lazy").setup("plugins")
 require("vim-options")
 require("theme-picker")
-
--- Ignore Check Health Warnings

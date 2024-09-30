@@ -1,8 +1,11 @@
-*/.DS_Store
 .zsh_history
 .zhistory
 .DS_Store
+test.py
+licenses.toml
+.null-ls_232569_test.py
+
+*/.DS_Store
 /.config/.DS_Store
 /.config/nvim/.DS_Store
-test.py
-.null-ls_232569_test.py
+/void

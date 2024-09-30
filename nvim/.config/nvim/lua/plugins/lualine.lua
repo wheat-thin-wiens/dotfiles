@@ -14,6 +14,39 @@ M.config = function()
     end,
   }
 
+  local git_icon = {
+    function()
+      return ""
+    end
+  }
+
+  local branch_name = function()
+    local name = vim.fn.system("git branch --show-current 2> /dev/null | tr -d '\n'")
+    local symbol = ""
+
+    if name ~= '' then
+      return string.format('%s %s', symbol, name)
+    else
+      return ''
+    end
+  end
+
+  vim.api.nvim_create_autocmd({'Filetype', 'BufEnter', 'FocusGained'}, {
+    callback = function()
+      vim.b.branch_name = branch_name()
+    end
+  })
+
+  local branch = function()
+    local name = vim.b.branch_name
+
+    if name == nil then
+      return ''
+    else
+      return name
+    end
+  end
+
   local modes = {
     "mode",
     fmt = function(str) return str:sub(1, 1) end,
@@ -61,7 +94,7 @@ M.config = function()
     sections = {
       lualine_a = { vim_icons, 'filename', },
       lualine_b = {},
-      lualine_c = { 'branch', 'diff' },
+      lualine_c = { branch, 'diff' },
       lualine_x = { 'diagnostics', filetype, },
       lualine_y = {},
       lualine_z = { lsp, 'location', },
