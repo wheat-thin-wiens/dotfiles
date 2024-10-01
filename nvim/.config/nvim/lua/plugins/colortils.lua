@@ -3,7 +3,10 @@ return {
   cmd = "Colortils",
   config = function ()
     require("colortils").setup({
-      replace_choose_format = "g<C-CR>"
+      mappings = {
+        replace_default_format = "rdf",
+        replace_choose_format = "rcf",
+      }
     })
   end,
 }

@@ -14,7 +14,7 @@ return {
           "lua_ls",
           "markdown_oxide",
           "pyright",
-          "tsserver"
+          "ts_ls"
         }
       })
     end,
@@ -25,11 +25,14 @@ return {
 	},
 	{
 		"neovim/nvim-lspconfig",
+    dependencies = {},
     lazy = false,
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
-
+      lspconfig.bashls.setup({
+        capabilities = capabilities
+      })
       lspconfig.cssls.setup({
         capabilities = capabilities
       })
@@ -45,11 +48,14 @@ return {
 			lspconfig.markdown_oxide.setup({
 				capabilities = capabilities
 			})
-      lspconfig.omnisharp.setup({
-        capabilities = capabilities,
-        cmd = { "dotnet", "/Users/ethanwiens/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"},
-      })
+      -- lspconfig.omnisharp.setup({
+      --   capabilities = capabilities,
+      --   cmd = { "dotnet", "/Users/ethanwiens/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"},
+      -- })
 			lspconfig.pyright.setup({
+				capabilities = capabilities
+			})
+			lspconfig.rnix.setup({
 				capabilities = capabilities
 			})
 --			lspconfig.rubocop.setup({
@@ -64,7 +70,7 @@ return {
 --          },
 --        },
 --      })
-        lspconfig.tsserver.setup({
+        lspconfig.ts_ls.setup({
         capabilities = capabilities,
         init_options = {
           preferences = {
@@ -73,10 +79,6 @@ return {
         }
       })
 
-			vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
-			vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {})
-			vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {})
-      vim.keymap.set({ "n" }, "<leader>rn", vim.lsp.buf.rename, {})
 		end,
 	},
 }

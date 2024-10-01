@@ -1,3 +1,4 @@
+-- Lazy Package Manager
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not (vim.uv or vim.loop).fs_stat(lazypath) then
   vim.fn.system({
@@ -11,12 +12,14 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
 end
 vim.opt.rtp:prepend(lazypath)
 
-local opts = {}
+-- Set Leader Key
+vim.g.mapleader = " "
+vim.g.maplocalleader = " "
 
-require("vim-options")
+-- Other Priority Settings
+vim.opt.termguicolors = true
+
+-- Setting Dependencies
 require("lazy").setup("plugins")
+require("vim-options")
 require("theme-picker")
-
-vim.keymap.set('n', '<C-n>', ':Neotree toggle<CR>', {})
-
--- Ignore Check Health Warnings
