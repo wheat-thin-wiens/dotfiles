@@ -10,10 +10,10 @@ return {
     require("noice").setup({
       cmdline = {},
       messages = {
-        enabled = false,
+        enabled = true,
       },
       notify = {
-        enabled = false,
+        enabled = true,
       },
     })
   end
