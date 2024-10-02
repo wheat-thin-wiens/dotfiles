@@ -9,3 +9,5 @@ licenses.toml
 /.config/.DS_Store
 /.config/nvim/.DS_Store
 /void
+
+/tmux/.tmux/plugins/vim-tmux-navigator/
