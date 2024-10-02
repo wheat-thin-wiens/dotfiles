@@ -3,6 +3,12 @@ local builtin = require("telescope.builtin")
 local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
 
+-- local function fb_actions(f)
+--   return function(b)
+--     require('telescope').extensions.file_browser.actions[f](b)
+--   end
+-- end
+
 local function normalize_path(path)
   return path:gsub("\\", "/")
 end
@@ -49,6 +55,7 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
       "debugloop/telescope-undo.nvim",
+      -- "nvim-telescope/telescope-file-browser.nvim",
     },
 		config = function()
       telescope.setup({
@@ -104,10 +111,25 @@ return {
             },
           },
         },
+        extensions = {
+        --   file_browser = {
+        --     hidden = true,
+        --     mappings = {
+        --       ['i'] = {
+        --       },
+        --       ['n'] = {
+        --         ['<C-a>'] = fb_actions 'create_file',
+        --         ['<C-.>'] = fb_actions 'change_cwd',
+        --         ['<C-,>'] = fb_actions 'goto_parent_dir',
+        --       },
+        --     },
+        --   },
+        },
         opts = {},
       })
       telescope.load_extension("undo")
 			telescope.load_extension("ui-select")
+      -- telescope.load_extension("file_browser")
     end,
 	}
 }

@@ -30,7 +30,7 @@ vim.keymap.set('i', '<Esc>', '<Esc>', opts)
 vim.keymap.set('n', "<C-d>", "<C-d>zz")
 vim.keymap.set('n', "<C-u>", "<C-u>zz")
 vim.keymap.set('n', '<C-s>', "<cmd> w <CR>")
-vim.keymap.set('n', '<leader>pf', '<cmd> Ex <CR>')
+-- vim.keymap.set('n', '<leader>pf', '<cmd> Ex <CR>')
 vim.keymap.set('n', '<leader>n', '<cmd> noh <CR>')
 vim.keymap.set('n', '<leader>bw', '<cmd> bw <CR>')
 
@@ -57,7 +57,7 @@ vim.keymap.set('n', '<leader>tb', '<cmd> Telescope buffers <CR>', {desc = "[T]el
 vim.keymap.set('n', '<leader>td', function() builtin.find_files { cwd = '~/dotfiles', prompt_title = "// dotfiles //" } end, { desc = '[T]elescope [D]otfiles' })
 vim.keymap.set('n', '<leader>tn', function() builtin.find_files { cwd = '~/dotfiles/nvim/.config/nvim', prompt_title = "// neovim //" } end, {})
 vim.keymap.set('n', '<leader>tc', function() builtin.find_files { cwd = '~/dev', prompt_title = "// dev //" } end, {})
--- vim.keymap.set('n', '<leader>ts', ':Telescope directory <CR>', {})
+vim.keymap.set('n', '<leader>pf', '<cmd> Telescope file_browser <CR>', {})
 
 -- Neotree
 vim.keymap.set('n', '<C-n>', '<cmd> Neotree toggle <CR>', {})

@@ -23,8 +23,8 @@ return {
     vim.keymap.set('n', '<leader>3', function() harpoon:list():select(3) end, {desc = "Harpoon [3]"})
     vim.keymap.set('n', '<leader>4', function() harpoon:list():select(4) end, {desc = "Harpoon [4]"})
     vim.keymap.set('n', '<C-e>', function() harpoon.ui:toggle_quick_menu(harpoon:list()) end)
-    vim.keymap.set("n", "<C-[>", function() harpoon:list():prev() end)
-    vim.keymap.set("n", "<C-]>", function() harpoon:list():next() end)
+    vim.keymap.set("n", "<S-h>", function() harpoon:list():prev() end)
+    vim.keymap.set("n", "<S-l>", function() harpoon:list():next() end)
 
     -- Clear Harpoon on Startup
     -- local clear = function()

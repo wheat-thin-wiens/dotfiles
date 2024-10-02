@@ -5,10 +5,10 @@ function ColorPick(color)
   vim.cmd.colorscheme(color)
 
   -- Background
-  --vim.api.nvim_set_hl(0, "Normal", { bg = "None" })
-  --vim.api.nvim_set_hl(0, "NormalFloat", { bg = "None" })
-  --vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "None" })
-  --vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "None" })
+  -- vim.api.nvim_set_hl(0, "Normal", { bg = "None" })
+  -- vim.api.nvim_set_hl(0, "NormalFloat", { bg = "None" })
+  -- vim.api.nvim_set_hl(0, "NeoTreeNormal", { bg = "None" })
+  -- vim.api.nvim_set_hl(0, "NeoTreeNormalNC", { bg = "None" })
 
   -- Line Number Color
   local LineNumAbove = vim.api.nvim_get_hl(0, {
@@ -39,6 +39,7 @@ end
 ColorPick("catppuccin-mocha")
 
 -- To get names of highlight groups, run :highlight
+-- or, to find them in telescope, run :Telescope highlights
 
 -- carbonfox
 -- catppuccin-frappe

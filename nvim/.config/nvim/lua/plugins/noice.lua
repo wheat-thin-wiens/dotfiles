@@ -8,12 +8,24 @@ return {
   opts = {},
   config = function()
     require("noice").setup({
-      cmdline = {},
+      -- cmdline = {},
       messages = {
-        enabled = true,
+        enabled = false,
       },
       notify = {
-        enabled = true,
+        enabled = false,
+      },
+      views = {
+        cmdline_popup = {
+          position = {
+            row = 5,
+            col = '50%',
+          },
+          size = {
+            width = 60,
+            height = 'auto',
+          },
+        },
       },
     })
   end
