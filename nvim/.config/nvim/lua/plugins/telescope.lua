@@ -69,7 +69,7 @@ return {
           dynamic_preview_title = true,
           layout_strategy = "flex",
           layout_config = {
-            flex = { flip_columns = 120 },
+            flex = { flip_columns = 140 },
             horizontal = {
               mirror = false,
               prompt_position = "top",
@@ -98,6 +98,7 @@ return {
           find_files = {
             prompt_title = get_cwd(),
             hidden = true,
+            no_ignore = false,
             mappings = {},
             file_ignore_patterns = {
               "%.png",
