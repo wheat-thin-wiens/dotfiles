@@ -1,3 +1,7 @@
+# Open Applications
+cmd - return : open -na /Applications/WezTerm.app
+cmd + shift - return : open -na /Applications/Zen Browser.app
+
 # Changing window focus
 
 ## Changing window focus within space

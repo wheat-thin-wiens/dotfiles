@@ -6,7 +6,10 @@ config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 config.color_scheme = "catppuccin-mocha"
 
 config.font = wezterm.font(
-  "MesloLGS Nerd Font Mono",
+  -- "Fantasque Sans Mono",
+  -- "MesloLGS Nerd Font Mono",
+  "Jetbrains Mono",
+  -- "SauceCodePro Nerd Font",
   { weight = "Bold", italic = false }
 )
 config.font_size = 14

@@ -2,9 +2,11 @@
 
 format = """
 [](color_fg0)\
+$os\
+$username\
+[](bg:color_yellow fg:color_fg0)\
 $directory\
-[](bg:color_fg0 fg:color_fg0)\
-[](fg:color_fg0 bg:color_aqua)\
+[](fg:color_yellow bg:color_aqua)\
 $git_branch\
 $git_status\
 [](fg:color_aqua bg:color_blue)\
@@ -74,7 +76,7 @@ style_root = "bg:color_fg0 fg:color_white"
 format = '[ $user ]($style)'
 
 [directory]
-style = "fg:color_white bg:color_fg0"
+style = "fg:color_fg0 bg:color_yellow"
 format = "[ $path ]($style)"
 truncation_length = 2
 truncation_symbol = "…/"

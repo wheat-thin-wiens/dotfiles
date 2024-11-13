@@ -60,7 +60,7 @@ return {
 		config = function()
       telescope.setup({
         defaults = {
-          prompt_prefix = "  ",
+          prompt_prefix = "   ",
           sorting_strategy = "descending",
           path_display = path_display,
           -- path_display = {

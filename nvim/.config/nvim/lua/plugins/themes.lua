@@ -9,6 +9,11 @@ return {
 		    config = function()
           require("catppuccin").setup({
             transparent_background = false,
+        styles = {
+          comments = { 'italic' },
+          functions = { 'italic' },
+          loops = { 'italic' },
+        }
           })
 		    end
 	},
