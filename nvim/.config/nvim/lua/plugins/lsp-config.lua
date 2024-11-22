@@ -33,12 +33,15 @@ return {
       lspconfig.bashls.setup({
         capabilities = capabilities
       })
+      lspconfig.clangd.setup({
+        capabilities = capabilities
+      })
       lspconfig.cssls.setup({
         capabilities = capabilities
       })
-      --lspconfig.eslint.setup({
-      --  capabilities = capabilities
-      --})
+      lspconfig.gopls.setup({
+        capabilities = capabilities
+      })
       lspconfig.html.setup({
         capabilities = capabilities
       })
@@ -48,10 +51,10 @@ return {
 			lspconfig.markdown_oxide.setup({
 				capabilities = capabilities
 			})
-      -- lspconfig.omnisharp.setup({
-      --   capabilities = capabilities,
-      --   cmd = { "dotnet", "/Users/ethanwiens/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"},
-      -- })
+      lspconfig.omnisharp.setup({
+        capabilities = capabilities,
+        cmd = { "dotnet", "/Users/ethanwiens/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"},
+      })
 			lspconfig.pyright.setup({
 				capabilities = capabilities
 			})
@@ -70,6 +73,9 @@ return {
 --          },
 --        },
 --      })
+			-- lspconfig.tailwindcss.setup({
+			-- 	capabilities = capabilities
+			-- })
         lspconfig.ts_ls.setup({
         capabilities = capabilities,
         init_options = {

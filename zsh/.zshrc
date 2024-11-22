@@ -12,6 +12,7 @@ bindkey '^[[B' history-search-forward
 # Homebrew Settings
 export HOMEBREW_NO_AUTO_UPDATE=1
 export HOMEBREW_NO_ENV_HINTS=1
+export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
 
 # Plugins
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -22,6 +23,7 @@ eval $(thefuck --alias)
 
 # Additional Functions
 source ~/dev/python/launch_python.sh
+source ~/dev/c/make_c.sh
 source ~/dotfiles/theme-picker.sh
 
 # Language Support
