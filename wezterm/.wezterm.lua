@@ -1,4 +1,6 @@
 local wezterm = require("wezterm")
+-- local features = require("features")
+
 local config = wezterm.config_builder()
 local act = wezterm.action
 

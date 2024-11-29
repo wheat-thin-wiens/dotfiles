@@ -17,6 +17,15 @@ return {
           })
 		    end
 	},
+  {
+    "sam4llis/nvim-tundra",
+    name = "tundra",
+    config = function()
+      require('nvim-tundra').setup({
+        transparent_background = false,
+      })
+    end
+  }
   -- {
   --   "oxfist/night-owl.nvim",
   --   priority = 1000,
