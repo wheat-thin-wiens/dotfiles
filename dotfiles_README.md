@@ -236,3 +236,12 @@ way to do it with shell scripts on a per-project basis but I haven't even starte
 yet so I don't know.
 
 If you get lost, you can refer to [this guide](https://mac.install.guide/ruby/12).
+
+## Clearing System / Application Cache
+
+Just remember these directories:
+
+- `~/Library/Application Support`
+- `~/Library/Caches`
+- `/opt/homebrew/Library/Taps`
+- `/opt/homebrew/Cellar`

@@ -23,6 +23,7 @@ eval $(thefuck --alias)
 
 # Additional Functions
 source ~/dev/python/launch_python.sh
+source ~/dev/google_python/launch.sh
 source ~/dev/c/make_c.sh
 source ~/dotfiles/theme-picker.sh
 
