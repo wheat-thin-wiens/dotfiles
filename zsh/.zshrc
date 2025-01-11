@@ -25,6 +25,7 @@ eval $(thefuck --alias)
 source ~/dev/python/launch_python.sh
 source ~/dev/google_python/launch.sh
 source ~/dev/c/make_c.sh
+source ~/dev/cpp/cppmake.sh
 source ~/dotfiles/theme-picker.sh
 
 # Language Support
@@ -45,7 +46,7 @@ alias gogogo="~/dev/dotnet/C#.sh"
 # alias mc="mc --nosubshell"
 # alias launch_python=". ~/dev/python/launch_python.sh"
 alias matrix=". ~/dotfiles/matrix.sh"
-alias run-ladybird="open -W --stdout $(tty) --stderr $(tty) .~/ladybird/Build/ladybird/bin/Ladybird.app"
+# alias run-ladybird="open -W --stdout $(tty) --stderr $(tty) .~/ladybird/Build/ladybird/bin/Ladybird.app"
 
 # Keybindings
 bindkey              '^I'         menu-complete
