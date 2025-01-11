@@ -3,6 +3,12 @@ local builtin = require("telescope.builtin")
 local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
 
+-- local function fb_actions(f)
+--   return function(b)
+--     require('telescope').extensions.file_browser.actions[f](b)
+--   end
+-- end
+
 local function normalize_path(path)
   return path:gsub("\\", "/")
 end
@@ -49,11 +55,12 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
       "debugloop/telescope-undo.nvim",
+      -- "nvim-telescope/telescope-file-browser.nvim",
     },
 		config = function()
       telescope.setup({
         defaults = {
-          prompt_prefix = "  ",
+          prompt_prefix = "   ",
           sorting_strategy = "descending",
           path_display = path_display,
           -- path_display = {
@@ -62,7 +69,7 @@ return {
           dynamic_preview_title = true,
           layout_strategy = "flex",
           layout_config = {
-            flex = { flip_columns = 120 },
+            flex = { flip_columns = 140 },
             horizontal = {
               mirror = false,
               prompt_position = "top",
@@ -91,6 +98,7 @@ return {
           find_files = {
             prompt_title = get_cwd(),
             hidden = true,
+            no_ignore = false,
             mappings = {},
             file_ignore_patterns = {
               "%.png",
@@ -104,10 +112,25 @@ return {
             },
           },
         },
+        extensions = {
+        --   file_browser = {
+        --     hidden = true,
+        --     mappings = {
+        --       ['i'] = {
+        --       },
+        --       ['n'] = {
+        --         ['<C-a>'] = fb_actions 'create_file',
+        --         ['<C-.>'] = fb_actions 'change_cwd',
+        --         ['<C-,>'] = fb_actions 'goto_parent_dir',
+        --       },
+        --     },
+        --   },
+        },
         opts = {},
       })
       telescope.load_extension("undo")
 			telescope.load_extension("ui-select")
+      -- telescope.load_extension("file_browser")
     end,
 	}
 }

@@ -9,9 +9,23 @@ return {
 		    config = function()
           require("catppuccin").setup({
             transparent_background = false,
+        styles = {
+          comments = { 'italic' },
+          functions = { 'italic' },
+          loops = { 'italic' },
+        }
           })
 		    end
 	},
+  {
+    "sam4llis/nvim-tundra",
+    name = "tundra",
+    config = function()
+      require('nvim-tundra').setup({
+        transparent_background = false,
+      })
+    end
+  }
   -- {
   --   "oxfist/night-owl.nvim",
   --   priority = 1000,
