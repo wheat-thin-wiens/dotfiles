@@ -1,5 +1,5 @@
 # History Config
-HISTFILE=$HOME/.zhistory
+# HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
 HISTSIZE=999
 setopt share_history
