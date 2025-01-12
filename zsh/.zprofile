@@ -1,9 +1,12 @@
-# Setting PATH for Python 3.12
-# The original version is saved in .zprofile.pysave
-PATH="/Library/Frameworks/Python.framework/Versions/3.12/bin:${PATH}"
-export PATH
-
+# Homebrew
 eval "$(/opt/homebrew/bin/brew shellenv)"
+
+# Homebrew Python 3.X
+export PATH="$(brew --prefix)/opt/python@3.12/libexec/bin:$PATH"
+
+#Homebrew Go
+export PATH="$(brew --prefix)/Cellar/go/1.23.3/libexec/bin:$PATH"
+export PATH="$HOME/go/bin:$PATH"
 
 #if command -v tmux &> /dev/null && [ -z "$TMUX" ]; then
 #  tmux attach -t default || tmux new -s default

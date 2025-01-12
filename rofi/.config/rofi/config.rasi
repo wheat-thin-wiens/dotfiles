@@ -13,4 +13,4 @@ configuration{
     sidebar-mode: true;
 }
 
-@theme "~/dotfiles/.config/rofi/rounded-blue-dark.rasi"
+@theme "~/dotfiles/rofi/.config/rofi/rounded-blue-dark.rasi"

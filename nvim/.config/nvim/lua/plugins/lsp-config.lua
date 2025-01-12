@@ -11,6 +11,7 @@ return {
     config = function()
       require("mason-lspconfig").setup({
         ensure_installed = {
+          "bashls",
           "lua_ls",
           "markdown_oxide",
           "pyright",
