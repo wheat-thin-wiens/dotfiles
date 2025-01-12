@@ -1,25 +1,19 @@
 # History Config
 # HISTFILE=$HOME/.zhistory
-SAVEHIST=1000
-HISTSIZE=999
-setopt share_history
-setopt hist_expire_dups_first
-setopt hist_ignore_dups
-setopt hist_verify
-bindkey '^[[A' history-search-backward
-bindkey '^[[B' history-search-forward
-
-# Homebrew Settings
-export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_NO_ENV_HINTS=1
-export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
+# SAVEHIST=1000
+# HISTSIZE=999
+# setopt share_history
+# setopt hist_expire_dups_first
+# setopt hist_ignore_dups
+# setopt hist_verify
+# bindkey '^[[A' history-search-backward
+# bindkey '^[[B' history-search-forward
 
 # Plugins
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
 
 # Additional Functions
-source ~/dev/python/launch_python.sh
 source ~/dev/c/cmake.sh
 source ~/dotfiles/theme-picker.sh
 
