@@ -1,0 +1,9 @@
+theme = catppuccin-mocha
+background-opacity = 1
+
+font-family = Jetbrains Mono
+font-style = bold
+font-size = 14
+# font-thicken = true
+
+mouse-hide-while-typing = true
