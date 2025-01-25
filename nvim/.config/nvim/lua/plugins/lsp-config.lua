@@ -12,6 +12,10 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "bashls",
+          "clangd",
+          "cssls",
+          "gopls",
+          "html",
           "lua_ls",
           "markdown_oxide",
           "pyright",

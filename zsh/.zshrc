@@ -10,10 +10,21 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # Plugins
+source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 eval "$(starship init zsh)"
 eval $(thefuck --alias)
 
+# PNPM
+export PNPM_HOME="/home/ewiens/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
 # Additional Functions
+source ~/dev/python/launch_python.sh
 source ~/dev/c/cmake.sh
 source ~/dotfiles/theme-picker.sh
 
@@ -24,10 +35,11 @@ export NVM_DIR="$HOME/.nvm"
 
 # Alias
 alias vim='nvim'
+alias ls='eza'
+
 alias avocado="~/dev/java/java.sh"
 alias gogogo="~/dev/dotnet/C#.sh"
 alias mc="mc --nosubshell"
-# alias launch_python=". ~/dev/python/launch_python.sh"
 
 # Keybindings
 bindkey              '^I'         menu-complete
