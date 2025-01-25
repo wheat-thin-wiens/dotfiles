@@ -63,6 +63,27 @@
 - tmux
 - ttf-meslo-nerd
 
+## WiFi Setup
+
+To get a list of available network in BASH or ZSH, run the following commands:
+
+`nmcli dev wifi list`
+
+Use this command to connect to a network:
+
+`sudo nmcli dev wifi connect [SSID] password [PASSWORD]`
+
+If there is a space in the name of the SSID, you can put the SSID in quotes
+and type the name as normal. `nmcli` will be able to parse it as a string.
+
+Use this command to list available network devices:
+
+`nmcli --get-values GENERAL.DEVICE,GENERAL.TYPE device show`
+
+You can then see what network a device is connected to with this command:
+
+`sudo iw dev [DEVICE] info`
+
 ## Bluetooth Setup
 
 To enable bluetooth, enter the following commands into the terminal:
