@@ -38,8 +38,7 @@ source /opt/homebrew/Cellar/chruby/0.3.9/share/chruby/chruby.sh
 chruby 3.3.3
 
 # Alias
-alias python='python3'
-alias pip='pip3'
+alias ls='eza'
 alias vim='nvim'
 alias avocado="~/dev/java/java.sh"
 alias gogogo="~/dev/dotnet/C#.sh"
