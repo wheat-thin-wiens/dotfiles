@@ -18,7 +18,7 @@ exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 exec_always feh --bg-scale ~/dotfiles/backgrounds/eva1.png
 
 ## rofi ##
-bindsym $mod+space exec --no-startup-id rofi -show combi
+bindsym $mod+space exec --no-startup-id rofi -show drun
 
 ## font ##
 # Font for window titles. Will also be used by the bar unless a different font
