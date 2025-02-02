@@ -75,3 +75,6 @@ vim.keymap.set('n', '<leader>ct', "<cmd> Colortils <CR>")
 vim.keymap.set('n', '<leader>ss', "<cmd> LiveServerStart <CR>", {desc = "[S]erver [S]tart"})
 vim.keymap.set('n', '<leader>sq', "<cmd> LiveServerStop <CR>", {desc = "[S]erver [Q]uit"})
 
+-- Word Count
+vim.keymap.set('n', '<leader>wc', '<cmd> WordCount <CR>', {desc = "[W]ord [C]ount"})
+vim.keymap.set('n', '<leader>ac', '<cmd> AppendCount <CR>', {desc = "[A]ppend [C]ount"})
