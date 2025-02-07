@@ -27,6 +27,7 @@ source ~/dev/google_python/launch.sh
 source ~/dev/c/make_c.sh
 source ~/dev/cpp/cppmake.sh
 source ~/dotfiles/theme-picker.sh
+source ~/dev/bash/nvimplug.sh
 
 # Language Support
 export NVM_DIR="$HOME/.nvm"
@@ -52,9 +53,9 @@ bindkey              '^I'         menu-complete
 bindkey "$terminfo[kcbt]" reverse-menu-complete
 
 # Auto Run on Startup
-#if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-#  exec tmux
-#fi
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+ exec tmux
+fi
 
 #tmux
 neofetch

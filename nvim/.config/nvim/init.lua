@@ -20,16 +20,6 @@ vim.g.maplocalleader = " "
 -- Other Priority Settings
 vim.opt.termguicolors = true
 
--- Setting Dependencies
--- require("lazy").setup({
---   spec = {
---     { import = "plugins" },
---   dev = {
---       path = "~/projects"
---     },
---   },
--- })
 require("lazy").setup("plugins")
 require("vim-options")
 require("theme-picker")
-
