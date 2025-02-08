@@ -2,9 +2,7 @@ return {
 	{
 		"williamboman/mason.nvim",
     lazy = false,
-		config = function()
-			require("mason").setup({})
-		end,
+    opts = {}
 	},
 	{
 		"williamboman/mason-lspconfig.nvim",
@@ -14,7 +12,8 @@ return {
           "lua_ls",
           "markdown_oxide",
           "pyright",
-          "ts_ls"
+          "ts_ls",
+          "clangd"
         }
       })
     end,
@@ -27,12 +26,12 @@ return {
 		"neovim/nvim-lspconfig",
     dependencies = {},
     lazy = false,
+    opts = {
+      inlay_hints = { enabled = true },
+    },
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
-      lspconfig.bashls.setup({
-        capabilities = capabilities
-      })
       lspconfig.clangd.setup({
         capabilities = capabilities
       })
@@ -42,13 +41,7 @@ return {
       lspconfig.gopls.setup({
         capabilities = capabilities
       })
-      lspconfig.html.setup({
-        capabilities = capabilities
-      })
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities
-			})
-			lspconfig.markdown_oxide.setup({
 				capabilities = capabilities
 			})
       lspconfig.omnisharp.setup({
@@ -58,12 +51,6 @@ return {
 			lspconfig.pyright.setup({
 				capabilities = capabilities
 			})
-			lspconfig.rnix.setup({
-				capabilities = capabilities
-			})
---			lspconfig.rubocop.setup({
---				capabilities = capabilities
---			})
 --      lspconfig.sourcekit.setup({
 --        capabilities = {
 --          workspace = {
@@ -73,9 +60,6 @@ return {
 --          },
 --        },
 --      })
-			-- lspconfig.tailwindcss.setup({
-			-- 	capabilities = capabilities
-			-- })
         lspconfig.ts_ls.setup({
         capabilities = capabilities,
         init_options = {
@@ -85,6 +69,12 @@ return {
         }
       })
 
+      vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+      vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {desc = "[G]et [D]efinition"})
+      vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {desc = "[G]et [R]eferences"})
+      vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {desc = "[C]ode [A]ctions"})
+      vim.keymap.set("n", "<leader>cf", vim.lsp.buf.format, {desc = "[C]ode [F]ormat"})
+      vim.keymap.set('n', '<space>rn', vim.lsp.buf.rename, {desc = "[R]e[N]ame"})
 		end,
 	},
 }
