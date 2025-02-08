@@ -21,6 +21,8 @@ config.window_decorations = "RESIZE"
 config.window_background_opacity = 1
 config.macos_window_background_blur = 30
 
+config.enable_wayland = false
+
 config.keys = {
   {
     key = 'n',

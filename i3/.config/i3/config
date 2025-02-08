@@ -15,7 +15,7 @@ exec --no-startup-id picom
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
 
 ## Background ##
-exec_always feh --bg-scale ~/dotfiles/backgrounds/eva1.png
+exec_always feh --bg-scale ~/dotfiles/backgrounds/rei.JPG
 
 ## rofi ##
 bindsym $mod+space exec --no-startup-id rofi -show drun
