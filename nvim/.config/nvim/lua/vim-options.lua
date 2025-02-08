@@ -15,6 +15,21 @@ vim.opt.ruler = false
 vim.opt.fillchars = { eob = "~" }
 vim.opt.wrap = false
 
+-- Appearance
+vim.cmd.colorscheme('oldworld')
+
+local LineNumAbove = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
+local LineNum = vim.api.nvim_get_hl(0, { name = "Function", link = true })
+local LineNumBelow = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
+local eobCol = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
+
+vim.api.nvim_set_hl(0, "LineNrAbove", { fg = LineNumAbove.fg })
+vim.api.nvim_set_hl(0, "LineNr", { fg = LineNum.fg })
+vim.api.nvim_set_hl(0, "LineNrBelow", { fg = LineNumBelow.fg })
+vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = eobCol.fg })
+
+-- EoB Character Color
+
 -- NVIM Window Navigation
 -- vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
 -- vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
@@ -27,11 +42,13 @@ vim.keymap.set("n", "<leader>lurn", ":Lazy update rudder.nvim <CR>", {})
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<Esc>", "<Esc>", opts)
 vim.keymap.set("i", "<Esc>", "<Esc>", opts)
+
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 vim.keymap.set("n", "<C-s>", "<cmd> w <CR>")
 vim.keymap.set("n", "<leader>n", "<cmd> noh <CR>")
 vim.keymap.set("n", "<leader>bw", "<cmd> bw <CR>")
+-- vim.keymap.set('n', '<', '<S-<><')
 -- vim.keymap.set('n', '<leader>pf', '<cmd> Ex <CR>')
 
 -- LSP Keymaps

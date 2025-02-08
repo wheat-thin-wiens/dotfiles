@@ -4,10 +4,10 @@ format = """
 [](color_fg0)\
 $directory\
 [](bg:color_fg0 fg:color_fg0)\
-[](fg:color_fg0 bg:color_aqua)\
+[](fg:color_fg0 bg:color_green)\
 $git_branch\
 $git_status\
-[](fg:color_aqua bg:color_yellow)\
+[](fg:color_green bg:color_yellow)\
 [](fg:color_yellow bg:color_red)\
 $docker_context\
 $conda\
@@ -23,18 +23,17 @@ command_timeout = 1000
 
 [palettes.gruvbox_dark]
 # cattppuccin macchiato
-color_fg0 = '#27272a'
-color_bg1 = '#e29eca'
-color_bg3 = '#aca1cf'
-color_blue = '#92a2d5'
-# color_blue = '#92a2d5'
-color_aqua = '#90b99f'
-color_green = '#a6e3a1'
-color_orange = '#f5a191'
+color_fg0 = '#374151'
+color_bg1 = '#ddd6fe'
+color_bg3 = '#957fb8'
+color_blue = '#bae6fd'
+color_aqua = '#a5f3fc'
+color_green = '#b1e3ad'
+color_orange = '#fca5a5'
 color_purple = '#b16286'
 color_red = '#ea83a5'
-color_yellow = '#e6b99d'
-color_white = '#c1c0d4'
+color_yellow = '#fbc19d'
+color_white = '#d1d5db'
 
 [os]
 disabled = false
@@ -82,12 +81,12 @@ truncation_symbol = "…/"
 
 [git_branch]
 symbol = ""
-style = "bg:color_aqua"
-format = '[[ $symbol $branch ](fg:color_fg0 bg:color_aqua)]($style)'
+style = "bg:color_green"
+format = '[[ $symbol $branch ](fg:color_fg0 bg:color_green)]($style)'
 
 [git_status]
-style = "bg:color_aqua"
-format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_aqua)]($style)'
+style = "bg:color_green"
+format = '[[($all_status$ahead_behind )](fg:color_fg0 bg:color_green)]($style)'
 
 [nodejs]
 symbol = ""

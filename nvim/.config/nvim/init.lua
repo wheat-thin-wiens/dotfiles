@@ -22,4 +22,3 @@ vim.opt.termguicolors = true
 
 require("lazy").setup("plugins")
 require("vim-options")
-require("theme-picker")

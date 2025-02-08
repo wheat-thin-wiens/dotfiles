@@ -1,7 +1,7 @@
 -- Theme Picker, with option for transparent background
 
 function ColorPick(color)
-	color = color or "nightfox"
+	color = color or "catppuccin-mocha"
 	vim.cmd.colorscheme(color)
 
 	-- Background
@@ -35,7 +35,7 @@ function ColorPick(color)
 	vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = eobCol.fg })
 end
 
-ColorPick("catppuccin-mocha")
+ColorPick("oldworld")
 
 -- To get names of highlight groups, run :highlight
 -- or, to find them in telescope, run :Telescope highlights
