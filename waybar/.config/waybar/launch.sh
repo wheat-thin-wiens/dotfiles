@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
-killall -9 waybar
+killall waybar
 waybar &

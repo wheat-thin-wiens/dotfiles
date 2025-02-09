@@ -1,0 +1,122 @@
+* { 
+  font-family: "JetBrains Mono";
+  font-size: 14px;
+  font-weight: bold;
+  /* background: transparent; */
+}
+
+window#waybar {
+  background: transparent;
+  padding: 4px 4px;
+}
+
+window#waybar.empty #window {
+  background-color: transparent;
+}
+
+.modules-left {
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+}
+
+.modules-center {
+  padding-left: 4px;
+  padding-right: 4px;
+  padding-top: 4px;
+}
+
+.modules-right {
+  padding-top: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#window {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 0px 10px;
+}
+
+#window.empty {
+  background-color: rgba(255, 255, 255, 1);
+}
+
+button {
+  border-radius: 20px;
+}
+
+button:hover {
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#workspaces {
+  /* background-color: rgba(255, 255, 255, 0.1); */
+  border-radius: 20px;
+}
+
+#workspaces button {
+  color: #FFFFFF;
+  /* background-color: rgba(255, 255, 255, 0.3); */
+  padding: 0px 4px;
+  margin-left: 1px;
+  margin-right: 1px;
+  /* margin-left: 2px; */
+  /* margin-right: 2px; */
+}
+
+#workspaces button.focused {
+  background-color: rgba(255, 255, 255, 0.3);
+}
+
+#workspaces button.active {
+  background-color: rgba(255, 255, 255, 0.3);
+  border-bottom: 2px solid #FFFFFF;
+}
+
+#clock {
+  color: #FFFFFF;
+}
+
+#workspaces,
+#clock,
+#pulseaudio,
+#network,
+#cpu,
+#memory {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#network {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0px 10px;
+}
+
+#pulseaudio {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0px 10px;
+}
+
+#clock {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0px 10px;
+}
+
+#memory {
+  color: #FFFFFF;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 20px;
+  padding: 0px 10px;
+}
