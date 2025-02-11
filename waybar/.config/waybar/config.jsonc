@@ -1,5 +1,7 @@
 {
   "position": "top",
+  "margin-top": 4,
+  "reload_style_on_change": true,
   "modules-left": [
     "custom/os_button",
     "hyprland/workspaces",
