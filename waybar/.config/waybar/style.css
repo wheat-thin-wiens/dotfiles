@@ -6,8 +6,8 @@
 }
 
 window#waybar {
-  background: transparent;
   padding: 4px 4px;
+  background: transparent;
 }
 
 window#waybar.empty #window {
@@ -34,13 +34,13 @@ window#waybar.empty #window {
 
 #window {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: rgba(0, 0, 0, 0.1);
   border-radius: 20px;
   padding: 0px 10px;
 }
 
 #window.empty {
-  background-color: rgba(255, 255, 255, 1);
+  background-color: rgba(0, 0, 0, 1);
 }
 
 button {
@@ -48,38 +48,40 @@ button {
 }
 
 button:hover {
-  background-color: rgba(255, 255, 255, 0.4);
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 #workspaces {
-  /* background-color: rgba(255, 255, 255, 0.1); */
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
 }
 
 #workspaces button {
   color: #FFFFFF;
-  /* background-color: rgba(255, 255, 255, 0.3); */
   padding: 0px 4px;
-  margin-left: 1px;
-  margin-right: 1px;
-  /* margin-left: 2px; */
-  /* margin-right: 2px; */
+  /* margin-left: 1px; */
+  /* margin-right: 1px; */
 }
 
 #workspaces button.focused {
-  background-color: rgba(255, 255, 255, 0.3);
+  background-color: rgba(0, 0, 0, 0.3);
 }
 
 #workspaces button.active {
-  background-color: rgba(255, 255, 255, 0.3);
-  border-bottom: 2px solid #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.3);
+  /* color: #32BEFF; */
+  /* border-bottom: 2px solid #FFFFFF; */
 }
 
 #clock {
   color: #FFFFFF;
 }
 
-#workspaces,
+/* #workspaces, */
 #clock,
 #pulseaudio,
 #network,
@@ -95,28 +97,35 @@ button:hover {
 
 #network {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 0px 10px;
 }
 
 #pulseaudio {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 0px 10px;
 }
 
 #clock {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 0px 10px;
 }
 
 #memory {
   color: #FFFFFF;
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  padding: 0px 10px;
+}
+
+#cpu {
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
   padding: 0px 10px;
 }

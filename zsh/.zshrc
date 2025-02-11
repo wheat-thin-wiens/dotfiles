@@ -27,6 +27,7 @@ esac
 source ~/dev/python/launch_python.sh
 source ~/dev/c/cmake.sh
 source ~/dotfiles/theme-picker.sh
+source ~/dev/bash/nvimplug.sh
 
 # Language Support
 export NVM_DIR="$HOME/.nvm"
