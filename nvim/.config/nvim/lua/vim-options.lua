@@ -90,6 +90,8 @@ vim.keymap.set("n", "<C-n>", "<cmd> Neotree toggle <CR>", {})
 
 -- Colortils
 vim.keymap.set("n", "<leader>ct", "<cmd> Colortils <CR>")
+vim.keymap.set("n", "<leader>cd", "<cmd> Colortils darken <CR>")
+vim.keymap.set("n", "<leader>cl", "<cmd> Colortils lighten <CR>")
 
 -- Live Server
 vim.keymap.set("n", "<leader>ss", "<cmd> LiveServerStart <CR>", { desc = "[S]erver [S]tart" })
