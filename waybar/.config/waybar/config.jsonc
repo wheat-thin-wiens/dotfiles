@@ -1,6 +1,7 @@
 {
   "position": "top",
   "modules-left": [
+    "custom/os_button",
     "hyprland/workspaces",
     "hyprland/window"
   ],
@@ -38,5 +39,10 @@
     },
     "scroll-step": 5,
     "on-click": "pavucontrol"
+  },
+  "custom/os_button": {
+    "format": "󰣇",
+    "on-click": "",
+    "tooltip": "arch btw"
   }
 }
