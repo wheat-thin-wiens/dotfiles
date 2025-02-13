@@ -16,7 +16,7 @@ vim.opt.fillchars = { eob = "~" }
 vim.opt.wrap = false
 
 -- Appearance
-vim.cmd.colorscheme('oldworld')
+vim.cmd.colorscheme('rei')
 
 local LineNumAbove = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
 local LineNum = vim.api.nvim_get_hl(0, { name = "Function", link = true })

@@ -1,4 +1,9 @@
 return {
 	'rei.nvim',
-	dev = true
+	dev = true,
+  opts = {
+    styles = {
+      functions = { italic = true }
+    }
+  }
 }

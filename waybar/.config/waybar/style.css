@@ -67,7 +67,6 @@ button:hover {
 }
 
 /* #workspaces, */
-#custom-os_button,
 #clock,
 #pulseaudio,
 #network,
@@ -82,5 +81,18 @@ button:hover {
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  padding: 0px 10px;
+}
+
+#custom-os_button {
+  border-radius: 20px;
+  color: #FFFFFF;
+  background-color: rgba(0, 0, 0, 0.2);
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
   padding: 0px 10px;
 }
