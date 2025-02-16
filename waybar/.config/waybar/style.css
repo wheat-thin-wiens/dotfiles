@@ -19,18 +19,16 @@ window#waybar {
 
 #window {
   color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.1);
+  background-color: rgba(0, 0, 0, 0.2);
   border-radius: 20px;
+  margin-top: 2px;
+  margin-bottom: 2px;
   padding: 0px 10px;
 }
 
 window#waybar.empty #window {
   background-color: transparent;
 }
-
-/* #window.empty {
-  background-color: rgba(0, 0, 0, 1);
-} */
 
 #workspaces {
   margin-top: 2px;

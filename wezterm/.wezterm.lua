@@ -5,7 +5,7 @@ local config = wezterm.config_builder()
 local act = wezterm.action
 
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
-config.color_scheme = "oldworld"
+config.color_scheme = "rei"
 
 config.font = wezterm.font(
   -- "Fantasque Sans Mono",

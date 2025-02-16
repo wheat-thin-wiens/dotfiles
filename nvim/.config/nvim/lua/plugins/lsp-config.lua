@@ -10,7 +10,6 @@ return {
       require("mason-lspconfig").setup({
         ensure_installed = {
           "lua_ls",
-          "markdown_oxide",
           "pyright",
           "ts_ls",
           "clangd"

@@ -39,31 +39,6 @@ return {
       end
   },
   {
-    "oxfist/night-owl.nvim",
-    priority = 1000,
-    config = function ()
-      require("night-owl").setup()
-    end,
-  },
-  {
-    "rose-pine/neovim",
-    name = "rose-pine",
-    config = function ()
-      require("rose-pine").setup({
-        variant = "main" --(main, moon, dawn)
-      })
-    end,
-  },
-  {
-    "aktersnurra/no-clown-fiesta.nvim",
-    priority = 1000,
-    lazy = false,
-    opts = {
-      transparency = false,
-      styles = {}
-    }
-  },
-  {
     "steguiosaur/fullerene.nvim",
     lazy = false,
     priority = 1000

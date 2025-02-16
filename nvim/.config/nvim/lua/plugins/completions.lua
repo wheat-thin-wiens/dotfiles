@@ -23,7 +23,7 @@ return {
 			local cmp = require("cmp")
       -- local cmp_action = require('lsp-zero').cmp_action()
       local cmp_select = { behavior = cmp.SelectBehavior.Select }
-      -- local lspkind = require("lspkind")
+      local lspkind = require("lspkind")
 
 			require("luasnip.loaders.from_vscode").lazy_load()
 
@@ -44,6 +44,7 @@ return {
 				},
         formatting = {
           fields = { "kind", "abbr", "menu" },
+          expandable_indicator = true,
           format = function(entry, vim_item)
             local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
             local strings = vim.split(kind.kind, "%s", { trimempty = true })
