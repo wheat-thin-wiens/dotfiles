@@ -11,13 +11,13 @@
     "clock"
   ],
   "modules-right": [
-    "cpu",
-    "memory",
+    // "cpu",
+    // "memory",
     "pulseaudio",
     "network"
   ],
   "clock": {
-    "format": "<span foreground='#FFFFFF'>  </span>{:%a %d %I:%M}",
+    "format": "<span foreground='#FFFFFF'></span>{:%a %d %I:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "memory": {
