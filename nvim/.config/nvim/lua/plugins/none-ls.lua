@@ -19,7 +19,7 @@ return {
             return { "--python-executable", virtual .. "/bin/python3"}
           end,
         }),
-        null_ls.builtins.diagnostics.markdownlint,
+        -- null_ls.builtins.diagnostics.markdownlint,
         --null_ls.builtins.diagnostics.rubocop,
         --null_ls.builtins.diagnostics.swiftlint,
         null_ls.builtins.formatting.clang_format,

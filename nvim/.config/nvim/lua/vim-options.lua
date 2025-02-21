@@ -15,8 +15,16 @@ vim.opt.ruler = false
 vim.opt.fillchars = { eob = "~" }
 vim.opt.wrap = false
 
+-- vim.api.nvim_create_autocmd("FileType", {
+--   pattern = "swift",
+--   callback = function()
+--     vim.opt_local.shiftwidth = 2
+--     vim.opt_local.tabstop = 2
+--   end
+-- })
+
 -- Appearance
-vim.cmd.colorscheme('oldworld')
+vim.cmd.colorscheme("rei")
 
 local LineNumAbove = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
 local LineNum = vim.api.nvim_get_hl(0, { name = "Function", link = true })
@@ -27,8 +35,6 @@ vim.api.nvim_set_hl(0, "LineNrAbove", { fg = LineNumAbove.fg })
 vim.api.nvim_set_hl(0, "LineNr", { fg = LineNum.fg })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = LineNumBelow.fg })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = eobCol.fg })
-
--- EoB Character Color
 
 -- NVIM Window Navigation
 -- vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
@@ -66,19 +72,32 @@ vim.keymap.set("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>")
 -- Telescope
 local builtin = require("telescope.builtin")
 -- vim.keymap.set('n', '<C-p>', ':Telescope find_files <CR>')
+--
 vim.keymap.set("n", "<C-p>", function()
 	builtin.find_files({ cwd = vim.fn.getcwd(), prompt_title = vim.fn.getcwd() })
 end, {})
+
 vim.keymap.set("n", "<leader>gs", "<cmd> Telescope git_status <CR>", { desc = "[G]it [S]tatus" })
 vim.keymap.set("n", "<leader>lg", "<cmd> Telescope live_grep <CR>", { desc = "[L]ive [G]rep" })
 vim.keymap.set("n", "<leader>tu", "<cmd> Telescope undo <CR>", { desc = "[T]elescope [U]ndo" })
 vim.keymap.set("n", "<leader>tb", "<cmd> Telescope buffers <CR>", { desc = "[T]elescope [B]uffers" })
+
 vim.keymap.set("n", "<leader>td", function()
 	builtin.find_files({ cwd = "~/dotfiles", prompt_title = "// dotfiles //" })
 end, { desc = "[T]elescope [D]otfiles" })
+
 vim.keymap.set("n", "<leader>tn", function()
 	builtin.find_files({ cwd = "~/dotfiles/nvim/.config/nvim", prompt_title = "// neovim //" })
 end, { desc = "[T]elescope [N]eovim" })
+
+vim.keymap.set("n", "<leader>/", function()
+  builtin.current_buffer_fuzzy_find(require("telescope.themes").get_dropdown {
+    winblend = 10,
+    previewer = false
+  })
+end, {})
+
+vim.keymap.set("n", "<leader>th", "<cmd> Telescope highlights <CR>", { desc = "[T]elescope [H]ighlights" })
 
 -- Neotree
 vim.keymap.set("n", "<C-n>", "<cmd> Neotree toggle <CR>", {})
@@ -90,6 +109,9 @@ vim.keymap.set("n", "<C-n>", "<cmd> Neotree toggle <CR>", {})
 
 -- Colortils
 vim.keymap.set("n", "<leader>ct", "<cmd> Colortils <CR>")
+vim.keymap.set("n", "<leader>cl", "<cmd> Colortils lighten <CR>")
+vim.keymap.set("n", "<leader>cd", "<cmd> Colortils darken <CR>")
+vim.keymap.set("n", "<leader>cg", "<cmd> Colortils greyscale <CR>")
 
 -- Live Server
 vim.keymap.set("n", "<leader>ss", "<cmd> LiveServerStart <CR>", { desc = "[S]erver [S]tart" })

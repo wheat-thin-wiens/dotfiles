@@ -48,20 +48,13 @@ return {
   {
     "rose-pine/neovim",
     name = "rose-pine",
-    config = function ()
-      require("rose-pine").setup({
-        variant = "main" --(main, moon, dawn)
-      })
-    end,
+    opts = {
+      variant = "main"  -- main, moon, dawn
+    }
   },
   {
-    "aktersnurra/no-clown-fiesta.nvim",
-    priority = 1000,
-    lazy = false,
-    opts = {
-      transparency = false,
-      styles = {}
-    }
+    "rjshkhr/shadow.nvim",
+    priority = 1000
   },
   {
     "steguiosaur/fullerene.nvim",

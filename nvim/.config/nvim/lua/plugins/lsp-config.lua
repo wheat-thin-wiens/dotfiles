@@ -28,6 +28,11 @@ return {
     lazy = false,
     opts = {
       inlay_hints = { enabled = true },
+      servers = {
+        sourcekit = {
+          cmd = { "/Users/ethanwiens/.local/bin/lsp" }
+        }
+      }
     },
 		config = function()
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
@@ -54,6 +59,18 @@ return {
 			lspconfig.pyright.setup({
 				capabilities = capabilities
 			})
+      lspconfig.sourcekit.setup({
+        -- capabilities = capabilities,
+        capabilities = {
+          workspace = {
+            didChangeWatchedFiles = {
+              dynamicRegistration = true,
+            }
+          }
+        },
+        -- cmd = { "/Users/ethanwiens/.local/bin/lsp/sourcekit-lsp" }
+        cmd = { "/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/sourcekit-lsp" },
+      })
 --      lspconfig.sourcekit.setup({
 --        capabilities = {
 --          workspace = {
