@@ -1,6 +1,9 @@
 {
   "position": "top",
-  "margin-top": 4,
+  "margin-top": 5,
+  // "margin-bottom": 5,
+  "margin-left": 5,
+  "margin-right": 5,
   "reload_style_on_change": true,
   "modules-left": [
     // "custom/os_button",
@@ -15,9 +18,10 @@
     // "memory",
     "pulseaudio",
     "network"
+    // "clock"
   ],
   "clock": {
-    "format": "<span foreground='#FFFFFF'></span>{:%a %d %I:%M}",
+    "format": "<span></span>{:%a %d %I:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "memory": {
@@ -27,14 +31,14 @@
     "format": "cpu/{}%"
   },
   "network": {
-    "format-wifi": "<span size='13000' foreground='#f5e0dc'>  </span>{essid}",
-    "format-ethernet": "<span size='13000' foreground='#f5e0dc'>󰤭  </span> Disconnected",
+    "format-wifi": "<span size='13000'>  </span>{essid}",
+    "format-ethernet": "<span size='13000'>󰤭  </span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000' foreground='#f5e0dc'>  </span>Disconnected",
+    "format-disconnected": "<span size='13000'>  </span>Disconnected",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
   },
   "pulseaudio": {
-    "format": "{icon}  {volume}%",
+    "format": "{icon} {volume}%",
     "format-muted": "",
     "format-icons": {
       "default": ["", ""]

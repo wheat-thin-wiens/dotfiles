@@ -24,7 +24,7 @@ case ":$PATH:" in
 esac
 
 # Additional Functions
-# source ~/dev/python/launch_python.sh
+source ~/dev/bash/pystart.sh
 # source ~/dev/c/cmake.sh
 # source ~/dotfiles/theme-picker.sh
 # source ~/dev/bash/nvimplug.sh
@@ -53,3 +53,11 @@ fi
 
 #tmux
 neofetch
+
+# pnpm
+export PNPM_HOME="/home/ewiens/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+# pnpm end

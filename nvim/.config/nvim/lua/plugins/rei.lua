@@ -7,6 +7,9 @@ return {
       loops = { italic = true },
       comments = { italic = true },
     },
+    integrations = {
+      telescope = "borderless",
+    },
     highlight_overrides = {
       -- Normal = { bg = "none" },
       -- NormalFloat = { bg = "none" }

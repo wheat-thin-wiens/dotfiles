@@ -6,7 +6,8 @@
 }
 
 window#waybar {
-  background: transparent;
+  background-color: rgba(14, 23, 35, 0.9);
+  border-radius: 10px;
 }
 
 .modules-left,
@@ -15,12 +16,13 @@ window#waybar {
   padding-left: 4px;
   padding-right: 4px;
   padding-top: 4px;
+  padding-bottom: 4px;
 }
 
 #window {
-  color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  color: #DAD0E9;
+  /* background-color: #0C131D; */
+  border-radius: 10px;
   margin-top: 2px;
   margin-bottom: 2px;
   padding: 0px 10px;
@@ -40,7 +42,7 @@ window#waybar.empty #window {
 }
 
 button {
-  border-radius: 20px;
+  border-radius: 10px;
 }
 
 button:hover {
@@ -48,10 +50,8 @@ button:hover {
 }
 
 #workspaces button {
-  color: #FFFFFF;
+  color: #DAD0E9;
   padding: 0px 4px;
-  /* margin-left: 1px; */
-  /* margin-right: 1px; */
 }
 
 #workspaces button.focused {
@@ -59,9 +59,9 @@ button:hover {
 }
 
 #workspaces button.active {
-  background-color: rgba(0, 0, 0, 0.3);
-  /* color: #32BEFF; */
-  /* border-bottom: 2px solid #FFFFFF; */
+  background-color: #48445A;
+  color: #B9AEE6;
+  /* border-bottom: 2px solid #B9AEE6; */
 }
 
 /* #workspaces, */
@@ -76,15 +76,28 @@ button:hover {
   margin-right: 4px;
   padding-left: 4px;
   padding-right: 4px;
-  color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.2);
-  border-radius: 20px;
+  border-radius: 10px;
   padding: 0px 10px;
+}
+
+#clock {
+  color: #91B8E9;
+  background-color: #3C4D60;
+}
+
+#network {
+  color: #A87692;
+  background-color: #2D2027;
+}
+
+#pulseaudio {
+  color: #9DBCD0;
+  background-color: #364344;
 }
 
 #custom-os_button {
   border-radius: 20px;
-  color: #FFFFFF;
+  color: #DAD0E9;
   background-color: rgba(0, 0, 0, 0.2);
   margin-top: 2px;
   margin-bottom: 2px;
