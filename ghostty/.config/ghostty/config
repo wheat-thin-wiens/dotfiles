@@ -1,4 +1,5 @@
 theme = rei.ghostty
+# custom-shader = ghostty-shaders/in-game-crt.glsl
 background-opacity = 1
 window-padding-x = 10
 window-padding-y = 10
