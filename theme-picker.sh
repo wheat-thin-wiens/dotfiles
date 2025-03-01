@@ -7,7 +7,6 @@ function colorpick {
   else
     rm -f ~/dotfiles/starship/.config/starship.toml
     cp ~/dotfiles/starship/.config/starship_themes/starship_$1.toml ~/dotfiles/starship/.config/starship.toml
-    stow starship
     echo "Starship theme updated."
 
     nvim ~/.config/nvim/lua/vim-options.lua

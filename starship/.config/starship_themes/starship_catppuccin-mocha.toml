@@ -8,15 +8,6 @@ $directory\
 $git_branch\
 $git_status\
 [](fg:color_aqua bg:color_blue)\
-$c\
-$rust\
-$golang\
-$nodejs\
-$php\
-$java\
-$kotlin\
-$haskell\
-$python\
 [](fg:color_blue bg:color_bg3)\
 $docker_context\
 $conda\
@@ -154,7 +145,8 @@ format = '[[ $symbol( $environment) ](fg:#83a598 bg:color_bg3)]($style)'
 disabled = false
 time_format = "%R"
 style = "bg:color_bg1"
-format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
+format = '[[ $time ](fg:color_fg0 bg:color_bg1)]($style)'
+# format = '[[  $time ](fg:color_fg0 bg:color_bg1)]($style)'
 
 [line_break]
 disabled = false
