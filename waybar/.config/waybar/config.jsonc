@@ -6,7 +6,7 @@
   "margin-right": 5,
   "reload_style_on_change": true,
   "modules-left": [
-    // "custom/os_button",
+    "custom/os_button",
     "hyprland/workspaces",
     "hyprland/window"
   ],
@@ -17,8 +17,9 @@
     // "cpu",
     // "memory",
     "pulseaudio",
-    "network"
-    // "clock"
+    "network",
+    "custom/wlsunset",
+    "custom/power_button"
   ],
   "clock": {
     "format": "<span></span>{:%a %d %I:%M}",
@@ -32,7 +33,7 @@
   },
   "network": {
     "format-wifi": "<span size='13000'>  </span>{essid}",
-    "format-ethernet": "<span size='13000'>󰤭  </span> Disconnected",
+    "format-ethernet": "<span size='13000'>󰈁</span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='13000'>  </span>Disconnected",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
@@ -46,9 +47,20 @@
     "scroll-step": 5,
     "on-click": "pavucontrol"
   },
+  "custom/power_button": {
+    "format": "⏻",
+    "on-click": "shutdown now",
+    "tooltip-format": "Shutdown"
+  },
   "custom/os_button": {
-    "format": "",
+    // "format": "",
+    "format": "󰣇",
     "on-click": "",
-    "tooltip": "arch btw"
+    "tooltip-format": "arch btw"
+  },
+  "custom/wlsunset": {
+    "format": "󱍖",
+    "on-click": "bash ~/.config/waybar/scripts/wlsunset.sh",
+    "tooltip-format": "Toggle wlsunset"
   }
 }

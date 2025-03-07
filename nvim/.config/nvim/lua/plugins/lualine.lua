@@ -14,12 +14,6 @@ M.config = function()
     end,
   }
 
-  local git_icon = {
-    function()
-      return ""
-    end
-  }
-
   local branch_name = function()
     local name = vim.fn.system("git branch --show-current 2> /dev/null | tr -d '\n'")
     local symbol = ""
@@ -81,15 +75,18 @@ M.config = function()
     end
   }
 
+  local blank_sep = { left = " ", right = " " }
+  local line_sep = { left = "|", right = "|" }
+  local rounded_sep = { left = "", right = "" }
+  local angled_sep = { left = "", right = "" }
+
   require("lualine").setup {
     options = {
       icons_enabled = true,
       theme = 'auto',
       disabled_filetypes = {"neo-tree"},
-      section_separators = { left = "", right = "" },
-      -- section_separators = { left = "", right = "" },
-      component_separators = { left = "", right = "" },
-      -- component_separators = { left = "|", right = "|" },
+      section_separators = blank_sep,
+      component_separators = line_sep,
     },
     sections = {
       lualine_a = { vim_icons, 'filename', },
