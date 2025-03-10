@@ -18,6 +18,7 @@
     // "memory",
     "pulseaudio",
     "network",
+    "bluetooth",
     "custom/wlsunset",
     "custom/power_button"
   ],
@@ -36,7 +37,8 @@
     "format-ethernet": "<span size='13000'>󰈁</span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='13000'>  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%"
+    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "on-click": "nmcli device wifi list"
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -46,6 +48,14 @@
     },
     "scroll-step": 5,
     "on-click": "pavucontrol"
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "default": "",
+      "active": ""
+    },
+    "sort-by-number": true
   },
   "custom/power_button": {
     "format": "⏻",
@@ -62,5 +72,13 @@
     "format": "󱍖",
     "on-click": "bash ~/.config/waybar/scripts/wlsunset.sh",
     "tooltip-format": "Toggle wlsunset"
+  },
+  "bluetooth": {
+    "format": "󰂯",
+    "format-on": "󰂯",
+    "format-off": "",
+    "format-connected-battery": "󰥈 {device_alias} {device_battery_percentage}%",
+    "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
+    "on-click": "blueman-manager"
   }
 }

@@ -1,0 +1,3 @@
+/dev/sdb
+|-/dev/sdb1 - btrfs - 11e0cc11-6a54-40c7-9423-4572cabd9e49
+

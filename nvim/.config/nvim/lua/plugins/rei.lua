@@ -10,9 +10,6 @@ return {
     integrations = {
       telescope = "borderless",
     },
-    highlight_overrides = {
-      -- Normal = { bg = "none" },
-      -- NormalFloat = { bg = "none" }
-    }
+    transparency = false
   }
 }

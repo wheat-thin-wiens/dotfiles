@@ -1,3 +1,8 @@
+# Config
+export SYSTEMD_EDITOR='nvim'
+export EDITOR='nvim'
+export VISUAL='nvim'
+
 # History Config
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
