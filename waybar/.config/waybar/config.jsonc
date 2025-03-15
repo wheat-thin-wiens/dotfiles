@@ -15,16 +15,10 @@
     "clock"
   ],
   "modules-right": [
-    // "cpu",
-    // "memory",
-    // "cava",
-    // "pulseaudio",
-    "group/sound",
+    "cava",
+    "pulseaudio",
     "network",
-    // "bluetooth",
-    // "custom/wlsunset",
     "group/settings"
-    // "custom/power_button"
   ],
   "clock": {
     "format": "<span></span>{:%a %d %I:%M}",
@@ -95,7 +89,7 @@
   },
   "custom/restart": {
     "format": "  ",
-    "on-click": "Restart",
+    "on-click": "shutdown -r now",
     "tooltip-format": "Restart"
   },
   "custom/lock": {
@@ -125,9 +119,6 @@
     },
     "modules": ["pulseaudio", "cava"]
   },
-  // "custom/sound-wrap": {
-  //   "format": 
-  // },
   "group/networking": {
     "orientation": "horizontal",
     "modules": []
@@ -147,5 +138,10 @@
       "transition-left-to-right": false
     },
     "modules": ["custom/settings", "bluetooth", "custom/wlsunset"]
+  },
+  "group/hardware": {
+    "orientation": "horizontal",
+    "drawer": {},
+    "modules": []
   }
 }
