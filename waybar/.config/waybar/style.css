@@ -5,6 +5,11 @@
   /* background: transparent; */
 }
 
+tooltip {
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
+}
+
 window#waybar {
   background: transparent;
 }
@@ -71,10 +76,10 @@ button:hover {
 /* #workspaces, */
 #clock,
 #pulseaudio,
+#cava,
 #network,
 #cpu,
 #memory,
-#custom-power_button,
 #bluetooth,
 #custom-wlsunset {
   margin-top: 2px;
@@ -89,7 +94,11 @@ button:hover {
   padding: 0px 10px;
 }
 
-#custom-os_button {
+#custom-os_button,
+#custom-power_button,
+#custom-restart,
+#custom-settings,
+#custom-lock {
   border-radius: 20px;
   color: #FFFFFF;
   background-color: rgba(0, 0, 0, 0.2);
@@ -101,4 +110,3 @@ button:hover {
   padding-right: 4px;
   padding: 0px 10px;
 }
-
