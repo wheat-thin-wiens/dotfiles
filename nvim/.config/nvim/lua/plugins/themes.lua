@@ -46,19 +46,25 @@ return {
     end,
   },
   {
-    "rose-pine/neovim",
-    name = "rose-pine",
+    "rei.nvim",
+    dev = true,
     opts = {
-      variant = "main"  -- main, moon, dawn
+      styles ={
+        functions = { italic = true, bold = true },
+        comments = { italic = true },
+        loops = { italic = true }
+      },
+      integrations = {
+        telescope = "borderless",
+      },
+      transparency = true,
+      highlight_overrides = {}
     }
   },
   {
-    "rjshkhr/shadow.nvim",
-    priority = 1000
-  },
-  {
-    "steguiosaur/fullerene.nvim",
+    "folke/tokyonight.nvim",
     lazy = false,
-    priority = 1000
-  },
+    priority = 1000,
+    opts = {}
+  }
 }

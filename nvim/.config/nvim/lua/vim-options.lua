@@ -109,6 +109,5 @@ vim.keymap.set("n", "<leader>cg", "<cmd> Colortils greyscale <CR>")
 vim.keymap.set("n", "<leader>ss", "<cmd> LiveServerStart <CR>", { desc = "[S]erver [S]tart" })
 vim.keymap.set("n", "<leader>sq", "<cmd> LiveServerStop <CR>", { desc = "[S]erver [Q]uit" })
 
--- dewey
-vim.keymap.set("n", "<leader>da", "<cmd> DeweyAppend <CR>", { desc = "[D]ewey [A]ppend" })
-vim.keymap.set("n", "<leader>ds", "<cmd> DeweyStats <CR>", { desc = "[D]ewey [S]tats" })
+-- Stat Bastard
+vim.keymap.set("n", "<leader>sbf", "<cmd> StatBastardFile <CR>", {})
