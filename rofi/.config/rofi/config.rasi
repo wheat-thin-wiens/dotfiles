@@ -3,7 +3,7 @@ configuration{
     font: "JetBrainsMono Nerd Font Medium 10";
     icon-theme: "Papirus";
     show-icons: true;
-    terminal: "ghostty";
+    terminal: "wezterm";
     drun-display-format: "{icon} {name}";
     location: 0;
     disable-history: false;
