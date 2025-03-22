@@ -17,26 +17,37 @@
   "modules-right": [
     "cava",
     "pulseaudio",
+    "brightness",
     "network",
+    "battery",
     "group/settings"
   ],
   "clock": {
     "format": "<span></span>{:%a %d %I:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
-  "memory": {
-    "format": "mem/{}%"
-  },
-  "cpu": {
-    "format": "cpu/{}%"
-  },
   "network": {
-    "format-wifi": "<span size='13000'>  </span>{essid}",
+    "format-wifi": "<span size='13000'>{icon} </span>{essid}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format-ethernet": "<span size='13000'>󰈁</span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000'>  </span>Disconnected",
+    "format-disconnected": "<span size='13000'>󰤭  </span>Disconnected",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
     "on-click": "nmcli device wifi list"
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"]
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",

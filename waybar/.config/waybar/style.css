@@ -74,12 +74,12 @@ button:hover {
 }
 
 /* #workspaces, */
+#backlight,
+#battery,
 #clock,
 #pulseaudio,
 #cava,
 #network,
-#cpu,
-#memory,
 #bluetooth,
 #custom-wlsunset {
   margin-top: 2px;

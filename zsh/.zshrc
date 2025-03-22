@@ -42,6 +42,7 @@ export NVM_DIR="$HOME/.nvm"
 # Alias
 alias vim='nvim'
 alias ls='eza'
+alias grupdate="sudo grub-mkconfig -o /boot/grub.grub.cfg"
 
 alias avocado="~/dev/java/java.sh"
 alias gogogo="~/dev/dotnet/C#.sh"
