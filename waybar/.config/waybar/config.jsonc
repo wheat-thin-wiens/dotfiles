@@ -18,16 +18,17 @@
     "cava",
     "pulseaudio",
     "backlight",
+    "bluetooth",
     "network",
-    "battery",
-    "group/settings"
+    "battery"
+    // "group/settings"
   ],
   "clock": {
     "format": "<span></span>{:%a %d %I:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "network": {
-    "format-wifi": "<span size='13000'>{icon} </span>{essid}",
+    "format-wifi": "<span size='13000'>{icon}  </span>{essid}",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format-ethernet": "<span size='13000'>󰈁</span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
@@ -67,9 +68,9 @@
     "sort-by-number": true
   },
   "bluetooth": {
-    "format": "󰂯",
-    "format-on": "󰂯",
-    "format-off": "",
+    "format-on": "󰂯 {status}",
+    "format-off": "󰂲 {status}",
+    "format-disabled": "󰂲 {status}",
     "format-connected-battery": "󰥈 {device_alias} {device_battery_percentage}%",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "on-click": "blueman-manager"
@@ -119,6 +120,11 @@
     "on-click": "bash ~/.config/waybar/scripts/wlsunset.sh",
     "tooltip-format": "Toggle wlsunset"
   },
+  "custom/caffeine": {
+    "format": "",
+    "on-click": "bash caffeine &",
+    "tooltip-format": "Toggle caffeine"
+  },
   "custom/settings": {
     "format": "  "
   },
@@ -148,7 +154,7 @@
       "transition-duration": 250,
       "transition-left-to-right": false
     },
-    "modules": ["custom/settings", "bluetooth", "custom/wlsunset"]
+    "modules": ["custom/settings", "bluetooth", "custom/wlsunset", "custom/caffeine"]
   },
   "group/hardware": {
     "orientation": "horizontal",

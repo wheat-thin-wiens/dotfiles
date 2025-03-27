@@ -1,0 +1,12 @@
+#!/usr/bin/zsh
+
+CHOSEN=$(printf "Lock\nSuspend\nReboot\nShutdown\nLog Out" | rofi --config "$HOME"/.config/rofi/powermenu-config)
+
+case "$CHOSEN" in
+	"Lock") lockscreen ;;
+	"Suspend") systemctl suspend-then-hibernate ;;
+	"Reboot") reboot ;;
+	"Shutdown") poweroff ;;
+	"Log Out") hyprctl dispatch exit ;;
+	*) exit 1 ;;
+esac

@@ -28,15 +28,8 @@ vim.api.nvim_set_hl(0, "LineNr", { fg = LineNum.fg })
 vim.api.nvim_set_hl(0, "LineNrBelow", { fg = LineNumBelow.fg })
 vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = eobCol.fg })
 
--- EoB Character Color
-
--- NVIM Window Navigation
--- vim.keymap.set('n', '<c-k>', ':wincmd k<CR>')
--- vim.keymap.set('n', '<c-j>', ':wincmd j<CR>')
--- vim.keymap.set('n', '<c-h>', ':wincmd h<CR>')
--- vim.keymap.set('n', '<c-l>', ':wincmd l<CR>')
-
-vim.keymap.set("n", "<leader>lurn", ":Lazy update rudder.nvim <CR>", {})
+-- LSP Options
+vim.diagnostic.config({ virtual_text = true })
 
 -- Common Keymaps
 local opts = { noremap = true, silent = true }
