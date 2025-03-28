@@ -14,6 +14,7 @@ vim.opt.numberwidth = 3
 vim.opt.ruler = false
 vim.opt.fillchars = { eob = "~" }
 vim.opt.wrap = false
+vim.opt.showmode = false
 
 -- Appearance
 vim.cmd.colorscheme('rei')

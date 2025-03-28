@@ -95,7 +95,7 @@
     "actions": {}
   },
   "custom/power_button": {
-    "format": " ⏻ ",
+    "format": " 󰐥 ",
     "on-click": "shutdown now",
     "tooltip-format": "Shutdown"
   },
@@ -106,8 +106,13 @@
   },
   "custom/lock": {
     "format": "  ",
-    "on-click": "hyprctl dispatch exit",
+    "on-click": "hyprlock",
     "tooltip-format": "Lock screen"
+  },
+  "custom/logout": {
+    "format": " 󰍃 ",
+    "on-click": "hyprctl dispatch exit",
+    "tooltip-format": "Log out"
   },
   "custom/os_button": {
     // "format": "",
@@ -146,7 +151,7 @@
       "transition-duration": 250,
       "transition-left-to-right": true
     },
-    "modules": ["custom/os_button", "custom/power_button", "custom/restart", "custom/lock"]
+    "modules": ["custom/os_button", "custom/power_button", "custom/restart", "custom/lock", "custom/logout"]
   },
   "group/settings": {
     "orientation": "horizontal",

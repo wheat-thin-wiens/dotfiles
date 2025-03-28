@@ -102,6 +102,7 @@ button {
 #custom-power_button,
 #custom-restart,
 #custom-settings,
+#custom-logout,
 #custom-lock {
   border-radius: 20px;
   color: #FFFFFF;
