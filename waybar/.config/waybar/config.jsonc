@@ -25,10 +25,11 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "memory": {
-    "format": "mem/{}%"
+    "format": "mem / {}%",
+    "on-click": "btop"
   },
   "cpu": {
-    "format": "cpu/{}%"
+    "format": "cpu / {}%"
   },
   "network": {
     "format-wifi": "<span size='13000'>  </span>{essid}",
@@ -74,7 +75,7 @@
     "method": "pulse",
     "source": "auto",
     "stereo": true,
-    "reverse": false,
+    "reverse": true,
     "bar_delimiter": 0,
     "monstercat": false,
     "noise_reduction": 0.77,
@@ -111,6 +112,9 @@
   "custom/settings": {
     "format": "  "
   },
+  "custom/hw_icon": {
+    "format": "  "
+  },
   "group/sound": {
     "orientation": "horizontal",
     "drawer": {
@@ -141,7 +145,10 @@
   },
   "group/hardware": {
     "orientation": "horizontal",
-    "drawer": {},
-    "modules": []
+    "drawer": {
+      "transition-duration": 250,
+      "transition-left-to-right": false
+    },
+    "modules": ["custom/hw_icon", "memory", "cpu"]
   }
 }

@@ -10,6 +10,6 @@ return {
     integrations = {
       telescope = "borderless",
     },
-    transparency = false
+    transparency = true
   }
 }

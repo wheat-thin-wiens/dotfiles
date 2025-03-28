@@ -1,6 +1,6 @@
 theme = rei.ghostty
 # custom-shader = ghostty-shaders/in-game-crt.glsl
-background-opacity = 1
+background-opacity = 0.8
 window-padding-x = 10
 window-padding-y = 10
 window-inherit-working-directory = true
@@ -8,7 +8,7 @@ title = "ghostty"
 
 font-family = Jetbrains Mono
 font-style = bold
-font-size = 11
+font-size = 10
 
 clipboard-read = allow
 clipboard-write = allow

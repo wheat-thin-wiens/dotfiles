@@ -14,15 +14,16 @@ config.font = wezterm.font(
   -- "SauceCodePro Nerd Font",
   { weight = "Bold", italic = false }
 )
-config.font_size = 11
+config.font_size = 10.5
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 
-config.window_background_opacity = 1
+config.window_background_opacity = 0.8
 config.macos_window_background_blur = 30
 
 config.enable_wayland = false
 config.warn_about_missing_glyphs = false
+config.window_close_confirmation = "NeverPrompt"
 
 config.keys = {
   {
