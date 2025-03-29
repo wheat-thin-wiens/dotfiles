@@ -1,4 +1,19 @@
 return {
+  {
+    "rei.nvim",
+    dev = true,
+    opts = {
+      styles = {
+        functions = { italic = true, bold = true },
+        loops = { italic = true },
+        comments = { italic = true },
+      },
+      integrations = {
+        telescope = "borderless"
+      },
+      transparency = true
+    }
+  },
 	{
 		"EdenEast/nightfox.nvim",
 	},
@@ -37,11 +52,6 @@ return {
           }
         })
       end
-  },
-  {
-    "steguiosaur/fullerene.nvim",
-    lazy = false,
-    priority = 1000
   },
   {
     "folke/tokyonight.nvim",
