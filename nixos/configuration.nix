@@ -92,7 +92,7 @@
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ewiens = {
     isNormalUser = true;
-    description = "ethan";
+    description = "ewiens";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       amberol
