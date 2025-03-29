@@ -15,11 +15,8 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # Plugins
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 eval "$(starship init zsh)"
-eval $(thefuck --alias)
+# eval $(thefuck --alias)
 
 # PNPM
 export PNPM_HOME="/home/ewiens/.local/share/pnpm"

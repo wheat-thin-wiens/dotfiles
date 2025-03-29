@@ -77,17 +77,10 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  # services.xserver.libinput.enable = true;
 
   environment.variables.EDITOR = "nvim";
-
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-  };
-  environment.shells = with pkgs; [ zsh ];
-  users.defaultUserShell = pkgs.zsh;
+  users.users.box.shell = pkgs.zsh;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.box = {
@@ -96,7 +89,6 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       gh
-      ghostty
       git
       jetbrains-mono
       neofetch
@@ -104,6 +96,7 @@
       starship
       stow
       yazi
+      zsh
     ];
   };
 
