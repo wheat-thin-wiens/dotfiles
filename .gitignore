@@ -1,5 +1,5 @@
 .zhistory
-/zsh/.zhistory
+zsh/.zhistory
 /tmux/.tmux/plugins/vim-tmux-navigator/
 
 hardware-configuration.nix
