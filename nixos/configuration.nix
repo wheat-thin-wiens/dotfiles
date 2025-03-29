@@ -77,7 +77,7 @@
   };
 
   # Enable touchpad support (enabled default in most desktopManager).
-  services.xserver.libinput.enable = true;
+  services.libinput.enable = true;
 
   environment.variables.EDITOR = "nvim";
 
@@ -95,14 +95,26 @@
     description = "box";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      amberol
+      btop
+      cava
+      eza
       gh
       ghostty
       git
       jetbrains-mono
+      lua
+      luarocks-nix
+      nemo
       neofetch
       neovim
+      obsidian
+      polybar
+      python312Full
       starship
       stow
+      waybar
+      wezterm
       yazi
     ];
   };
