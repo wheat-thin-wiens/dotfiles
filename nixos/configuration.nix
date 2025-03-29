@@ -90,9 +90,9 @@
   users.defaultUserShell = pkgs.zsh;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
-  users.users.box = {
+  users.users.ewiens = {
     isNormalUser = true;
-    description = "box";
+    description = "ethan";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       amberol
