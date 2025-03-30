@@ -39,7 +39,7 @@ vim.keymap.set("i", "<Esc>", "<Esc>", opts)
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "<C-s>", "<cmd> w <CR>")
+vim.keymap.set("n", "<C-s>", "<cmd> w! <CR>")
 vim.keymap.set("n", "<leader>y", "\"+y", {})
 vim.keymap.set("v", "<leader>y", "\"+y", {})
 vim.keymap.set("n", "<leader>n", "<cmd> noh <CR>")

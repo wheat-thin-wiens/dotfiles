@@ -12,7 +12,9 @@ return {
           "lua_ls",
           "pyright",
           "ts_ls",
-          "clangd"
+          "clangd",
+          "jsonls",
+          "cssls"
         }
       })
     end,
