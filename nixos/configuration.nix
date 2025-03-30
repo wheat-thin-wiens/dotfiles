@@ -101,6 +101,7 @@
       btop
       cava
       eza
+      gh
       ghostty
       hyprland
       hyprpaper
@@ -133,7 +134,6 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
    gcc
-   gh
    git
    unzip
    vim
