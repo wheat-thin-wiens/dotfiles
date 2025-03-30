@@ -52,28 +52,28 @@ M.config = function()
     colored = true,
   }
 
-  local function getLspName()
-    local msg = "No active LSP"
-    local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-    local clients = vim.lsp.get_active_clients()
+  -- local function getLspName()
+  --   local msg = "No active LSP"
+  --   local buf_ft = vim.api.nvim_get_option_value(0, 'filetype')
+  --   local clients = vim.lsp.get_clients()
+  --
+  --   if next(clients) == nil then
+  --     return msg
+  --   end
+  --   for _, client in ipairs(clients) do
+  --     local filetypes = client.config.filetypes
+  --     if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+  --       return client.name  --""
+  --     end
+  --   end
+  --   return msg
+  -- end
 
-    if next(clients) == nil then
-      return msg
-    end
-    for _, client in ipairs(clients) do
-      local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return client.name  --""
-      end
-    end
-    return msg
-  end
-
-  local lsp = {
-    function()
-      return getLspName()
-    end
-  }
+  -- local lsp = {
+  --   function()
+  --     return getLspName()
+  --   end
+  -- }
 
   local blank_sep = { left = " ", right = " " }
   local line_sep = { left = "|", right = "|" }
@@ -84,7 +84,7 @@ M.config = function()
     options = {
       icons_enabled = true,
       theme = 'auto',
-      disabled_filetypes = {"neo-tree"},
+      disabled_filetypes = { "neo-tree" },
       section_separators = blank_sep,
       component_separators = line_sep,
     },
@@ -94,7 +94,7 @@ M.config = function()
       lualine_c = { branch, 'diff' },
       lualine_x = { 'diagnostics', filetype, },
       lualine_y = {},
-      lualine_z = { lsp, 'location', },
+      lualine_z = { 'location', },
     },
     inactive_sections = {
       lualine_a = { window },

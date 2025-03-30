@@ -7,6 +7,7 @@ return {
   lazy = true,
   ft = "markdown",
   opts = {
+    ui = { enable = false },
     workspaces = {
       {
         name = "notes",
