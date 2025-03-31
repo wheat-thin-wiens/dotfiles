@@ -15,6 +15,31 @@
   boot.loader.grub.device = "/dev/vda";
   boot.loader.grub.useOSProber = true;
 
+  # Plymouth
+  boot = {
+    plymouth = {
+      enable = true;
+      theme = "cuts";
+      themePackages = with pkgs; [
+        (adi1090x-plymouth-themes.override {
+          selected_themes = [ "cuts" ];
+        })
+      ];
+    };
+
+    consoleLogLevel = 3;
+    initrd.verbose = false;
+    kernelParams = [
+      "quiet"
+      "splash"
+      "boot.shell_on_fail"
+      "udev.log_priority=3"
+      "rd.systemd.show_status=auto"
+    ];
+
+    loader.timeout = 0;
+  };
+
   networking.hostName = "nixos"; # Define your hostname.
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
@@ -45,23 +70,36 @@
 
   # Enable the X11 windowing system.
   # You can disable this if you're only using the Wayland session.
-  services.xserver.enable = true;
+  services.xserver = {
+    enable = true;
+
+    xkb = {
+      layout = "us";
+      variant = "";
+    };
+
+    windowManager.i3 = {
+      enable = true;
+      extraPackages = with pkgs; [];
+    };
+
+  };
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "us";
-    variant = "";
-  };
+  # services.xserver.xkb = {
+  #   layout = "us";
+  #   variant = "";
+  # };
 
   # Enable CUPS to print documents.
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
+  services.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -99,13 +137,17 @@
     packages = with pkgs; [
       amberol
       btop
+      cargo
       cava
       eza
+      feh
       gh
       ghostty
+      home-manager
       hyprland
       hyprpaper
       hyprshot
+      i3
       jetbrains-mono
       lua
       luarocks-nix
@@ -114,11 +156,15 @@
       neovim
       nodejs_23
       obsidian
+      picom
       polybar
       python312Full
+      rofi
+      rustc
       starship
       stow
       waybar
+      wayland
       wezterm
       yazi
     ];
