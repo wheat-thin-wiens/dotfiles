@@ -14,7 +14,8 @@ return {
           "ts_ls",
           "clangd",
           "jsonls",
-          "cssls"
+          "cssls",
+          "nil_ls"
         }
       })
     end,
