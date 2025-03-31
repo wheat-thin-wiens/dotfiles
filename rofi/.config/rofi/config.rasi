@@ -1,6 +1,7 @@
-configuration{
+configuration {
+    // display-drun: "";
     display-drun: "Applications:";
-    font: "JetBrainsMono Nerd Font Medium 10";
+    font: "JetBrainsMono 14";
     icon-theme: "Papirus";
     show-icons: true;
     terminal: "ghostty";
@@ -14,4 +15,4 @@ configuration{
     sidebar-mode: false;
 }
 
-@theme "~/dotfiles/rofi/.config/rofi/themes/catppuccin-mocha.rasi"
+@theme "~/.config/rofi/themes/rei.rasi"

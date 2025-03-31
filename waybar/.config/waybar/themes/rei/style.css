@@ -48,15 +48,10 @@ button {
 #battery,
 #pulseaudio,
 #cava,
+#network,
 #bluetooth,
 #custom-os_button {
   margin: 2px 4px 2px 4px;
-  padding: 0px 10px 0px 10px;
-  color: #B4B4E8;
-}
-
-#network {
-  margin: 2px 4px 6px 4px;
   padding: 0px 10px 0px 10px;
   color: #B4B4E8;
 }
