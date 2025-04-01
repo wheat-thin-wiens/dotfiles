@@ -1,24 +1,21 @@
 { config, pkgs, ... }:
 
 {
-  # Home Manager needs a bit of information about you and the paths it should
-  # manage.
   home.username = "ewiens";
   home.homeDirectory = "/home/ewiens";
-
-  # This value determines the Home Manager release that your configuration is
-  # compatible with. This helps avoid breakage when a new Home Manager release
-  # introduces backwards incompatible changes.
-  #
-  # You should not change this value, even if you update Home Manager. If you do
-  # want to update the value, then make sure to first check the Home Manager
-  # release notes.
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
     pkgs.eza
+    pkgs.fira-code-symbols
+    pkgs.font-awesome
+    pkgs.fzf
+    pkgs.git
+    pkgs.hyprland
+    pkgs.hyprpaper
+    pkgs.hyprshot
     pkgs.jetbrains-mono
     pkgs.lua
     pkgs.luarocks
@@ -27,9 +24,11 @@
     # pkgs.obsidian
     pkgs.picom
     # pkgs.posy-cursors
+    pkgs.ripgrep
     pkgs.starship
     pkgs.swww
-    pkgs.tmux
+    # pkgs.tmux
+    pkgs.zsh-prezto
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -37,11 +36,37 @@
     # (pkgs.writeShellScriptBin "my-hello" ''
     #   echo "Hello, ${config.home.username}!"
     # '')
+    (pkgs.writeShellScriptBin "tmux-init" ''
+      if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+        exec tmux
+      fi
+      '')
   ];
+
+  services.picom.enable = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
   home.file = {
+    ".config/alacritty".source = ../alacritty/.config/alacritty;
+    ".config/bat".source       = ../bat/.config/bat;
+    ".config/btop".source      = ../btop/.config/btop;
+    ".config/ghostty".source   = ../ghostty/.config/ghostty;
+    ".config/hypr".source      = ../hypr/.config/hypr;
+    ".config/i3".source        = ../i3/.config/i3;
+    ".config/neofetch".source  = ../neofetch/.config/neofetch;
+    ".config/nvim".source      = ../nvim/.config/nvim;
+    ".config/picom".source     = ../picom/.config/picom;
+    ".config/polybar".source   = ../polybar/.config/polybar;
+    ".config/rofi".source      = ../rofi/.config/rofi;
+    ".config/starship.toml".source  = ../starship/.config/starship.toml;
+    ".config/thefuck".source   = ../thefuck/.config/thefuck;
+    # ".tmux".source             = ../tmux/.tmux;
+    # ".tmux.conf".source        = ../tmux/.tmux.conf;
+    ".config/waybar".source    = ../waybar/.config/waybar;
+    ".config/wezterm".source   = ../wezterm/.config/wezterm;
+    ".config/yazi".source      = ../yazi/.config/yazi;
+
     # # Building this configuration will create a copy of 'dotfiles/screenrc' in
     # # the Nix store. Activating the configuration will then make '~/.screenrc' a
     # # symlink to the Nix store copy.
@@ -74,19 +99,16 @@
     EDITOR = "nvim";
   };
 
-  programs.zsh = {
+  fonts.fontconfig.enable = true;
+
+  # wayland.windowManager.hyprland = {
+  #   enable = true;
+  # };
+
+  programs.git = {
     enable = true;
-    autosuggestion.enable = true;
-    syntaxHighlighting.enable = true;
-    history = {
-      size = 10000;
-    };
-    shellAliases = {
-      ls = "eza";
-    };
-    initExtra = ''
-      neofetch
-    '';
+    userName = "wheat-thin-wiens";
+    userEmail = "ethanjwiens@gmail.com";
   };
 
   programs.starship = {
@@ -94,28 +116,54 @@
     enableZshIntegration = true;
   };
 
-  gtk = {
+  programs.tmux = {
     enable = true;
+    prefix = "C-a";
+    mouse = true;
+    plugins = with pkgs; [
+      tmuxPlugins.sensible
+      tmuxPlugins.vim-tmux-navigator
+    ];
+    extraConfig = ''
+      unbind [
+      unbind ]
+
+      bind [ split-window -h
+      bind ] split-window -v
+
+      set -g default-terminal"tmux-256color"
+      set -ga terminal-overrides ",xterm-256color:rgb"
+      set -ga terminal-overrides ",alacritty:RGB"
+
+      bind-key h select-pane -L
+      bind-key j select-pane -D
+      bind-key k select-pane -U
+      bind-key l select-pane -R
+
+      set-option -g status off
+      set-option -g escape-time 10
+    '';
   };
 
-  home.file.".config/alacritty".source = ../alacritty/.config/alacritty;
-  home.file.".config/bat".source       = ../bat/.config/bat;
-  home.file.".config/btop".source      = ../btop/.config/btop;
-  home.file.".config/ghostty".source   = ../ghostty/.config/ghostty;
-  home.file.".config/hypr".source      = ../hypr/.config/hypr;
-  home.file.".config/i3".source        = ../i3/.config/i3;
-  home.file.".config/neofetch".source  = ../neofetch/.config/neofetch;
-  home.file.".config/nvim".source      = ../nvim/.config/nvim;
-  home.file.".config/picom".source     = ../picom/.config/picom;
-  home.file.".config/polybar".source   = ../polybar/.config/polybar;
-  home.file.".config/rofi".source      = ../rofi/.config/rofi;
-  home.file.".config/starship.toml".source  = ../starship/.config/starship.toml;
-  home.file.".config/thefuck".source   = ../thefuck/.config/thefuck;
-  home.file.".tmux".source             = ../tmux/.tmux;
-  home.file.".tmux.conf".source        = ../tmux/.tmux.conf;
-  home.file.".config/waybar".source    = ../waybar/.config/waybar;
-  home.file.".config/wezterm".source   = ../wezterm/.config/wezterm;
-  home.file.".config/yazi".source      = ../yazi/.config/yazi;
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    enableCompletion = true;
+    syntaxHighlighting.enable = true;
+    history = {
+      size = 10000;
+    };
+    shellAliases = {
+      ls = "eza";
+    };
+    prezto = {
+      enable = true;
+      tmux.autoStartLocal = true;
+    };
+    initExtra = ''
+      neofetch
+    '';
+  };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

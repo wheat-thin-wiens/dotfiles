@@ -11,36 +11,39 @@ tooltip {
 }
 
 window#waybar {
-  background: transparent;
+  /* background: transparent; */
+  background-color: rgba(0, 0, 0, 0.4);
+  border-radius: 20px;
 }
 
-.modules-left,
-.modules-center,
-.modules-right {
-  padding-left: 4px;
-  padding-right: 4px;
-  padding-top: 4px;
-}
+/* .modules-left, */
+/* .modules-center, */
+/* .modules-right { */
+/*   padding-left: 4px; */
+/*   padding-right: 4px; */
+/*   padding-top: 4px; */
+/*   padding-bottom: 4px; */
+/* } */
 
 #window {
   color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.2); */
   border-radius: 20px;
   margin-top: 2px;
   margin-bottom: 2px;
   padding: 0px 10px;
 }
 
-window#waybar.empty #window {
-  background-color: transparent;
-}
+/* window#waybar.empty #window { */
+  /* background-color: transparent; */
+/* } */
 
 #workspaces {
   margin-top: 2px;
   margin-bottom: 2px;
   margin-left: 4px;
   margin-right: 4px;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.2); */
   border-radius: 20px;
 }
 
@@ -48,9 +51,9 @@ button {
   border-radius: 20px;
 }
 
-button:hover {
-  background-color: rgba(255, 255, 255, 0.4);
-}
+/* button:hover { */
+  /* background-color: rgba(255, 255, 255, 0.4); */
+/* } */
 
 #workspaces button {
   color: #FFFFFF;
@@ -59,28 +62,29 @@ button:hover {
   /* margin-right: 1px; */
 }
 
-#workspaces button:hover {
-  background-color: rgba(255, 255, 255, 0.4)
-}
+/* #workspaces button:hover { */
+  /* background-color: rgba(255, 255, 255, 0.4) */
+/* } */
 
 /* #workspaces button.focused { */
 /*   background-color: rgba(255, 255, 255, 0.3); */
 /* } */
 
-#workspaces button.active {
-  background-color: rgba(0, 0, 0, 0.6);
+/* #workspaces button.active { */
+  /* background-color: rgba(0, 0, 0, 0.3); */
   /* color: #32BEFF; */
   /* border-bottom: 2px solid #FFFFFF; */
-}
+/* } */
 
 /* #workspaces, */
+#backlight,
+#battery,
 #clock,
 #pulseaudio,
 #cava,
 #network,
-#cpu,
-#memory,
 #bluetooth,
+#custom-caffeine,
 #custom-wlsunset {
   margin-top: 2px;
   margin-bottom: 2px;
@@ -89,7 +93,7 @@ button:hover {
   padding-left: 4px;
   padding-right: 4px;
   color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.2); */
   border-radius: 20px;
   padding: 0px 10px;
 }
@@ -98,11 +102,11 @@ button:hover {
 #custom-power_button,
 #custom-restart,
 #custom-settings,
-#custom-lock,
-#custom-hw_icon {
+#custom-logout,
+#custom-lock {
   border-radius: 20px;
   color: #FFFFFF;
-  background-color: rgba(0, 0, 0, 0.4);
+  /* background-color: rgba(0, 0, 0, 0.2); */
   margin-top: 2px;
   margin-bottom: 2px;
   margin-left: 4px;

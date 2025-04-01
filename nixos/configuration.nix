@@ -85,7 +85,7 @@
 
   };
 
-  programs.hyprland.enable = true;
+  # programs.hyprland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
@@ -127,6 +127,9 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
+
+  fonts.fontconfig.enable = true;
+
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ewiens = {
     isNormalUser = true;
@@ -141,9 +144,6 @@
       gh
       ghostty
       home-manager
-      hyprland
-      hyprpaper
-      hyprshot
       i3
       neofetch
       nodejs_23
@@ -151,15 +151,17 @@
       python312Full
       rofi
       rustc
+      tmux
       waybar
       wayland
       wezterm
       yazi
+      zsh-prezto
     ];
   };
 
-  # Install firefox.
   programs.firefox.enable = true;
+  programs.hyprland.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -168,7 +170,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
    gcc
-   git
+   # git
    unzip
    vim
    wget

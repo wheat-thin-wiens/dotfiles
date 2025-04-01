@@ -17,27 +17,38 @@
   "modules-right": [
     "cava",
     "pulseaudio",
+    "backlight",
+    "bluetooth",
     "network",
-    "group/settings"
+    "battery"
+    // "group/settings"
   ],
   "clock": {
     "format": "<span></span>{:%a %d %I:%M}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
-  "memory": {
-    "format": "mem / {}%",
-    "on-click": "btop"
-  },
-  "cpu": {
-    "format": "cpu / {}%"
-  },
   "network": {
-    "format-wifi": "<span size='13000'>  </span>{essid}",
+    "format-wifi": "<span size='13000'>{icon}  </span>{essid}",
+    "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format-ethernet": "<span size='13000'>󰈁</span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
-    "format-disconnected": "<span size='13000'>  </span>Disconnected",
+    "format-disconnected": "<span size='13000'>󰤭  </span>Disconnected",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
     "on-click": "nmcli device wifi list"
+  },
+  "battery": {
+    "interval": 60,
+    "states": {
+        "warning": 30,
+        "critical": 15
+    },
+    "format": "{icon} {capacity}%",
+    "format-icons": ["", "", "", "", ""],
+    "max-length": 25
+  },
+  "backlight": {
+    "format": "{icon} {percent}%",
+    "format-icons": ["󰃞", "󰃟", "󰃠"]
   },
   "pulseaudio": {
     "format": "{icon} {volume}%",
@@ -57,9 +68,9 @@
     "sort-by-number": true
   },
   "bluetooth": {
-    "format": "󰂯",
-    "format-on": "󰂯",
-    "format-off": "",
+    "format-on": "󰂯 {status}",
+    "format-off": "󰂲 {status}",
+    "format-disabled": "󰂲 {status}",
     "format-connected-battery": "󰥈 {device_alias} {device_battery_percentage}%",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "on-click": "blueman-manager"
@@ -75,7 +86,7 @@
     "method": "pulse",
     "source": "auto",
     "stereo": true,
-    "reverse": true,
+    "reverse": false,
     "bar_delimiter": 0,
     "monstercat": false,
     "noise_reduction": 0.77,
@@ -84,7 +95,7 @@
     "actions": {}
   },
   "custom/power_button": {
-    "format": " ⏻ ",
+    "format": " 󰐥 ",
     "on-click": "shutdown now",
     "tooltip-format": "Shutdown"
   },
@@ -95,8 +106,13 @@
   },
   "custom/lock": {
     "format": "  ",
-    "on-click": "hyprctl dispatch exit",
+    "on-click": "hyprlock",
     "tooltip-format": "Lock screen"
+  },
+  "custom/logout": {
+    "format": " 󰍃 ",
+    "on-click": "hyprctl dispatch exit",
+    "tooltip-format": "Log out"
   },
   "custom/os_button": {
     // "format": "",
@@ -109,11 +125,13 @@
     "on-click": "bash ~/.config/waybar/scripts/wlsunset.sh",
     "tooltip-format": "Toggle wlsunset"
   },
+  "custom/caffeine": {
+    "format": "",
+    "on-click": "bash caffeine &",
+    "tooltip-format": "Toggle caffeine"
+  },
   "custom/settings": {
     "format": "  "
-  },
-  "custom/hw_icon": {
-    "format": "  "
   },
   "group/sound": {
     "orientation": "horizontal",
@@ -133,7 +151,7 @@
       "transition-duration": 250,
       "transition-left-to-right": true
     },
-    "modules": ["custom/os_button", "custom/power_button", "custom/restart", "custom/lock"]
+    "modules": ["custom/os_button", "custom/power_button", "custom/restart", "custom/lock", "custom/logout"]
   },
   "group/settings": {
     "orientation": "horizontal",
@@ -141,14 +159,11 @@
       "transition-duration": 250,
       "transition-left-to-right": false
     },
-    "modules": ["custom/settings", "bluetooth", "custom/wlsunset"]
+    "modules": ["custom/settings", "bluetooth", "custom/wlsunset", "custom/caffeine"]
   },
   "group/hardware": {
     "orientation": "horizontal",
-    "drawer": {
-      "transition-duration": 250,
-      "transition-left-to-right": false
-    },
-    "modules": ["custom/hw_icon", "memory", "cpu"]
+    "drawer": {},
+    "modules": []
   }
 }
