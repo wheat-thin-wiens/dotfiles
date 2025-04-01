@@ -37,7 +37,7 @@
       "rd.systemd.show_status=auto"
     ];
 
-    loader.timeout = 0;
+    loader.timeout = 5;
   };
 
   networking.hostName = "nixos"; # Define your hostname.
@@ -138,6 +138,7 @@
       cargo
       cava
       feh
+      gh
       ghostty
       home-manager
       hyprland

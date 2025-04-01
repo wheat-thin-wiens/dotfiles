@@ -19,7 +19,6 @@
   # environment.
   home.packages = [
     pkgs.eza
-    pkgs.gh
     pkgs.jetbrains-mono
     pkgs.lua
     pkgs.luarocks
