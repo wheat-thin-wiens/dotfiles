@@ -85,6 +85,8 @@
 
   };
 
+  programs.hyprland.enable = true;
+
   # Enable the KDE Plasma Desktop Environment.
   services.displayManager.sddm.enable = true;
   services.desktopManager.plasma6.enable = true;
@@ -121,13 +123,9 @@
 
   environment.variables.EDITOR = "nvim";
 
-  programs.zsh = {
-    enable = true;
-    autosuggestions.enable = true;
-    syntaxHighlighting.enable = true;
-  };
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
+  programs.zsh.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
   users.users.ewiens = {
@@ -139,7 +137,6 @@
       btop
       cargo
       cava
-      eza
       feh
       gh
       ghostty
@@ -148,10 +145,8 @@
       hyprpaper
       hyprshot
       i3
-      jetbrains-mono
       lua
       luarocks-nix
-      nemo
       neofetch
       neovim
       nodejs_23
@@ -161,7 +156,6 @@
       python312Full
       rofi
       rustc
-      starship
       stow
       waybar
       wayland

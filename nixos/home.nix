@@ -18,15 +18,12 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
-    # # Adds the 'hello' command to your environment. It prints a friendly
-    # # "Hello, world!" when run.
-    pkgs.hello
-
-    # # It is sometimes useful to fine-tune packages, for example, by applying
-    # # overrides. You can do that directly here, just don't forget the
-    # # parentheses. Maybe you want to install Nerd Fonts with a limited number of
-    # # fonts?
-    # (pkgs.nerdfonts.override { fonts = [ "FantasqueSansMono" ]; })
+    pkgs.eza
+    pkgs.jetbrains-mono
+    pkgs.nemo
+    # pkgs.posy-cursors
+    pkgs.starship
+    pkgs.swww
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -68,8 +65,48 @@
   #  /etc/profiles/per-user/ewiens/etc/profile.d/hm-session-vars.sh
   #
   home.sessionVariables = {
-    # EDITOR = "emacs";
+    EDITOR = "nvim";
   };
+
+  programs.zsh = {
+    enable = true;
+    autosuggestion.enable = true;
+    syntaxHighlighting.enable = true;
+    history = {
+      size = 10000;
+    };
+    shellAliases = {
+      ls = "eza";
+    };
+  };
+
+  programs.starship = {
+    enable = true;
+    enableZshIntegration = true;
+  };
+
+  gtk = {
+    enable = true;
+  };
+
+  home.file.".config/alacritty".source = ../alacritty/.config/alacritty;
+  home.file.".config/bat".source       = ../bat/.config/bat;
+  home.file.".config/btop".source      = ../btop/.config/btop;
+  home.file.".config/ghostty".source   = ../ghostty/.config/ghostty;
+  home.file.".config/hypr".source      = ../hypr/.config/hypr;
+  home.file.".config/i3".source        = ../i3/.config/i3;
+  home.file.".config/neofetch".source  = ../neofetch/.config/neofetch;
+  home.file.".config/nvim".source      = ../nvim/.config/nvim;
+  home.file.".config/picom".source     = ../picom/.config/picom;
+  home.file.".config/polybar".source   = ../polybar/.config/polybar;
+  home.file.".config/rofi".source      = ../rofi/.config/rofi;
+  home.file.".config/starship.toml".source  = ../starship/.config/starship.toml;
+  home.file.".config/thefuck".source   = ../thefuck/.config/thefuck;
+  home.file.".tmux".source             = ../tmux/.tmux;
+  home.file.".tmux.conf".source        = ../tmux/.tmux.conf;
+  home.file.".config/waybar".source    = ../waybar/.config/waybar;
+  home.file.".config/wezterm".source   = ../wezterm/.config/wezterm;
+  home.file.".config/yazi".source      = ../yazi/.config/yazi;
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

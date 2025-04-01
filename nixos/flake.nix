@@ -3,11 +3,15 @@
   description = "My first flake";
 
   inputs = {
-    nixpkgs.url = "nixpkgs/nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager/master";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nixpkgs = {
+      url =  "nixpkgs/nixos-unstable";
+    };
+
+    home-manager = {
+      url =  "github:nix-community/home-manager/master";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     # catppuccin.url = "github:catppuccin.nix";
-    # home-manager = {};
   };
 
   outputs = { self, nixpkgs, home-manager, ... }:
