@@ -19,11 +19,18 @@
   # environment.
   home.packages = [
     pkgs.eza
+    pkgs.gh
     pkgs.jetbrains-mono
+    pkgs.lua
+    pkgs.luarocks
     pkgs.nemo
+    pkgs.neovim
+    # pkgs.obsidian
+    pkgs.picom
     # pkgs.posy-cursors
     pkgs.starship
     pkgs.swww
+    pkgs.tmux
 
     # # You can also create simple shell scripts directly inside your
     # # configuration. For example, this adds a command 'my-hello' to your
@@ -78,6 +85,9 @@
     shellAliases = {
       ls = "eza";
     };
+    initExtra = ''
+      neofetch
+    '';
   };
 
   programs.starship = {

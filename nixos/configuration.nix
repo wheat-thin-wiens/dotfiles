@@ -138,25 +138,18 @@
       cargo
       cava
       feh
-      gh
       ghostty
       home-manager
       hyprland
       hyprpaper
       hyprshot
       i3
-      lua
-      luarocks-nix
       neofetch
-      neovim
       nodejs_23
-      obsidian
-      picom
       polybar
       python312Full
       rofi
       rustc
-      stow
       waybar
       wayland
       wezterm
