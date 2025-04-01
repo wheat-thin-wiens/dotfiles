@@ -170,7 +170,7 @@
   # $ nix search wget
   environment.systemPackages = with pkgs; [
    gcc
-   # git
+   git
    unzip
    vim
    wget

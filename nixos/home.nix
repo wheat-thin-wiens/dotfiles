@@ -12,7 +12,7 @@
     pkgs.fira-code-symbols
     pkgs.font-awesome
     pkgs.fzf
-    pkgs.git
+    # pkgs.git
     pkgs.hyprland
     pkgs.hyprpaper
     pkgs.hyprshot
@@ -105,11 +105,11 @@
   #   enable = true;
   # };
 
-  programs.git = {
-    enable = true;
-    userName = "wheat-thin-wiens";
-    userEmail = "ethanjwiens@gmail.com";
-  };
+  # programs.git = {
+  #   enable = true;
+  #   userName = "wheat-thin-wiens";
+  #   userEmail = "ethanjwiens@gmail.com";
+  # };
 
   programs.starship = {
     enable = true;
