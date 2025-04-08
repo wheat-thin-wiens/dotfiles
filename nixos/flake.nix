@@ -11,10 +11,12 @@
       url =  "github:nix-community/home-manager/master";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     # catppuccin.url = "github:catppuccin.nix";
   };
 
-  outputs = { self, nixpkgs, home-manager, ... }:
+  outputs = { self, nixpkgs, home-manager, determinate, ... }:
     let
       lib = nixpkgs.lib;
       system = "x86_64-linux";
@@ -24,7 +26,10 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
-        modules = [ ./configuration.nix ];
+        modules = [ 
+            ./configuration.nix
+            determinate.nixosModules.default
+        ];
       };
     };
     
