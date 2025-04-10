@@ -30,10 +30,7 @@ case ":$PATH:" in
 esac
 
 # Additional Functions
-source ~/dev/bash/pystart.sh
-# source ~/dev/c/cmake.sh
-# source ~/dotfiles/theme-picker.sh
-# source ~/dev/bash/nvimplug.sh
+source ~/dotfiles/scripts/pystart.sh
 
 # Language Support
 export NVM_DIR="$HOME/.nvm"
@@ -44,11 +41,7 @@ export NVM_DIR="$HOME/.nvm"
 alias vim='nvim'
 alias ls='eza'
 alias grupdate="sudo grub-mkconfig -o /boot/grub.grub.cfg"
-alias skullz="bash /home/ewiens/dev/bash/skullz.sh"
-
-alias avocado="~/dev/java/java.sh"
-alias gogogo="~/dev/dotnet/C#.sh"
-alias mc="mc --nosubshell"
+alias skullz="bash /home/ewiens/dotfiles/scripts/skullz.sh"
 
 # Keybindings
 bindkey              '^I'         menu-complete
@@ -61,11 +54,3 @@ fi
 
 #tmux
 neofetch
-
-# pnpm
-export PNPM_HOME="/home/ewiens/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-# pnpm end

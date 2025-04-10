@@ -37,7 +37,6 @@ gopls
 grub
 grub-btrfs
 gst-plugin-pipewire
-hyprcursor-git
 hypridle
 hyprland
 hyprlock
@@ -101,7 +100,6 @@ neovim
 network-manager-applet
 networkmanager
 nil-git
-nil-git-debug
 nodejs
 npm
 obsidian
@@ -109,6 +107,7 @@ ocean-sound-theme
 oxygen
 oxygen-sounds
 pavucontrol
+peaclock
 picom
 pipewire
 pipewire-alsa
@@ -162,7 +161,6 @@ systemsettings
 tagger
 tealdeer
 thefuck
-thunar
 thunderbird
 timeshift
 timeshift-systemd-timer
@@ -184,7 +182,6 @@ wireplumber
 wlroots
 wlsunset
 wmctrl
-xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdotool
 xorg-xhost
