@@ -1,0 +1,9 @@
+[22:08:23 2025-04-01] FETCHING Version 2.39.5
+[22:08:23 2025-04-01] CREATING /home/ewiens/.spicetify
+[22:08:23 2025-04-01] DOWNLOADING https://github.com/spicetify/cli/releases/download/v2.39.5/spicetify-2.39.5-linux-amd64.tar.gz
+[22:08:24 2025-04-01] EXTRACTING /home/ewiens/.spicetify/spicetify.tar.gz
+[22:08:24 2025-04-01] SETTING EXECUTABLE PERMISSIONS TO /home/ewiens/.spicetify/spicetify
+[22:08:24 2025-04-01] REMOVING /home/ewiens/.spicetify/spicetify.tar.gz
+[22:08:24 2025-04-01] APPENDING /home/ewiens/.spicetify to PATH in /home/ewiens/.zshrc
+[22:08:24 2025-04-01] spicetify v2.39.5 was installed successfully to /home/ewiens/.spicetify
+[22:08:24 2025-04-01] Run 'spicetify --help' to get started
