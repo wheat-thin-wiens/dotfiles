@@ -1,0 +1,6 @@
+
+2025/04/17 (17:42:08) | ===> btop++ v.1.4.0
+2025/04/17 (17:42:08) | WARNING: Failed to get disk/partition stats for mount "/media/2TB" with statvfs error code: 112. Ignoring...
+
+2025/04/17 (17:42:51) | ===> btop++ v.1.4.0
+2025/04/17 (17:42:51) | WARNING: Failed to get disk/partition stats for mount "/media/2TB" with statvfs error code: 112. Ignoring...

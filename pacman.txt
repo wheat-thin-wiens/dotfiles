@@ -1,5 +1,4 @@
 7zip
-amberol
 amd-ucode
 arch-wiki-docs
 ark
@@ -29,10 +28,12 @@ feh
 filelight
 flatpak-kcm
 fprintd
+fusee-nano
 ghostty
 gimp
 git
 github-cli
+gnome-keyring
 gopls
 grub
 grub-btrfs
@@ -87,6 +88,7 @@ libvirt
 linux
 linux-firmware
 luarocks
+ly
 man-db
 milou
 mirage
@@ -102,6 +104,7 @@ networkmanager
 nil-git
 nodejs
 npm
+nxdumpclient
 obsidian
 ocean-sound-theme
 oxygen
@@ -139,12 +142,12 @@ print-manager
 python312
 qbittorrent
 qemu-base
+qemu-hw-usb-host
 qqc2-breeze-style
 qt5-quickcontrols2
 reflector
 rhythmbox
 rofi
-rust
 samba
 sddm
 sddm-kcm
@@ -154,6 +157,7 @@ spicetify-cli
 spicetify-marketplace-bin
 spotify-launcher
 starship
+steam
 stow
 swaync
 swww
@@ -161,6 +165,7 @@ systemsettings
 tagger
 tealdeer
 thefuck
+thunar
 thunderbird
 timeshift
 timeshift-systemd-timer
@@ -173,7 +178,6 @@ ufw
 unzip
 usbutils
 virt-manager
-vscodium
 waybar-cava-git
 wezterm
 wget

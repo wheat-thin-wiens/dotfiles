@@ -42,6 +42,7 @@ alias vim='nvim'
 alias ls='eza'
 alias grupdate="sudo grub-mkconfig -o /boot/grub.grub.cfg"
 alias skullz="bash /home/ewiens/dotfiles/scripts/skullz.sh"
+alias timeshift-launcher="sudo -E timeshift-gtk"
 
 # Keybindings
 bindkey              '^I'         menu-complete
