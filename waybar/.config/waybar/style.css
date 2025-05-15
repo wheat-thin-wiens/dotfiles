@@ -2,20 +2,24 @@
   font-family: "JetBrains Mono";
   font-size: 14px;
   font-weight: bold;
+  /* background: transparent; */
 }
 
 tooltip {
-  background-color: rgba(14, 23, 35, 0.95);
-  color: #CDCDCD;
+  background-color: rgba(0, 0, 0, 0.8);
+  border-radius: 20px;
 }
 
 window#waybar {
-  background-color: rgba(14, 23, 35, 0.95);
+  /* background: transparent; */
+  background-color: rgba(0, 0, 0, 0.4);
   border-radius: 20px;
 }
 
 #window {
-  color: #9DBCD0;
+  color: #FFFFFF;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  border-radius: 20px;
   margin-top: 2px;
   margin-bottom: 2px;
   padding: 0px 10px;
@@ -33,41 +37,52 @@ button {
   border-radius: 20px;
 }
 
-#workspaces button {
-  color: #9DBCD0;
-  padding: 0px 4px;
-}
+/* button:hover { */
+  /* background-color: rgba(255, 255, 255, 0.4); */
+/* } */
 
-#clock {
-  margin: 2px 4px 2px 4px;
-  padding: 0px 10px 0px 10px;
-  color: #91B8E9;
+#workspaces button {
+  color: #FFFFFF;
+  padding: 0px 4px;
+  /* margin-left: 1px; */
+  /* margin-right: 1px; */
 }
 
 #backlight,
 #battery,
+#clock,
 #pulseaudio,
 #cava,
 #network,
 #bluetooth,
-#custom-os_button {
-  margin: 2px 4px 2px 4px;
-  padding: 0px 10px 0px 10px;
-  color: #B4B4E8;
+#custom-caffeine,
+#custom-wlsunset {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  color: #FFFFFF;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  border-radius: 20px;
+  padding: 0px 10px;
 }
 
-#custom-os_button {
-  margin: 2px 4px 2px 4px;
-  padding: 0px 10px 0px 10px;
-  color: #9DBCD0;
-}
-
+#custom-os_button,
 #custom-power_button,
 #custom-restart,
+#custom-settings,
 #custom-logout,
 #custom-lock {
-  margin: 2px 4px 2px 4px;
-  padding: 0px 10px 0px 10px;
-  color: #FD9491;
-  border-bottom: 2px solid #FD9491;
+  border-radius: 20px;
+  color: #FFFFFF;
+  /* background-color: rgba(0, 0, 0, 0.2); */
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-left: 4px;
+  margin-right: 4px;
+  padding-left: 4px;
+  padding-right: 4px;
+  padding: 0px 10px;
 }

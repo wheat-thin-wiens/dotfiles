@@ -51,7 +51,8 @@ return {
             local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
             local strings = vim.split(kind.kind, "%s", { trimempty = true })
             kind.kind = "" .. (strings[1] or "") .. ""
-            -- kind.menu = " (" .. (strings[2] or "") .. ")"
+            kind.menu = " (" .. (strings[2] or "") .. ")"
+            vim_item.dup = 0
             return kind
           end
         },
@@ -65,10 +66,10 @@ return {
 					["<CR>"] = cmp.mapping.confirm({ select = false }),
 				}),
 				sources = cmp.config.sources({
-					{ name = "nvim_lsp" },
-					{ name = "luasnip" },
-				}, {
-					{ name = "buffer" },
+					{ name = "nvim_lsp", dup = 0 },
+					{ name = "luasnip", dup = 0 },
+				-- }, {
+					{ name = "buffer", dup = 0 },
 				}),
 			})
 

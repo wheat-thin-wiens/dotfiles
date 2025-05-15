@@ -2511,3 +2511,6 @@
 2025/03/18 (22:12:44) | ERROR: Couldn't determine terminal size of "STDOUT_FILENO"!
 2025/03/18 (22:12:45) | ERROR: Couldn't determine terminal size of "STDOUT_FILENO"!
 2025/03/18 (22:12:46) | ERROR: Couldn't determine terminal size of "STDOUT_FILENO"!
+
+2025/04/26 (21:49:28) | ===> btop++ v.1.4.0
+2025/04/26 (21:49:28) | WARNING: Failed to join _runner thread on exit!
