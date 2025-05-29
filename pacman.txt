@@ -1,6 +1,8 @@
 7zip
+alacritty
 amd-ucode
 arch-wiki-docs
+ark
 base
 base-devel
 bat
@@ -16,13 +18,16 @@ caffeine
 catppuccin-gtk-theme-mocha
 cbonsai
 chromium
+discord
 discover
 dnsmasq
+dolphin-emu
 drkonqi
 efibootmgr
 eslint
 eza
 feh
+filelight
 flatpak-kcm
 fprintd
 fusee-nano
@@ -76,6 +81,7 @@ mirage
 mpd
 mpv
 mpvpaper
+mullvad-vpn
 nautilus
 nemo
 neofetch
@@ -83,6 +89,7 @@ neovim
 network-manager-applet
 networkmanager
 nil-git
+niri
 nodejs
 npm
 nxdumpclient
@@ -127,11 +134,11 @@ sddm-kcm
 seahorse
 sof-firmware
 spectacle
+speedtest-cli
 spicetify-cli
 spicetify-marketplace-bin
 spotify-launcher
 starship
-steam
 stow
 swaync
 swww
@@ -160,11 +167,11 @@ wireplumber
 wlroots
 wlsunset
 wmctrl
+xdg-desktop-portal-hyprland
 xdotool
 xorg-xhost
 xorg-xinput
 yay
-yay-debug
 yazi
 zen-browser-bin
 zoxide

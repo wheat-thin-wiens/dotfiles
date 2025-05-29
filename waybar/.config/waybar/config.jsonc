@@ -51,7 +51,7 @@
     "format-icons": ["󰃞", "󰃟", "󰃠"]
   },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}  {volume}%",
     "format-muted": "",
     "format-icons": {
       "default": ["", ""]
@@ -62,8 +62,8 @@
   "hyprland/workspaces": {
     "format": "{icon}",
     "format-icons": {
-      "default": "",
-      "active": ""
+      "default": " ",
+      "active": " "
     },
     "sort-by-number": true
   },

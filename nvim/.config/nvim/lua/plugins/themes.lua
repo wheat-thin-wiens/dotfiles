@@ -11,7 +11,11 @@ return {
       integrations = {
         telescope = "borderless"
       },
-      transparency = true
+      transparency = true,
+      highlight_overrides = {
+        ["@type.go"] = { fg = "#91B8E9" },
+        ["@type.definition.go"] = { fg = "#91B8E9"}
+      }
     }
   },
 	{
@@ -58,5 +62,8 @@ return {
     lazy = false,
     priority = 1000,
     opts = {}
+  },
+  {
+    "sainnhe/everforest",
   },
 }
