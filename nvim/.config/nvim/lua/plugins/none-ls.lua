@@ -12,7 +12,7 @@ return {
         require("none-ls.diagnostics.eslint_d"),
         require("none-ls.code_actions.eslint_d"),
 
-        null_ls.builtins.diagnostics.golangci_lint,
+        -- null_ls.builtins.diagnostics.golangci_lint,
         null_ls.builtins.diagnostics.mypy.with({
           extra_args = function()
             local virtual = os.getenv("VIRTUAL_ENV") or os.getenv("CONDA_PREFIX") or "/usr"

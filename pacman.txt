@@ -1,4 +1,5 @@
 abcde
+alacritty
 amberol
 amd-ucode
 arch-install-scripts
@@ -34,6 +35,7 @@ feh
 filelight
 flatpak-kcm
 fusee-nano
+fuzzel
 gdm
 ghostty
 git
@@ -164,10 +166,12 @@ linux
 linux-firmware
 loupe
 luarocks
+mako
 malcontent
 milou
 mirage
 mpv
+mullvad-vpn
 mupen64plus
 nautilus
 nemo
@@ -176,12 +180,14 @@ neovim
 network-manager-applet
 networkmanager
 nginx
+niri
 npm
 nvidia
 nwg-look
 nxdumpclient
 obsidian
 ocean-sound-theme
+openvpn
 orca
 oxygen
 oxygen-sounds
@@ -207,7 +213,6 @@ plasma-welcome
 plasma-workspace
 plasma-workspace-wallpapers
 plasma5support
-plex-desktop
 plymouth-kcm
 pnpm
 polkit-kde-agent
@@ -237,11 +242,14 @@ sddm
 sddm-kcm
 simple-scan
 spectacle
+speedtest-cli
 spotify-launcher
 starship
 steam
 stow
 sushi
+swaybg
+swaylock
 swaync
 swww
 systemsettings
@@ -266,6 +274,7 @@ xdg-desktop-portal-gnome
 xdg-desktop-portal-kde
 xdg-user-dirs-gtk
 xorg-xhost
+xwaylandvideobridge-git
 yay
 yazi
 yelp
