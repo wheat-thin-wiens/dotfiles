@@ -27,7 +27,6 @@ dolphin-emu
 drkonqi
 efibootmgr
 emulationstation-de
-evince
 exfatprogs
 eza
 fastfetch
@@ -36,7 +35,6 @@ filelight
 flatpak-kcm
 fusee-nano
 fuzzel
-gdm
 ghostty
 git
 github-cli
@@ -47,7 +45,6 @@ gnome-clocks
 gnome-color-manager
 gnome-connections
 gnome-console
-gnome-control-center
 gnome-disk-utility
 gnome-font-viewer
 gnome-keyring
@@ -55,10 +52,6 @@ gnome-logs
 gnome-maps
 gnome-menus
 gnome-remote-desktop
-gnome-session
-gnome-settings-daemon
-gnome-shell
-gnome-shell-extensions
 gnome-tour
 gnome-user-docs
 gnome-user-share
@@ -127,6 +120,7 @@ libksysguard
 libplasma
 libpulse
 libqt5xdg
+libreoffice-fresh
 libretro-beetle-pce
 libretro-beetle-pce-fast
 libretro-beetle-psx
@@ -166,13 +160,13 @@ linux
 linux-firmware
 loupe
 luarocks
-mako
 malcontent
 milou
 mirage
 mpv
 mullvad-vpn
 mupen64plus
+musescore
 nautilus
 nemo
 neofetch
@@ -185,6 +179,7 @@ npm
 nvidia
 nwg-look
 nxdumpclient
+obs-studio
 obsidian
 ocean-sound-theme
 openvpn
@@ -247,7 +242,6 @@ spotify-launcher
 starship
 steam
 stow
-sushi
 swaybg
 swaylock
 swaync
@@ -261,7 +255,6 @@ thunderbird
 timeshift
 timeshift-systemd-timer
 tmux
-totem
 ttf-nerd-fonts-symbols-mono
 ufw
 virt-manager
@@ -270,7 +263,7 @@ wezterm
 wikiman
 wireplumber
 xclip
-xdg-desktop-portal-gnome
+xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-user-dirs-gtk
 xorg-xhost
