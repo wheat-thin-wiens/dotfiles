@@ -5,10 +5,10 @@ return {
 			"saadparwaiz1/cmp_luasnip",
 			"rafamadriz/friendly-snippets",
 		},
-     --config = function()
+     -- config = function()
      --  require("luasnip").filetype_extend("javascript")
-		 --  require("luasnip.loaders.from_vscode").lazy_load()
-     --end,
+		  -- require("luasnip.loaders.from_vscode").lazy_load()
+     -- end,
 	},
 	{
 		"hrsh7th/nvim-cmp",
@@ -16,8 +16,11 @@ return {
       -- 'VonHeikemen/lsp-zero.nvim',
       "neovim/nvim-lspconfig",
       'hrsh7th/cmp-nvim-lsp',
+      -- 'hrsh7th/cmp-buffer',
+      'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
-      'onsails/lspkind.nvim'
+      'onsails/lspkind.nvim',
+      -- { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
     },
 		config = function()
 			local cmp = require("cmp")
@@ -51,7 +54,7 @@ return {
             local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
             local strings = vim.split(kind.kind, "%s", { trimempty = true })
             kind.kind = "" .. (strings[1] or "") .. ""
-            -- kind.menu = " (" .. (strings[2] or "") .. ")"
+            kind.menu = " (" .. (strings[2] or "") .. ")"
             vim_item.dup = 0
             return kind
           end
@@ -68,6 +71,7 @@ return {
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" },
 					{ name = "luasnip" },
+          { name = "tailwindcss" },
 				}, {
 					{ name = "buffer" },
 				}),

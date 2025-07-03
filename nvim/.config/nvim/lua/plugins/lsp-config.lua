@@ -11,6 +11,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "pyright",
+          "tailwindcss",
           "ts_ls",
           "clangd",
           "jsonls",
@@ -32,8 +33,18 @@ return {
       inlay_hints = { enabled = true },
     },
 		config = function()
-			local capabilities = require("cmp_nvim_lsp").default_capabilities()
       local lspconfig = require("lspconfig")
+			local capabilities = require("cmp_nvim_lsp").default_capabilities()
+      local cmp_nvim_lsp = require("cmp_nvim_lsp")
+      -- local capabilities = vim.tbl_deep_extend(
+      --   "force",
+      --   {},
+      --   vim.lsp.protocol.make_client_capabilities(),
+      --   cmp_nvim_lsp.default_capabilities()
+      -- )
+
+      require'lspconfig'.tailwindcss.setup{}
+
       lspconfig.clangd.setup({
         capabilities = capabilities
       })
@@ -65,13 +76,16 @@ return {
 --          },
 --        },
 --      })
-        lspconfig.ts_ls.setup({
+      -- lspconfig.tailwindcss.setup({
+      --   capabilities = capabilities,
+      -- })
+      lspconfig.ts_ls.setup({
         capabilities = capabilities,
-        init_options = {
-          preferences = {
-            disableSuggestions = true,
-          }
-        }
+        -- init_options = {
+        --   preferences = {
+        --     disableSuggestions = true,
+        --   }
+        -- }
       })
 
       vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})

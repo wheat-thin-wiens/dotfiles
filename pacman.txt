@@ -71,6 +71,7 @@ lazygit
 libcava
 libfprint
 libpulse
+libreoffice-fresh
 libvirt
 linux
 linux-firmware
@@ -93,7 +94,9 @@ niri
 nodejs
 npm
 nxdumpclient
+obs-studio
 obsidian
+opencode-bin
 oxygen
 oxygen-sounds
 pavucontrol
@@ -159,15 +162,17 @@ unzip
 usbutils
 virt-manager
 wacomtablet
-waybar-cava-git
+waybar
 wezterm
 wget
 wikiman
 wireplumber
-wlroots
+wlroots0.18
 wlsunset
 wmctrl
+wordgrinder
 xdg-desktop-portal-hyprland
+xdg-desktop-portal-wlr
 xdotool
 xorg-xhost
 xorg-xinput
