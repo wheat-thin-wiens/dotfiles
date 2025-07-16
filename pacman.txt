@@ -181,6 +181,7 @@ network-manager-applet
 networkmanager
 nginx
 niri
+noto-fonts-cjk
 npm
 nvidia
 nwg-look
@@ -188,6 +189,8 @@ nxdumpclient
 obs-studio
 obsidian
 ocean-sound-theme
+okular
+opencode-bin
 openvpn
 orca
 oxygen
@@ -271,6 +274,7 @@ ttf-nerd-fonts-symbols-mono
 ufw
 virt-manager
 waybar
+waypaper
 wezterm
 wikiman
 wireplumber

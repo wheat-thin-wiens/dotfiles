@@ -12,6 +12,7 @@ return {
           "lua_ls",
           "pyright",
           "ts_ls",
+          "tailwindcss",
           "clangd",
           "gopls"
         }
@@ -63,7 +64,10 @@ return {
 --          },
 --        },
 --      })
-        lspconfig.ts_ls.setup({
+      lspconfig.tailwindcss.setup({
+        capabilities = capabilities
+      })
+      lspconfig.ts_ls.setup({
         capabilities = capabilities,
         init_options = {
           preferences = {
