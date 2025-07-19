@@ -6,3 +6,4 @@ secrets.txt
 /tmux/.tmux/plugins/vim-tmux-navigator/
 
 /servers/navidrome/data/plugins
+/servers/navidrome/data/cache
