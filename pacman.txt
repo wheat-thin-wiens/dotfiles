@@ -27,6 +27,7 @@ dkms
 dmg2img
 dnsmasq
 docker
+docker-compose
 dolphin-emu
 drkonqi
 efibootmgr
@@ -174,6 +175,7 @@ mullvad-vpn
 mupen64plus
 musescore
 nautilus
+navidrome
 nemo
 neofetch
 neovim

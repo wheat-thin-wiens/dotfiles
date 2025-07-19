@@ -4,3 +4,5 @@ secrets.txt
 /zsh/.zhistory
 
 /tmux/.tmux/plugins/vim-tmux-navigator/
+
+/servers/navidrome/data/plugins
