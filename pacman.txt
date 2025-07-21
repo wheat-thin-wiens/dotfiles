@@ -30,6 +30,7 @@ docker
 docker-compose
 dolphin-emu
 drkonqi
+dysk
 efibootmgr
 emulationstation-de
 exfatprogs
@@ -116,6 +117,7 @@ kwayland
 kwin
 kwrited
 layer-shell-qt
+lazydocker
 lazygit
 lib32-libgudev
 lib32-libnm
@@ -285,6 +287,7 @@ xdg-desktop-portal-hyprland
 xdg-desktop-portal-kde
 xdg-user-dirs-gtk
 xorg-xhost
+xorg-xinput
 xwaylandvideobridge-git
 yay
 yazi
