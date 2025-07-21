@@ -20,7 +20,10 @@ cbonsai
 chromium
 discord
 discover
+dmenu
 dnsmasq
+docker
+docker-compose
 dolphin-emu
 drkonqi
 efibootmgr
@@ -92,6 +95,7 @@ networkmanager
 nil-git
 niri
 nodejs
+noto-fonts-cjk
 npm
 nxdumpclient
 obs-studio
@@ -141,6 +145,8 @@ speedtest-cli
 spicetify-cli
 spicetify-marketplace-bin
 spotify-launcher
+sqlectron-gui
+sqlitebrowser
 starship
 stow
 swaync
@@ -161,6 +167,7 @@ ufw
 unzip
 usbutils
 virt-manager
+vulkan-headers
 wacomtablet
 waybar
 wezterm
@@ -170,6 +177,7 @@ wireplumber
 wlroots0.18
 wlsunset
 wmctrl
+wofi
 wordgrinder
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr

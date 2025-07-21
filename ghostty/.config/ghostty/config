@@ -4,7 +4,7 @@ background-opacity = 1
 window-padding-x = 10
 window-padding-y = 10
 window-inherit-working-directory = true
-# window-decoration = false
+window-decoration = false
 title = "ghostty"
 
 font-family = Jetbrains Mono

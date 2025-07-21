@@ -3,6 +3,7 @@ export SYSTEMD_EDITOR='nvim'
 export EDITOR='nvim'
 export VISUAL='nvim'
 export MANPAGER="nvim +Man!"
+export TERMINAL="ghostty"
 
 # History Config
 HISTFILE=$HOME/.zhistory

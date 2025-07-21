@@ -7,7 +7,7 @@ show_power_menu() {
   \u2060󰜉 Restart
   󰐥\u2063 Shutdown"
 
-  local selection=$(echo -e "$menu_options" | rofi -show dmenu -prompt "Power Options" -width 200 -height 250 -0 alphabetical)
+  local selection=$(echo -e "$menu_options" | wofi --show dmenu --prompt "Power Options" --width 200 --height 250 -0 alphabetical)
   case "$selection" in
     *Lock*) hyprlock ;;
     *Sleep*) systemctl suspend ;;
