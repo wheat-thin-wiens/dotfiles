@@ -16,6 +16,7 @@ btop
 btrfs-progs
 catppuccin-gtk-theme-mocha
 cbonsai
+ccls
 chromium
 discord
 dnsmasq
@@ -74,6 +75,7 @@ libvirt
 linux
 linux-firmware
 love
+lua-language-server
 luarocks
 ly
 man-db
@@ -85,7 +87,6 @@ nautilus
 nemo
 neofetch
 neovim-nightly-bin
-neovim-nightly-bin-debug
 network-manager-applet
 networkmanager
 nil-git
@@ -121,7 +122,10 @@ plymouth
 plymouth-kcm
 polybar
 posy-cursors
+prettier
 print-manager
+pyright
+python-black
 python312
 qbittorrent
 qemu-base
@@ -154,14 +158,18 @@ timeshift
 timeshift-systemd-timer
 tmux
 trayer
+ttf-devicons
 ttf-jetbrains-mono
 ttf-meslo-nerd
 tumbler
+typescript-language-server
 ufw
 unzip
 usbutils
 ventoy-bin
 virt-manager
+vscode-css-languageserver
+vscode-json-languageserver
 vscodium
 vulkan-headers
 wacomtablet
@@ -173,6 +181,7 @@ wireplumber
 wlroots0.18
 wlsunset
 wmctrl
+woff2-font-awesome
 wofi
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr

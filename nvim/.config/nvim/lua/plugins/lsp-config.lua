@@ -1,32 +1,5 @@
 return {
 	{
-		"williamboman/mason.nvim",
-    lazy = false,
-    opts = {}
-	},
-	{
-		"williamboman/mason-lspconfig.nvim",
-    config = function()
-      require("mason-lspconfig").setup({
-        ensure_installed = {
-          "lua_ls",
-          "pyright",
-          -- "gopls",
-          "tailwindcss",
-          "ts_ls",
-          "clangd",
-          "jsonls",
-          "cssls",
-          "nil_ls"
-        }
-      })
-    end,
-    lazy = false,
-		opts = {
-      auto_install = true
-    },
-	},
-	{
 		"neovim/nvim-lspconfig",
     dependencies = {},
     lazy = false,
