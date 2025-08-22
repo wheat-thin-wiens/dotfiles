@@ -17,7 +17,7 @@ return {
       "neovim/nvim-lspconfig",
       'hrsh7th/cmp-nvim-lsp',
       -- 'hrsh7th/cmp-buffer',
-      'hrsh7th/cmp-path',
+      -- 'hrsh7th/cmp-path',
       'hrsh7th/cmp-cmdline',
       'onsails/lspkind.nvim',
       -- { "roobert/tailwindcss-colorizer-cmp.nvim", config = true },
@@ -52,10 +52,10 @@ return {
           expandable_indicator = true,
           format = function(entry, vim_item)
             local kind = require("lspkind").cmp_format({ mode = "symbol_text", maxwidth = 50 })(entry, vim_item)
-            local strings = vim.split(kind.kind, "%s", { trimempty = true })
-            kind.kind = "" .. (strings[1] or "") .. ""
-            kind.menu = " (" .. (strings[2] or "") .. ")"
-            vim_item.dup = 0
+            local strings = vim.split(kind.kind, "%s", { trimempty = false })
+            kind.kind = " " .. (strings[1] or "") .. " "
+            kind.menu = " (" .. (strings[2] or "") .. ") "
+            vim_item.dup = nil
             return kind
           end
         },

@@ -30,7 +30,7 @@
   "network": {
     "format-wifi": "<span size='13000'>{icon}  </span>{essid}",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "format-ethernet": "<span size='13000'>󰈁</span> Disconnected",
+    "format-ethernet": "<span size='13000'>󰈁</span> eth",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='13000'>󰤭  </span>Disconnected",
     "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",

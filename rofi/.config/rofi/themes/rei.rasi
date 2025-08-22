@@ -21,6 +21,7 @@ element-text, element-icon, mode-switcher {
 window {
   height: 340px;
   location: center;
+  border-radius: 4px;
   border-color: @border-col;
   background-color: @bg-col;
 }

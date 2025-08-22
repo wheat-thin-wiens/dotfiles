@@ -8,14 +8,11 @@ return {
         loops = { italic = true },
         comments = { italic = true },
       },
-      integrations = {
-        telescope = "borderless"
+      extras = {
+        transparency = false,
+        -- high_contrast = true,
+        telescope_theme = "default",
       },
-      transparency = false,
-      highlight_overrides = {
-        ["@type.go"] = { fg = "#91B8E9" },
-        ["@type.definition.go"] = { fg = "#91B8E9"}
-      }
     }
   },
 	{
@@ -26,7 +23,7 @@ return {
   	name = "catppuccin",
 		priority = 1000,
     opts = {
-      transparent_background = true,
+      -- transparent_background = true,
       styles = {
         comments = { 'italic' },
         functions = { 'italic' },
@@ -34,15 +31,6 @@ return {
       },
     }
 	},
-  {
-    "sam4llis/nvim-tundra",
-    name = "tundra",
-    config = function()
-      require('nvim-tundra').setup({
-        transparent_background = false,
-      })
-    end
-  },
   {
     "dgox16/oldworld.nvim",
     lazy = false,
@@ -58,12 +46,41 @@ return {
       end
   },
   {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {}
+    "sam4llis/nvim-tundra",
+    name = "tundra",
+    config = function()
+      require('nvim-tundra').setup({
+        transparent_background = false,
+      })
+    end
   },
   {
-    "sainnhe/everforest",
+    "rose-pine/neovim",
+    config = function()
+      require("rose-pine").setup({
+        variant = "main"
+      })
+    end
   },
+  {
+    "bluz71/vim-moonfly-colors",
+    name = 'moonfly',
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "nyoom-engineering/oxocarbon.nvim"
+  },
+  {
+    "mcauley-penney/techbase.nvim",
+  },
+  -- {
+  --   "folke/tokyonight.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {}
+  -- },
+  -- {
+  --   "sainnhe/everforest",
+  -- },
 }

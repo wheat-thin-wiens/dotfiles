@@ -62,6 +62,7 @@ return {
       telescope.setup({
         defaults = {
           prompt_prefix = "   ",
+          -- selection_caret = " ",
           sorting_strategy = "descending",
           path_display = path_display,
           -- path_display = {

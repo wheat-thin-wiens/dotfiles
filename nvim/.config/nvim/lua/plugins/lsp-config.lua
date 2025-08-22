@@ -11,6 +11,7 @@ return {
         ensure_installed = {
           "lua_ls",
           "pyright",
+          -- "gopls",
           "tailwindcss",
           "ts_ls",
           "clangd",
@@ -35,7 +36,7 @@ return {
 		config = function()
       local lspconfig = require("lspconfig")
 			local capabilities = require("cmp_nvim_lsp").default_capabilities()
-      local cmp_nvim_lsp = require("cmp_nvim_lsp")
+      -- local cmp_nvim_lsp = require("cmp_nvim_lsp")
       -- local capabilities = vim.tbl_deep_extend(
       --   "force",
       --   {},
@@ -58,7 +59,21 @@ return {
         capabilities = capabilities
       })
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
+        settings = {
+          Lua = {
+            diagnostics = {
+              globals = { "vim" },
+            },
+            workspace = {
+              library = {
+                [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+                [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
+                [vim.fn.expand "${3rd}/love2d/library"] = true,
+              }
+            }
+          }
+        }
 			})
       lspconfig.omnisharp.setup({
         capabilities = capabilities,

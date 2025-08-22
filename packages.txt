@@ -14,17 +14,13 @@ breeze-plymouth
 brightnessctl
 btop
 btrfs-progs
-caffeine
 catppuccin-gtk-theme-mocha
 cbonsai
 chromium
 discord
-discover
-dmenu
 dnsmasq
 docker
 docker-compose
-dolphin-emu
 drkonqi
 efibootmgr
 eslint
@@ -38,7 +34,6 @@ ghostty
 gimp
 git
 github-cli
-gnome-keyring
 gopls
 grub
 grub-btrfs
@@ -78,6 +73,7 @@ libreoffice-fresh
 libvirt
 linux
 linux-firmware
+love
 luarocks
 ly
 man-db
@@ -85,11 +81,11 @@ mirage
 mpd
 mpv
 mpvpaper
-mullvad-vpn
 nautilus
 nemo
 neofetch
-neovim
+neovim-nightly-bin
+neovim-nightly-bin-debug
 network-manager-applet
 networkmanager
 nil-git
@@ -132,7 +128,6 @@ qemu-base
 qemu-hw-usb-host
 qt5-quickcontrols2
 reflector
-rhythmbox
 rofi
 samba
 sddm
@@ -148,11 +143,11 @@ sqlectron-gui
 sqlitebrowser
 starship
 stow
+sway
 swaync
 swww
 tagger
 tealdeer
-thefuck
 thunar
 thunderbird
 timeshift
@@ -165,7 +160,9 @@ tumbler
 ufw
 unzip
 usbutils
+ventoy-bin
 virt-manager
+vscodium
 vulkan-headers
 wacomtablet
 waybar
@@ -177,7 +174,6 @@ wlroots0.18
 wlsunset
 wmctrl
 wofi
-wordgrinder
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 xdotool
@@ -185,8 +181,8 @@ xorg-xhost
 xorg-xinput
 yay
 yazi
+zed
 zen-browser-bin
-zoxide
 zram-generator
 zsh-autocomplete
 zsh-autosuggestions
