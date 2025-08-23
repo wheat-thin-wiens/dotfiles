@@ -3,7 +3,7 @@ set $mod Mod4
 
 ## Startup processes
 exec --no-startup-id picom
-exec --no-startup-id xinput set-prop "DEXIN Tt eSPORTS Level 10 M mouse" "libinput Accel Speed" 0.4
+exec --no-startup-id xinput set-prop "DEXIN Tt eSPORTS Level 10 M mouse" "libinput Accel Speed" 0.3
 exec --no-startup-id xset r rate 450 45
 exec --no-startup-id xset s off -dpms
 exec_always --no-startup-id ~/.config/polybar/launch_polybar.sh
@@ -184,10 +184,3 @@ client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
 
 client.background       #ffffff
-
-
-# Start i3bar to display a workspace bar (plus the system information i3status
-# finds out, if available)
-#bar {
-#        status_command i3status
-#}

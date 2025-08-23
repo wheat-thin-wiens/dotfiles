@@ -4,8 +4,8 @@ return {
     dev = true,
     opts = {
       styles = {
-        functions = { italic = true, bold = true },
-        loops = { italic = true },
+        -- functions = { italic = true, bold = true },
+        -- loops = { italic = true },
         comments = { italic = true },
       },
       integrations = {
@@ -58,9 +58,9 @@ return {
       end
   },
   {
-    "folke/tokyonight.nvim",
-    lazy = false,
-    priority = 1000,
-    opts = {}
+    "nyoom-engineering/oxocarbon.nvim",
+  },
+  {
+    "mcauley-penney/techbase.nvim",
   },
 }

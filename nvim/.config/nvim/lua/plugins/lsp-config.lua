@@ -14,7 +14,6 @@ return {
           "ts_ls",
           "tailwindcss",
           "clangd",
-          "gopls"
         }
       })
     end,
@@ -46,7 +45,19 @@ return {
         capabilities = capabilities
       })
 			lspconfig.lua_ls.setup({
-				capabilities = capabilities
+				capabilities = capabilities,
+   --      settings = {
+   --      Lua = {
+   --          diagnostics = {
+   --            globals = { "vim" },
+   --          },
+   --          workspace = {
+   --            library = {
+   --              [vim.fn.expand "${3rd}/love2d/library"] = true,
+   --            }
+   --          }
+   --        }
+   --      }
 			})
       lspconfig.omnisharp.setup({
         capabilities = capabilities,
