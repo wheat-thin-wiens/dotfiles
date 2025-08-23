@@ -9,9 +9,8 @@ return {
     null_ls.setup({
       -- debug = true,
       sources = {
-        require("none-ls.diagnostics.eslint_d"),
-        require("none-ls.code_actions.eslint_d"),
-
+        -- require("none-ls.diagnostics.eslint_d"),
+        -- require("none-ls.code_actions.eslint_d"),
         -- null_ls.builtins.diagnostics.golangci_lint,
         null_ls.builtins.diagnostics.mypy.with({
           extra_args = function()
@@ -22,6 +21,7 @@ return {
         -- null_ls.builtins.diagnostics.markdownlint,
         --null_ls.builtins.diagnostics.rubocop,
         --null_ls.builtins.diagnostics.swiftlint,
+
         null_ls.builtins.formatting.clang_format,
         null_ls.builtins.formatting.stylua,
         null_ls.builtins.formatting.black,

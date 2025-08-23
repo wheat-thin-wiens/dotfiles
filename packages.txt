@@ -19,6 +19,7 @@ caddy
 cbonsai
 cdrtools
 chromium
+clang
 discord
 dkms
 dmg2img
@@ -135,6 +136,7 @@ libvirt
 linux
 linux-firmware
 love
+lua-language-server
 luarocks
 ly
 milou
@@ -146,7 +148,7 @@ musescore
 navidrome
 nemo
 neofetch
-neovim
+neovim-nightly-bin
 network-manager-applet
 networkmanager
 nginx
@@ -192,7 +194,9 @@ polkit-kde-agent
 polybar
 posy-improved-cursors
 powerdevil
+prettier
 print-manager
+python-black
 python-wxpython
 python312
 qbittorrent
@@ -221,10 +225,12 @@ sqlitebrowser
 starship
 steam
 stow
+stylua
 swaync
 swww
 systemsettings
 tagger
+tailwindcss-language-server
 tesseract
 thefuck
 thunar
@@ -234,8 +240,12 @@ timeshift
 timeshift-systemd-timer
 tmux
 ttf-nerd-fonts-symbols-mono
+typescript-language-server
 ufw
+ventoy-bin
 virt-manager
+vscode-css-languageserver
+vscode-json-languageserver
 waybar
 waypaper
 wezterm

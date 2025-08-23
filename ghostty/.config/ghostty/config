@@ -1,10 +1,10 @@
-theme = rei.ghostty
+theme = oldworld.ghostty
 # custom-shader = ghostty-shaders/in-game-crt.glsl
 background-opacity = 1
 window-padding-x = 10
 window-padding-y = 10
 window-inherit-working-directory = true
-window-decoration = none
+window-decoration = false
 title = "ghostty"
 
 font-family = Jetbrains Mono
