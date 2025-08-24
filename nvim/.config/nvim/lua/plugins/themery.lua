@@ -35,7 +35,11 @@ return {
         {
           name = 'techbase',
           colorscheme = 'techbase',
-        }
+        },
+        {
+          name = 'vague',
+          colorscheme = 'vague',
+        },
       },
       globalAfter = [[
         if vim.g.colors_name ~= "rei" then

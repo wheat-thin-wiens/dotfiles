@@ -1,8 +1,8 @@
 local telescope = require("telescope")
-local builtin = require("telescope.builtin")
-local actions = require("telescope.actions")
-local action_state = require("telescope.actions.state")
-local sorters = require("telescope.sorters")
+-- local builtin = require("telescope.builtin")
+-- local actions = require("telescope.actions")
+-- local action_state = require("telescope.actions.state")
+-- local sorters = require("telescope.sorters")
 
 -- local function fb_actions(f)
 --   return function(b)

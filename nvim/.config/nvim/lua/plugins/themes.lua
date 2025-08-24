@@ -74,6 +74,9 @@ return {
   {
     "mcauley-penney/techbase.nvim",
   },
+  {
+    "vague2k/vague.nvim",
+  },
   -- {
   --   "folke/tokyonight.nvim",
   --   lazy = false,
