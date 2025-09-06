@@ -45,7 +45,9 @@ gopls
 grub
 grub-btrfs
 gst-plugin-pipewire
+gthumb
 gufw
+gvfs-gphoto2
 handbrake
 hyprland
 hyprpaper

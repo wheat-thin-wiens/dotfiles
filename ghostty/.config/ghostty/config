@@ -1,4 +1,4 @@
-theme = oldworld.ghostty
+theme = rei.ghostty
 # custom-shader = ghostty-shaders/in-game-crt.glsl
 background-opacity = 1
 window-padding-x = 10
