@@ -37,13 +37,16 @@ return {
     priority = 1000,
     config = function()
       require("oldworld").setup({
-          styles = {
-            comments = { italic = true },
-            functions = { italic = true },
-            loops = { italic = true },
-          }
-        })
-      end
+        styles = {
+          comments = { italic = true },
+          functions = { italic = true },
+          loops = { italic = true },
+        },
+        highlight_overrides = {
+          ["@constructor.go"] = { fg = "#85b5ba" }
+        },
+      })
+    end
   },
   {
     "sam4llis/nvim-tundra",

@@ -25,10 +25,10 @@ vim.opt.showmode = false
 vim.lsp.document_color.enable()
 
 -- Disable deprecated function warning
-vim.deprecate = function() end
+-- vim.deprecate = function() end
 
 -- Appearance
--- vim.cmd.colorscheme('nightfox')
+vim.cmd.colorscheme('oldworld')
 
 if vim.g.colors_name ~= "rei" then
   local LineNumAbove = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
@@ -99,10 +99,10 @@ vim.keymap.set("n", "<C-n>", "<cmd> Neotree toggle <CR>", {})
 -- vim.keymap.set('n', '<leader>fc', ':SearchBoxReplace confirm=menu <CR>', {desc = "[F]ind [C]onfirm"})
 
 -- Colortils
--- vim.keymap.set("n", "<leader>ct", "<cmd> Colortils <CR>")
--- vim.keymap.set("n", "<leader>cd", "<cmd> Colortils darken <CR>")
--- vim.keymap.set("n", "<leader>cl", "<cmd> Colortils lighten <CR>")
--- vim.keymap.set("n", "<leader>cg", "<cmd> Colortils greyscale <CR>")
+vim.keymap.set("n", "<leader>ct", "<cmd> Colortils <CR>")
+vim.keymap.set("n", "<leader>cd", "<cmd> Colortils darken <CR>")
+vim.keymap.set("n", "<leader>cl", "<cmd> Colortils lighten <CR>")
+vim.keymap.set("n", "<leader>cg", "<cmd> Colortils greyscale <CR>")
 
 -- Live Server
 -- vim.keymap.set("n", "<leader>ss", "<cmd> LiveServerStart <CR>", { desc = "[S]erver [S]tart" })
@@ -110,3 +110,6 @@ vim.keymap.set("n", "<C-n>", "<cmd> Neotree toggle <CR>", {})
 
 -- Stat Bastard
 -- vim.keymap.set("n", "<leader>sbf", "<cmd> StatBastardFile <CR>", {})
+
+-- Themery
+vim.keymap.set("n", "<leader>th", "<cmd> Themery <CR>", {})

@@ -1,10 +1,10 @@
 {
   "position": "top",
-  "margin-top": 5,
+  // "margin-top": 5,
   // "margin-bottom": 5,
-  "margin-left": 5,
-  "margin-right": 5,
-  "spacing": 5,
+  // "margin-left": 5,
+  // "margin-right": 5,
+  "spacing": 3,
   "reload_style_on_change": true,
   "modules-left": [
     "group/power",

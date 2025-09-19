@@ -1,6 +1,7 @@
 7zip
 alacritty
 amd-ucode
+android-file-transfer
 arch-wiki-docs
 ark
 base
@@ -17,11 +18,13 @@ btrfs-progs
 catppuccin-gtk-theme-mocha
 cbonsai
 ccls
+certbot
 chromium
 discord
 dnsmasq
 docker
 docker-compose
+dotnet-runtime-8.0-bin
 drkonqi
 efibootmgr
 eslint
@@ -53,7 +56,7 @@ i3status
 ifuse
 inkscape
 iptables-nft
-iwd
+jdbrowser-git
 kde-gtk-config
 kdeplasma-addons
 kew
@@ -67,6 +70,7 @@ kwallet-pam
 kwalletmanager
 kwrited
 lazygit
+lazysql
 libcava
 libfprint
 libpulse
@@ -83,12 +87,15 @@ mirage
 mpd
 mpv
 mpvpaper
+mtpfs
+mullvad-vpn-bin
 nautilus
 nemo
 neofetch
 neovim-nightly-bin
 network-manager-applet
 networkmanager
+nginx
 nil-git
 nodejs
 noto-fonts-cjk
@@ -96,6 +103,8 @@ npm
 nxdumpclient
 obs-studio
 obsidian
+omnisharp-roslyn
+omnisharp-roslyn-debug
 opencode-bin
 oxygen
 oxygen-sounds
@@ -170,7 +179,6 @@ ventoy-bin
 virt-manager
 vscode-css-languageserver
 vscode-json-languageserver
-vscodium
 vulkan-headers
 wacomtablet
 waybar
@@ -190,7 +198,7 @@ xorg-xhost
 xorg-xinput
 yay
 yazi
-zed
+yt-dlp
 zen-browser-bin
 zram-generator
 zsh-autocomplete
