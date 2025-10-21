@@ -225,6 +225,7 @@ samba
 screen
 sddm
 sddm-kcm
+shntool
 spectacle
 speedtest-cli
 spotify-launcher
@@ -269,10 +270,10 @@ xorg-xeyes
 xorg-xhost
 xorg-xinput
 xwaylandvideobridge-git
+yarn
 yay
 yazi
 yt-dlp
-zed
 zen-browser-bin
 zram-generator
 zsh
