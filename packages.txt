@@ -31,6 +31,7 @@ docker-compose
 dolphin-emu
 drkonqi
 dysk
+easytag
 efibootmgr
 emulationstation-de
 exfatprogs
@@ -226,6 +227,7 @@ screen
 sddm
 sddm-kcm
 shntool
+sound-juicer
 spectacle
 speedtest-cli
 spotify-launcher
