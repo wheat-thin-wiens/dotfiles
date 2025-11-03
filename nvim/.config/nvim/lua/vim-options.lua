@@ -28,7 +28,7 @@ vim.lsp.document_color.enable()
 -- vim.deprecate = function() end
 
 -- Appearance
-vim.cmd.colorscheme('oldworld')
+vim.cmd.colorscheme('rei')
 
 if vim.g.colors_name ~= "rei" then
   local LineNumAbove = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })

@@ -15,6 +15,7 @@ setopt hist_ignore_dups
 setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
+bindkey "^R" history-incremental-search-backward
 
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
@@ -44,7 +45,7 @@ alias ls='eza'
 alias grupdate="sudo grub-mkconfig -o /boot/grub.grub.cfg"
 alias scrupdate="xrandr --output DP-1 --auto --same-as eDP-1"
 alias skullz="bash /home/ewiens/dotfiles/scripts/skullz.sh"
-alias timeshift-launcher="sudo -E timeshift-gtk"
+# alias timeshift-launcher="sudo -E timeshift-gtk"
 
 # Keybindings
 bindkey              '^I'         menu-complete

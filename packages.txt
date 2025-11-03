@@ -104,7 +104,6 @@ nxdumpclient
 obs-studio
 obsidian
 omnisharp-roslyn
-omnisharp-roslyn-debug
 opencode-bin
 oxygen
 oxygen-sounds
@@ -167,6 +166,7 @@ timeshift
 timeshift-systemd-timer
 tmux
 trayer
+trayer-debug
 ttf-devicons
 ttf-jetbrains-mono
 ttf-meslo-nerd
@@ -177,7 +177,6 @@ unzip
 usbutils
 ventoy-bin
 virt-manager
-vscode-css-languageserver
 vscode-json-languageserver
 vulkan-headers
 wacomtablet

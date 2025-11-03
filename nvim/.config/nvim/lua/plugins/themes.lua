@@ -72,12 +72,16 @@ return {
     priority = 1000,
   },
   {
+    "xeind/nightingale.nvim",
+    lazy = false,
+    priority = 1000
+  },
+  {
     "nyoom-engineering/oxocarbon.nvim"
   },
   {
     "mcauley-penney/techbase.nvim",
   },
-  -- {
   --   "folke/tokyonight.nvim",
   --   lazy = false,
   --   priority = 1000,

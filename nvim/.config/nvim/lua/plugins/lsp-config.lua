@@ -14,9 +14,9 @@ return {
     vim.lsp.enable('clangd')
 
     -- CSS LSP
-    vim.lsp.config['cssls'] = {
-      cmd = { 'vscode-css-languageserver' },
-    }
+    -- vim.lsp.config['cssls'] = {
+    --   cmd = { 'vscode-css-languageserver' },
+    -- }
 
     vim.lsp.enable('cssls')
 
