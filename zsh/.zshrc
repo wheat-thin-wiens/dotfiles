@@ -20,7 +20,7 @@ bindkey "^R" history-incremental-search-backward
 # Plugins
 source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
 source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
 eval "$(starship init zsh)"
 # eval $(thefuck --alias)
 
@@ -40,7 +40,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Alias
-alias vim='nvim'
+# alias vim='nvim'
 alias ls='eza'
 alias grupdate="sudo grub-mkconfig -o /boot/grub.grub.cfg"
 alias scrupdate="xrandr --output DP-1 --auto --same-as eDP-1"

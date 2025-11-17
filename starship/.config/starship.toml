@@ -12,7 +12,7 @@ $time\
 $line_break$character"""
 
 palette = 'rei'
-command_timeout = 250
+command_timeout = 1000
 
 [palettes.rei]
 color_fg0    = "#CDCDCD"

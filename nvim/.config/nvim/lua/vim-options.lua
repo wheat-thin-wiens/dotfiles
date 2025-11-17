@@ -22,7 +22,7 @@ vim.opt.wrap = false
 vim.opt.showmode = false
 
 -- Additional Settings
-vim.lsp.document_color.enable()
+-- vim.lsp.document_color.enable()
 
 -- Disable deprecated function warning
 -- vim.deprecate = function() end
