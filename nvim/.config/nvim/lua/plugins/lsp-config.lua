@@ -14,11 +14,9 @@ return {
     vim.lsp.enable('clangd')
 
     -- CSS LSP
-    -- vim.lsp.config['cssls'] = {
-    --   cmd = { 'vscode-css-languageserver' },
-    -- }
-
-    vim.lsp.enable('cssls')
+    vim.lsp.config['cssls'] = {
+      cmd = { 'vscode-css-languageserver --stdio' },
+    }
 
     -- Go LSP
     vim.lsp.config['gopls'] = {
@@ -30,7 +28,7 @@ return {
 
     -- JSON LSP
     vim.lsp.config['jsonls'] = {
-      cmd = { 'vscode-json-languageserver' },
+      cmd = { 'vscode-json-languageserver --stdio' },
     }
 
     vim.lsp.enable('jsonls')

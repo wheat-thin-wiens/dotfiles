@@ -4,12 +4,14 @@ amd-ucode
 android-file-transfer
 arch-wiki-docs
 ark
+audacity
 base
 base-devel
 bat
 bluedevil
 blueman
 bluez
+bluez-utils
 breeze-gtk
 breeze-plymouth
 brightnessctl
@@ -30,6 +32,7 @@ efibootmgr
 eslint
 eza
 feh
+feishin
 filelight
 flatpak-kcm
 fprintd
@@ -42,6 +45,7 @@ gopls
 grub
 grub-btrfs
 gst-plugin-pipewire
+helvum
 hypridle
 hyprland
 hyprlock
@@ -128,6 +132,7 @@ plasma-welcome
 plasma-workspace-wallpapers
 plymouth
 plymouth-kcm
+pnpm
 polybar
 posy-cursors
 prettier
@@ -146,11 +151,9 @@ sddm
 sddm-kcm
 seahorse
 sof-firmware
+sox
 spectacle
 speedtest-cli
-spicetify-cli
-spicetify-marketplace-bin
-spotify-launcher
 sqlectron-gui
 sqlitebrowser
 starship
@@ -158,15 +161,16 @@ stow
 sway
 swaync
 swww
+syncthing
 tagger
 tealdeer
 thunar
 thunderbird
+tidal-hifi
 timeshift
 timeshift-systemd-timer
 tmux
 trayer
-trayer-debug
 ttf-devicons
 ttf-jetbrains-mono
 ttf-meslo-nerd
@@ -177,6 +181,7 @@ unzip
 usbutils
 ventoy-bin
 virt-manager
+vscode-css-languageserver
 vscode-json-languageserver
 vulkan-headers
 wacomtablet
@@ -202,4 +207,5 @@ zen-browser-bin
 zram-generator
 zsh-autocomplete
 zsh-autosuggestions
+zsh-completions
 zsh-syntax-highlighting
