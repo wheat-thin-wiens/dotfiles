@@ -28,6 +28,14 @@ return {
 
     vim.lsp.enable('gopls')
 
+    -- Java
+    vim.lsp.config['jdtls'] = {
+      cmd = { 'jdtls' },
+      filetypes = { 'java' }
+    }
+
+    vim.lsp.enable('jdtls')
+
     -- JSON LSP
     vim.lsp.config['jsonls'] = {
       cmd = { 'vscode-json-languageserver' },
