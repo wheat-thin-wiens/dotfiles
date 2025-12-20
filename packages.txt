@@ -1,5 +1,4 @@
 7zip
-alacritty
 amd-ucode
 android-file-transfer
 arch-wiki-docs
@@ -42,6 +41,7 @@ gimp
 git
 github-cli
 gopls
+gradle
 grub
 grub-btrfs
 gst-plugin-pipewire
@@ -61,6 +61,9 @@ ifuse
 inkscape
 iptables-nft
 jdbrowser-git
+jdk-openjdk
+jdk17-openjdk
+jdtls
 kde-gtk-config
 kdeplasma-addons
 kew
@@ -87,6 +90,7 @@ lua-language-server
 luarocks
 ly
 man-db
+maven
 mirage
 mpd
 mpv
@@ -107,6 +111,7 @@ npm
 nxdumpclient
 obs-studio
 obsidian
+okular
 omnisharp-roslyn
 opencode-bin
 oxygen
@@ -154,6 +159,7 @@ sof-firmware
 sox
 spectacle
 speedtest-cli
+spring-boot-cli
 sqlectron-gui
 sqlitebrowser
 starship
