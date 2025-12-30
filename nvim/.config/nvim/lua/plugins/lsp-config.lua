@@ -22,14 +22,35 @@ return {
     vim.lsp.config['gopls'] = {
       cmd = { 'gopls' },
       filetypes = { 'go' },
+      root_markers = { 'go.mod', 'go.sum' }
     }
 
     vim.lsp.enable('gopls')
 
     -- Java LSP
+    -- vim.api.nvim_create_autocmd('FileType', {
+    --   pattern = 'java',
+    --   callback = function(args)
+    --     require("")
+    --   end
+    -- })
+
     vim.lsp.config['jdtls'] = {
       cmd = { 'jdtls' },
-      filetypes = { 'java' }
+      filetypes = { 'java' },
+      root_markers = { 'build.gradle', 'settings.gradle' },
+      settings = {
+        java = {
+          configuration = {
+           'updateBuildConfiguration'
+          },
+          import = {
+            gradle = {
+              enabled = true
+            }
+          }
+        }
+      }
     }
 
     vim.lsp.enable('jdtls')
