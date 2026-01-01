@@ -9,7 +9,7 @@ return {
         comments = { italic = true },
       },
       extras = {
-        transparency = false,
+        transparency = true,
         -- high_contrast = true,
         telescope_theme = "default",
       },

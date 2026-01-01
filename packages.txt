@@ -50,6 +50,7 @@ gnome-disk-utility
 gopls
 gpart
 gparted
+gradle
 grpc
 grub
 grub-btrfs
@@ -175,7 +176,7 @@ nfs-utils
 nginx
 noto-fonts-cjk
 npm
-nvidia
+nvidia-open
 nwg-look
 nxdumpclient
 obs-studio
