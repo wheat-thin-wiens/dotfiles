@@ -127,7 +127,6 @@
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
 
-
   fonts.fontconfig.enable = true;
 
   # Define a user account. Don't forget to set a password with ‘passwd’.
@@ -136,32 +135,15 @@
     description = "ewiens";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
-      amberol
-      btop
-      cargo
-      cava
-      feh
-      gh
-      ghostty
       home-manager
       i3
-      neofetch
+      javaPackages.compiler.openjdk25
       nodejs_23
-      polybar
       python312Full
-      rofi
       rustc
-      tmux
-      waybar
       wayland
-      wezterm
-      yazi
-      zsh-prezto
     ];
   };
-
-  programs.firefox.enable = true;
-  programs.hyprland.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

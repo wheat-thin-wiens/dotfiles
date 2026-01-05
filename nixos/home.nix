@@ -8,10 +8,18 @@
   # The home.packages option allows you to install Nix packages into your
   # environment.
   home.packages = [
+    pkgs.amberol
+    pkgs.btop
+    pkgs.cargo
+    pkgs.cava
+    pkgs.eslint
     pkgs.eza
+    pkgs.feh
     pkgs.fira-code-symbols
     pkgs.font-awesome
     pkgs.fzf
+    pkgs.gh
+    pkgs.ghostty
     # pkgs.git
     pkgs.hyprland
     pkgs.hyprpaper
@@ -20,14 +28,20 @@
     pkgs.lua
     pkgs.luarocks
     pkgs.nemo
+    pkgs.neofetch
     pkgs.neovim
     # pkgs.obsidian
     pkgs.picom
+    pkgs.polybar
     # pkgs.posy-cursors
     pkgs.ripgrep
+    pkgs.rofi
     pkgs.starship
     pkgs.swww
-    # pkgs.tmux
+    pkgs.tmux
+    pkgs.waybar
+    pkgs.wezterm
+    pkgs.yazi
     pkgs.zsh-prezto
 
     # # You can also create simple shell scripts directly inside your
