@@ -88,7 +88,7 @@
   # programs.hyprland.enable = true;
 
   # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = true;
+  services.displayManager.sddm.enable = false;
   services.desktopManager.plasma6.enable = true;
 
   # Configure keymap in X11
@@ -121,11 +121,14 @@
 
   nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
-  environment.variables.EDITOR = "nvim";
-
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
   programs.zsh.enable = true;
+
+  environment.variables = {
+    EDITOR = "nvim";
+    VISUAL = "nvim";
+  };
 
   fonts.fontconfig.enable = true;
 
@@ -135,10 +138,14 @@
     description = "ewiens";
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
+      bash
       home-manager
+      hyprland
       i3
-      javaPackages.compiler.openjdk25
+      javaPackages.compiler.openjdk21
+      ly
       nodejs_23
+      picom
       python312Full
       rustc
       wayland
@@ -150,10 +157,7 @@
     defaultEditor = true;
   };
 
-  home.sessionVariables = {
-    EDITOR = "nvim";
-    VISUAL = "nvim";
-  };
+  programs.firefox.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -167,6 +171,10 @@
    vim
    wget
   ];
+
+  services.displayManager.ly = {
+    enable = true;
+  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

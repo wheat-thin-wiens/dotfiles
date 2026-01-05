@@ -1,5 +1,26 @@
 { config, pkgs, ... }:
 
+let
+
+  startTmux = pkgs.writeShellApplication {
+    name = "start_tmux";
+    runtimeInputs = [ pkgs.tmux ];
+    text = ''
+      # if [ -z "''${PS1:-}" ]; then
+      #   exit 0
+      # fi
+
+      case "''${TERM:-}" in
+        screen*|tmux*) exit 0 ;;
+      esac
+
+      if [ -z "''${TMUX:-}" ]; then
+        exec tmux
+      fi
+    '';
+  };
+
+in
 {
   home.username = "ewiens";
   home.homeDirectory = "/home/ewiens";
@@ -12,6 +33,7 @@
     pkgs.btop
     pkgs.cargo
     pkgs.cava
+    pkgs.cbonsai
     pkgs.eslint
     pkgs.eza
     pkgs.feh
@@ -20,41 +42,47 @@
     pkgs.fzf
     pkgs.gh
     pkgs.ghostty
+    pkgs.gopls
+    pkgs.gradle
     # pkgs.git
     pkgs.hyprland
     pkgs.hyprpaper
     pkgs.hyprshot
+    pkgs.jdt-language-server
     pkgs.jetbrains-mono
+    pkgs.kdePackages.ark
+    pkgs.kdePackages.okular
+    pkgs.keyd
+    pkgs.lazygit
+    pkgs.love
     pkgs.lua
     pkgs.luarocks
+    pkgs.maven
+    pkgs.mullvad-vpn
     pkgs.nemo
     pkgs.neofetch
     pkgs.neovim
-    # pkgs.obsidian
+    pkgs.obsidian
     pkgs.picom
     pkgs.polybar
     # pkgs.posy-cursors
+    pkgs.pyright
     pkgs.ripgrep
     pkgs.rofi
     pkgs.starship
     pkgs.swww
+    pkgs.tagger
     pkgs.tmux
+    pkgs.unzip
     pkgs.waybar
     pkgs.wezterm
+    pkgs.xfce.thunar
     pkgs.yazi
+    pkgs.zsh-autocomplete
+    pkgs.zsh-autosuggestions
+    pkgs.zsh-completions
     pkgs.zsh-prezto
-
-    # # You can also create simple shell scripts directly inside your
-    # # configuration. For example, this adds a command 'my-hello' to your
-    # # environment:
-    # (pkgs.writeShellScriptBin "my-hello" ''
-    #   echo "Hello, ${config.home.username}!"
-    # '')
-    (pkgs.writeShellScriptBin "tmux-init" ''
-      if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
-        exec tmux
-      fi
-      '')
+    pkgs.zsh-syntax-highlighting
   ];
 
   services.picom.enable = true;
@@ -145,7 +173,7 @@
       bind [ split-window -h
       bind ] split-window -v
 
-      set -g default-terminal"tmux-256color"
+      set -g default-terminal "tmux-256color"
       set -ga terminal-overrides ",xterm-256color:rgb"
       set -ga terminal-overrides ",alacritty:RGB"
 
@@ -168,13 +196,19 @@
       size = 10000;
     };
     shellAliases = {
-      ls = "eza";
+      ls = "eza -a";
     };
     prezto = {
       enable = true;
       tmux.autoStartLocal = true;
     };
     initExtra = ''
+      if [[ -o interactive ]]; then
+        if [[ -z "$TMUX" && "$TERM" != screen* && "$TERM" != tmux* ]]; then
+          exec ${pkgs.tmux}/bin/tmux
+        fi
+      fi
+
       neofetch
     '';
   };

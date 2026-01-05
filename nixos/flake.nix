@@ -1,5 +1,4 @@
 {
-
   description = "My first flake";
 
   inputs = {
@@ -17,10 +16,14 @@
   };
 
   outputs = { self, nixpkgs, home-manager, determinate, ... }:
-    let
-      lib = nixpkgs.lib;
-      system = "x86_64-linux";
-      pkgs = nixpkgs.legacyPackages.${system};
+  let
+    lib = nixpkgs.lib;
+    system = "x86_64-linux";
+    # pkgs = nixpkgs.legacyPackages.${system};
+    pkgs = import nixpkgs {
+      inherit system;
+      config.allowUnfree = true;
+    };
   in {
 
     nixosConfigurations = {
