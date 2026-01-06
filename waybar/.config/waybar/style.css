@@ -39,20 +39,51 @@ button {
   border-radius: 20px;
 }
 
-/* button:hover { */
-  /* background-color: rgba(255, 255, 255, 0.4); */
-/* } */
-
 #workspaces button {
   color: #FFFFFF;
   padding: 0px 4px;
-  /* margin-left: 1px; */
-  /* margin-right: 1px; */
+}
+
+#workspaces button:hover {
+  background: none;
+  border: none;
+  padding: 0px 5px;
+  box-shadow: none;
+  text-shadow: none;
+  transition: none;
+}
+
+#workspaces button.active {
+  color: rgba(0, 0, 0, 1);
+  background-color: #FFFFFF;
+  padding: 0px 12px 0px 12px;
+  border-radius: 12px;
+  transition: 0.1s ease-in-out;
+}
+
+#workspaces button.active:hover {
+  border: none;
+  color: rgba(0, 0, 0, 1);
+  background-color: #FFFFFF;
+  border-radius: 12px;
+  padding: 0px 13px;
+  box-shadow: none;
+  text-shadow: none;
+  transition: none;
+  -gtk-icon-shadow: none;
+  -gtk-icon-effect: none;
+}
+
+#clock.date {
+  margin-top: 2px;
+  margin-bottom: 2px;
+  margin-right: 8px;
+  padding-right: 2px;
+  color: #FFFFFF;
 }
 
 #backlight,
 #battery,
-#clock,
 #pulseaudio,
 #cava,
 #network,
@@ -61,14 +92,14 @@ button {
 #custom-wlsunset {
   margin-top: 2px;
   margin-bottom: 2px;
-  margin-left: 4px;
-  margin-right: 4px;
-  padding-left: 4px;
-  padding-right: 4px;
+  margin-left: 2px;
+  margin-right: 2px;
+  padding-left: 2px;
+  padding-right: 2px;
   color: #FFFFFF;
   /* background-color: rgba(0, 0, 0, 0.2); */
   border-radius: 20px;
-  padding: 0px 10px;
+  padding: 0px 8px;
 }
 
 #custom-os_button,

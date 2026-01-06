@@ -11,7 +11,7 @@
     "hyprland/window"
   ],
   "modules-center": [
-    "clock"
+    "clock#time"
   ],
   "modules-right": [
     // "cava",
@@ -19,46 +19,38 @@
     "backlight",
     "bluetooth",
     "network",
-    "battery"
+    "clock#date"
   ],
-  "clock": {
-    "format": "<span></span>{:%a %d %I:%M}",
+  "clock#time": {
+    "format": "<span></span>{:%I:%M}",
+    "tooltip": false,
+  },
+  "clock#date": {
+    "format": "<span></span>{:%a %d}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "network": {
-    "format-wifi": "<span size='13000'>{icon}  </span>{essid}",
+    "format-wifi": "<span size='13000'>{icon} </span>",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format-ethernet": "<span size='13000'>󰈁</span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='13000'>󰤭  </span>Disconnected",
-    "tooltip-format-wifi": "Signal Strenght: {signalStrength}%",
+    "tooltip-format-wifi": "Network: {essid}\nSignal Strenght: {signalStrength}%",
     "on-click": "nmcli device wifi list"
   },
-  "battery": {
-    "interval": 60,
-    "states": {
-        "warning": 30,
-        "critical": 15
-    },
-    "format": "{icon} {capacity}%",
-    "format-icons": ["", "", "", "", ""],
-    "max-length": 25
-  },
-  "backlight": {
-    "format": "{icon} {percent}%",
-    "format-icons": ["󰃞", "󰃟", "󰃠"]
-  },
   "pulseaudio": {
-    "format": "{icon} {volume}%",
+    "format": "{icon}",
     "format-muted": "",
     "format-icons": {
       "default": ["", ""]
     },
     "scroll-step": 5,
+    "tooltip-format": "{desc} - {volume}%",
     "on-click": "pavucontrol"
   },
   "hyprland/workspaces": {
-    "format": "{icon}",
+    "format": "{name}",
+    // "format": "{icon}",
     "format-icons": {
       "default": "",
       "active": ""
@@ -66,9 +58,9 @@
     "sort-by-number": true
   },
   "bluetooth": {
-    "format-on": "󰂯 {status}",
-    "format-off": "󰂲 {status}",
-    "format-disabled": "󰂲 {status}",
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
     "format-connected-battery": "󰥈 {device_alias} {device_battery_percentage}%",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "on-click": "blueman-manager"

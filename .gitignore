@@ -7,3 +7,5 @@ secrets.txt
 
 /servers/navidrome/data/plugins
 /servers/navidrome/data/cache
+
+test.py
