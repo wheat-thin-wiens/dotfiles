@@ -1,8 +1,8 @@
 -- Vim Options
-vim.cmd("set expandtab")
-vim.cmd("set tabstop=2")
-vim.cmd("set softtabstop=2")
-vim.cmd("set shiftwidth=2")
+vim.opt.expandtab = true
+vim.opt.tabstop = 2
+vim.opt.shiftwidth = 2
+vim.opt.softtabstop = 2
 
 vim.opt.backup = false
 vim.opt.swapfile = false -- ~/.local/state/nvim/swap
@@ -16,18 +16,26 @@ vim.opt.fillchars = { eob = "~" }
 vim.opt.wrap = false
 vim.opt.showmode = false
 
+-- Additional Settings
+vim.lsp.document_color.enable() -- 0.12 or later
+
+-- Disable deprecated function warning
+vim.deprecate = function() end
+
 -- Appearance
 vim.cmd.colorscheme('rei')
 
-local LineNumAbove = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
-local LineNum = vim.api.nvim_get_hl(0, { name = "Function", link = true })
-local LineNumBelow = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
-local eobCol = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
-
-vim.api.nvim_set_hl(0, "LineNrAbove", { fg = LineNumAbove.fg })
-vim.api.nvim_set_hl(0, "LineNr", { fg = LineNum.fg })
-vim.api.nvim_set_hl(0, "LineNrBelow", { fg = LineNumBelow.fg })
-vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = eobCol.fg })
+-- if vim.g.colors_name ~= "rei" then
+--   local LineNumAbove = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
+--   local LineNum      = vim.api.nvim_get_hl(0, { name = "Function", link = true })
+--   local LineNumBelow = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
+--   local eobCol       = vim.api.nvim_get_hl(0, { name = "StatusLine", link = true })
+--
+--   vim.api.nvim_set_hl(0, "LineNrAbove", { fg = LineNumAbove.fg })
+--   vim.api.nvim_set_hl(0, "LineNr", { fg = LineNum.fg })
+--   vim.api.nvim_set_hl(0, "LineNrBelow", { fg = LineNumBelow.fg })
+--   vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = eobCol.fg })
+-- end
 
 -- LSP Options
 vim.diagnostic.config({ virtual_text = true })
@@ -39,13 +47,13 @@ vim.keymap.set("i", "<Esc>", "<Esc>", opts)
 
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
-vim.keymap.set("n", "<C-s>", "<cmd> w! <CR>")
+vim.keymap.set("n", "<C-s>", "<cmd> w <CR>")
 vim.keymap.set("n", "<leader>y", "\"+y", {})
 vim.keymap.set("v", "<leader>y", "\"+y", {})
 vim.keymap.set("n", "<leader>n", "<cmd> noh <CR>")
 vim.keymap.set("n", "<leader>bw", "<cmd> bw <CR>")
+vim.keymap.set('n', '<leader>pf', '<cmd> Ex <CR>')
 -- vim.keymap.set('n', '<', '<S-<><')
--- vim.keymap.set('n', '<leader>pf', '<cmd> Ex <CR>')
 
 -- LSP Keymaps
 -- vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
@@ -86,14 +94,14 @@ vim.keymap.set("n", "<C-n>", "<cmd> Neotree toggle <CR>", {})
 -- vim.keymap.set('n', '<leader>fc', ':SearchBoxReplace confirm=menu <CR>', {desc = "[F]ind [C]onfirm"})
 
 -- Colortils
-vim.keymap.set("n", "<leader>ct", "<cmd> Colortils <CR>")
-vim.keymap.set("n", "<leader>cd", "<cmd> Colortils darken <CR>")
-vim.keymap.set("n", "<leader>cl", "<cmd> Colortils lighten <CR>")
-vim.keymap.set("n", "<leader>cg", "<cmd> Colortils greyscale <CR>")
+-- vim.keymap.set("n", "<leader>ct", "<cmd> Colortils <CR>")
+-- vim.keymap.set("n", "<leader>cd", "<cmd> Colortils darken <CR>")
+-- vim.keymap.set("n", "<leader>cl", "<cmd> Colortils lighten <CR>")
+-- vim.keymap.set("n", "<leader>cg", "<cmd> Colortils greyscale <CR>")
 
 -- Live Server
-vim.keymap.set("n", "<leader>ss", "<cmd> LiveServerStart <CR>", { desc = "[S]erver [S]tart" })
-vim.keymap.set("n", "<leader>sq", "<cmd> LiveServerStop <CR>", { desc = "[S]erver [Q]uit" })
+-- vim.keymap.set("n", "<leader>ss", "<cmd> LiveServerStart <CR>", { desc = "[S]erver [S]tart" })
+-- vim.keymap.set("n", "<leader>sq", "<cmd> LiveServerStop <CR>", { desc = "[S]erver [Q]uit" })
 
 -- Stat Bastard
-vim.keymap.set("n", "<leader>sbf", "<cmd> StatBastardFile <CR>", {})
+-- vim.keymap.set("n", "<leader>sbf", "<cmd> StatBastardFile <CR>", {})

@@ -1,8 +1,8 @@
 local telescope = require("telescope")
-local builtin = require("telescope.builtin")
-local actions = require("telescope.actions")
-local action_state = require("telescope.actions.state")
-local sorters = require("telescope.sorters")
+-- local builtin = require("telescope.builtin")
+-- local actions = require("telescope.actions")
+-- local action_state = require("telescope.actions.state")
+-- local sorters = require("telescope.sorters")
 
 -- local function fb_actions(f)
 --   return function(b)
@@ -62,6 +62,7 @@ return {
       telescope.setup({
         defaults = {
           prompt_prefix = "   ",
+          -- selection_caret = " ",
           sorting_strategy = "descending",
           path_display = path_display,
           -- path_display = {
