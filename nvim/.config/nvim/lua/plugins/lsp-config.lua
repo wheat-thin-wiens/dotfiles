@@ -65,6 +65,13 @@ return {
 
     vim.lsp.enable('luals')
 
+    -- Nix LSP
+    vim.lsp.config['nix'] = {
+      cmd = { "nil" },
+      filetypes = { ".nix" },
+      root_markers = { "flake.nix" },
+    }
+
     -- C# LSP
     -- vim.lsp.config['omnisharp-roslyn'] = {
     --   cmd = {},

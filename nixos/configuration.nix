@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ inputs, config, pkgs, ... }:
 
 {
   imports =
@@ -139,14 +139,15 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       bash
+      cargo
       home-manager
       hyprland
       i3
       javaPackages.compiler.openjdk21
       ly
-      nodejs_23
+      nodejs_24
       picom
-      python312Full
+      python312
       rustc
       wayland
     ];
@@ -155,9 +156,15 @@
   programs.neovim = {
     enable = true;
     defaultEditor = true;
+    # package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
 
   programs.firefox.enable = true;
+  programs.hyprland = {
+    enable = true;
+    # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+  };
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;

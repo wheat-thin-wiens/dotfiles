@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs = {
-      url =  "nixpkgs/nixos-unstable";
+      url =  "github:NixOS/nixpkgs/nixos-unstable";
     };
 
     home-manager = {
@@ -13,9 +13,12 @@
 
     determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     # catppuccin.url = "github:catppuccin.nix";
+
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    hyprland.url = "github:hyprwm/Hyprland";
   };
 
-  outputs = { self, nixpkgs, home-manager, determinate, ... }:
+  outputs = { self, nixpkgs, home-manager, determinate, ... }@inputs:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -24,16 +27,28 @@
       inherit system;
       config.allowUnfree = true;
     };
-  in {
-
+    overlays = [
+      inputs.neovim-nightly-overlay.overlays.default
+    ];
+  in 
+  {
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
         modules = [ 
-            ./configuration.nix
-            determinate.nixosModules.default
+          ./configuration.nix
+          determinate.nixosModules.default
+          {
+            nixpkgs.overlays = overlays;
+          }
         ];
       };
+      # nixos = nixpkgs.lib.nixosSystem {
+      #   specialArgs = { inherit inputs; };
+      #   modules = [
+      #     ./configuration.nix
+      #   ];
+      # };
     };
     
     homeConfigurations = {

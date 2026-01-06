@@ -45,7 +45,6 @@ in
     pkgs.gopls
     pkgs.gradle
     # pkgs.git
-    pkgs.hyprland
     pkgs.hyprpaper
     pkgs.hyprshot
     pkgs.jdt-language-server
@@ -56,27 +55,28 @@ in
     pkgs.lazygit
     pkgs.love
     pkgs.lua
+    pkgs.lua-language-server
     pkgs.luarocks
     pkgs.maven
     pkgs.mullvad-vpn
     pkgs.nemo
     pkgs.neofetch
-    pkgs.neovim
+    pkgs.nil
     pkgs.obsidian
-    pkgs.picom
     pkgs.polybar
-    # pkgs.posy-cursors
     pkgs.pyright
     pkgs.ripgrep
     pkgs.rofi
     pkgs.starship
     pkgs.swww
     pkgs.tagger
+    pkgs.tailwindcss-language-server
+    pkgs.thunar
     pkgs.tmux
+    pkgs.typescript-language-server
     pkgs.unzip
     pkgs.waybar
     pkgs.wezterm
-    pkgs.xfce.thunar
     pkgs.yazi
     pkgs.zsh-autocomplete
     pkgs.zsh-autosuggestions
@@ -84,8 +84,6 @@ in
     pkgs.zsh-prezto
     pkgs.zsh-syntax-highlighting
   ];
-
-  services.picom.enable = true;
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
   # plain files is through 'home.file'.
@@ -209,7 +207,7 @@ in
       enable = true;
       tmux.autoStartLocal = true;
     };
-    initExtra = ''
+    initContent = ''
       if [[ -o interactive ]]; then
         if [[ -z "$TMUX" && "$TERM" != screen* && "$TERM" != tmux* ]]; then
           exec ${pkgs.tmux}/bin/tmux

@@ -17,7 +17,7 @@ vim.opt.wrap = false
 vim.opt.showmode = false
 
 -- Additional Settings
-vim.lsp.document_color.enable() -- 0.12 or later
+-- vim.lsp.document_color.enable() -- 0.12 or later
 
 -- Disable deprecated function warning
 vim.deprecate = function() end
