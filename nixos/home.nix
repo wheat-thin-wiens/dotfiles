@@ -161,18 +161,24 @@ in
   #   enable = true;
   # };
 
-  # programs.git = {
-  #   enable = true;
-  #   userName = "wheat-thin-wiens";
-  #   userEmail = "ethanjwiens@gmail.com";
-  # };
+  programs.git = {
+    enable = true;
+    settings = {
+      # credential.helper = "cache --timeout=3600";
+      # credential."https://github.com" = {
+      #   helper = "!${pkgs.gh}/bin/gh auth git-helper";
+      # };
+    };
+  };
 
-  # programs.gh = {
-  #   enable = true;
-  #   gitCredentialHelper = {
-  #     enable = true;
-  #   };
-  # };
+  programs.gh = {
+    enable = true;
+    gitCredentialHelper.enable = true;
+    settings = {
+      # git_protocol = "https";
+      credential_helper = "";
+    };
+  };
 
   programs.starship = {
     enable = true;

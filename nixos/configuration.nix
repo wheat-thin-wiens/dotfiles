@@ -88,9 +88,16 @@
   };
 
   services.desktopManager.plasma6.enable = true;
+  # services.kwallet.enable = true;
   services.displayManager.ly = {
     enable = true;
   };
+
+  security.pam.services.kwallet.enable = true;
+  # security.pam.services.kwallet = {
+  #   name = "kwallet";
+  #   enableKwallet = true;
+  # };
 
 
   # Configure keymap in X11
@@ -184,11 +191,15 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-   gcc
-   git
-   unzip
-   vim
-   wget
+    gcc
+    git
+    kdePackages.kwalletmanager
+    # libsForQt5.kwallet
+    # libsForQt5.kwallet-pam
+    # libsForQt5.kwalletmanager
+    unzip
+    vim
+    wget
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
