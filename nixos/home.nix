@@ -30,6 +30,7 @@ in
   # environment.
   home.packages = [
     pkgs.amberol
+    pkgs.bat
     pkgs.btop
     pkgs.cargo
     pkgs.cava
