@@ -161,13 +161,14 @@
     ];
   };
 
+  programs.firefox.enable = true;
+  programs.git.enable = true;
   programs.neovim = {
     enable = true;
     defaultEditor = true;
     # package = inputs.neovim-nightly-overlay.packages.${pkgs.system}.default;
   };
 
-  programs.firefox.enable = true;
   programs.hyprland = {
     enable = true;
     package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;

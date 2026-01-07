@@ -167,12 +167,12 @@ in
   #   userEmail = "ethanjwiens@gmail.com";
   # };
 
-  programs.gh = {
-    enable = true;
-    gitCredentialHelper = {
-      enable = true;
-    };
-  };
+  # programs.gh = {
+  #   enable = true;
+  #   gitCredentialHelper = {
+  #     enable = true;
+  #   };
+  # };
 
   programs.starship = {
     enable = true;
