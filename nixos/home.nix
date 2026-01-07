@@ -1,4 +1,4 @@
-{ config, pkgs, ... }:
+{ config, pkgs, zen-browser, ... }:
 
 let
 
@@ -20,14 +20,14 @@ let
     '';
   };
 
+  zen-pkg = zen-browser.packages."${pkgs.system}".default;
+
 in
 {
   home.username = "ewiens";
   home.homeDirectory = "/home/ewiens";
   home.stateVersion = "24.11"; # Please read the comment before changing.
 
-  # The home.packages option allows you to install Nix packages into your
-  # environment.
   home.packages = [
     pkgs.amberol
     pkgs.bat
@@ -84,6 +84,8 @@ in
     pkgs.zsh-completions
     pkgs.zsh-prezto
     pkgs.zsh-syntax-highlighting
+
+    zen-browser.packages."${pkgs.system}".default
   ];
 
   # Home Manager is pretty good at managing dotfiles. The primary way to manage
@@ -135,8 +137,21 @@ in
   # or
   #
   #  /etc/profiles/per-user/ewiens/etc/profile.d/hm-session-vars.sh
-  #
+
+  xdg.mimeApps = {
+    enable = true;
+    defaultApplications = {
+      "text/html" = "zen-beta.desktop";
+      "x-scheme-handle/http" = "zen-beta.desktop";
+      "x-scheme-handle/https" = "zen-beta.desktop";
+      "x-scheme-handle/about" = "zen-beta.desktop";
+      "x-scheme-handle/unknown" = "zen-beta.desktop";
+    };
+  };
+
   home.sessionVariables = {
+    BROWSER = "zen";
+    DEFAULT_BROWSER = "${zen-browser.packages."${pkgs.system}".default}/bin/zen";
     EDITOR = "nvim";
   };
 

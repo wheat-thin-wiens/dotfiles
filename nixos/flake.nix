@@ -14,14 +14,14 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     # catppuccin.url = "github:catppuccin.nix";
-
-    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    determinate.url = "https://flakehub.com/f/DeterminateSystems/determinate/*";
     hyprland.url = "github:hyprwm/Hyprland";
+    neovim-nightly-overlay.url = "github:nix-community/neovim-nightly-overlay";
+    zen-browser.url = "github:0xc000022070/zen-browser-flake";
   };
 
-  outputs = { self, nixpkgs, home-manager, determinate, ... }@inputs:
+  outputs = { self, nixpkgs, home-manager, determinate, zen-browser, ... }@inputs:
   let
     lib = nixpkgs.lib;
     system = "x86_64-linux";
@@ -38,6 +38,7 @@
     nixosConfigurations = {
       nixos = lib.nixosSystem {
         inherit system;
+        specialArgs = { inherit inputs;};
         modules = [ 
           ./configuration.nix
           determinate.nixosModules.default
@@ -46,17 +47,14 @@
           }
         ];
       };
-      # nixos = nixpkgs.lib.nixosSystem {
-      #   specialArgs = { inherit inputs; };
-      #   modules = [
-      #     ./configuration.nix
-      #   ];
-      # };
     };
     
     homeConfigurations = {
       ewiens = home-manager.lib.homeManagerConfiguration {
         inherit pkgs;
+        extraSpecialArgs = {
+          inherit zen-browser;  
+        };
         modules = [ ./home.nix ];
       };
     };

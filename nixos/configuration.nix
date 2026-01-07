@@ -11,6 +11,12 @@
   boot.loader.grub.device = "/dev/vda";
   boot.loader.grub.useOSProber = true;
 
+  # Graphics
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
   # Plymouth
   boot = {
     plymouth = {
@@ -140,6 +146,7 @@
     packages = with pkgs; [
       bash
       cargo
+      gvfs
       home-manager
       hyprland
       i3
@@ -149,6 +156,7 @@
       picom
       python312
       rustc
+      udisks
       wayland
     ];
   };
@@ -162,9 +170,12 @@
   programs.firefox.enable = true;
   programs.hyprland = {
     enable = true;
-    # package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
-    # portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
+    package = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.hyprland;
+    portalPackage = inputs.hyprland.packages.${pkgs.stdenv.hostPlatform.system}.xdg-desktop-portal-hyprland;
   };
+
+  services.gvfs.enable = true;
+  services.udisks2.enable = true;
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
