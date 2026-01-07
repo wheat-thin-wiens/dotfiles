@@ -218,6 +218,21 @@ in
     '';
   };
 
+  # services.keyd = {
+  #   enable = true;
+    # nodes = {
+    #   # change default to actual device from output of `keyd -l`
+    #   default = {
+    #     ids = [ "*" ];
+    #     settings = {
+    #       main = {
+    #         capslock = "overload(control, esc)";
+    #       };
+    #     };
+    #   };
+    # };
+  # };
+
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;
 }

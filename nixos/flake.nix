@@ -2,9 +2,12 @@
   description = "My first flake";
 
   inputs = {
+    # nixos.url = "github:NixOS/nixpkgs/nixos-unstable";
     nixpkgs = {
       url =  "github:NixOS/nixpkgs/nixos-unstable";
     };
+
+    # flake-registry.url = "github:NixOS/flake-registry";
 
     home-manager = {
       url =  "github:nix-community/home-manager/master";

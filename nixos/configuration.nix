@@ -1,14 +1,10 @@
-# Edit this configuration file to define what should be installed on
-# your system.  Help is available in the configuration.nix(5) man page
-# and in the NixOS manual (accessible by running ‘nixos-help’).
-
 { inputs, config, pkgs, ... }:
 
 {
-  imports =
-    [ # Include the results of the hardware scan.
-      /etc/nixos/hardware-configuration.nix
-    ];
+  imports = [ 
+    # Include the results of the hardware scan.
+    /etc/nixos/hardware-configuration.nix
+  ];
 
   # Bootloader.
   boot.loader.grub.enable = true;
@@ -40,7 +36,7 @@
     loader.timeout = 5;
   };
 
-  networking.hostName = "nixos"; # Define your hostname.
+  networking.hostName = "nixos";
   # networking.wireless.enable = true;  # Enables wireless support via wpa_supplicant.
 
   # Configure network proxy if necessary
@@ -85,11 +81,11 @@
 
   };
 
-  # programs.hyprland.enable = true;
-
-  # Enable the KDE Plasma Desktop Environment.
-  services.displayManager.sddm.enable = false;
   services.desktopManager.plasma6.enable = true;
+  services.displayManager.ly = {
+    enable = true;
+  };
+
 
   # Configure keymap in X11
   # services.xserver.xkb = {
@@ -119,7 +115,11 @@
   # Enable touchpad support (enabled default in most desktopManager).
   services.libinput.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings = {
+    stalled-download-timeout = 10000;
+    experimental-features = [ "nix-command flakes" ];
+  };
+  # nix.settings.experimental-features = [ "nix-command flakes" ];
 
   environment.shells = with pkgs; [ zsh ];
   users.defaultUserShell = pkgs.zsh;
@@ -178,10 +178,6 @@
    vim
    wget
   ];
-
-  services.displayManager.ly = {
-    enable = true;
-  };
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.
