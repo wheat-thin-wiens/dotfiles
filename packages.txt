@@ -47,6 +47,7 @@ ghostty
 git
 github-cli
 gnome-disk-utility
+go-tools
 gopls
 gpart
 gparted
@@ -149,6 +150,7 @@ libretro-scummvm
 libretro-shaders-slang
 libretro-snes9x
 libretro-yabause
+libva-utils
 libvirt
 linux
 linux-firmware
@@ -175,7 +177,6 @@ networkmanager
 nfs-utils
 nginx
 nil-git
-nil-git-debug
 noto-fonts-cjk
 npm
 nvidia-open

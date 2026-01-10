@@ -24,6 +24,11 @@ return {
     vim.lsp.config['gopls'] = {
       cmd = { 'gopls' },
       filetypes = { 'go' },
+      settings = {
+        gopls = {
+          completionBudget = "500ms",
+        }
+      }
     }
 
     vim.lsp.enable('gopls')

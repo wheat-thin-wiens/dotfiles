@@ -71,15 +71,15 @@ return {
           dynamic_preview_title = true,
           layout_strategy = "flex",
           layout_config = {
-            flex = { flip_columns = 140 },
+            flex = { flip_columns = 150 },
             horizontal = {
               mirror = false,
               prompt_position = "top",
               width = { padding = 20 },
               height = { padding = 2 },
-              preview_cutoff = 10,
+              preview_cutoff = 150,
               preview_width = 0.5,
-              },
+            },
             vertical = {
               mirror = true,
               prompt_position = "top",
