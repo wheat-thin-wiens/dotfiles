@@ -10,7 +10,7 @@ tooltip {
 }
 
 window#waybar {
-  background-color: rgba(0, 0, 0, 0.8);
+  background-color: rgba(0, 0, 0, 0);
   /* border-radius: 20px; */
 }
 
@@ -62,11 +62,8 @@ button {
 }
 
 #backlight,
-/* #battery, */
-#clock,
 #pulseaudio,
 #cava,
-#bluetooth,
 #custom-caffeine,
 #custom-wlsunset {
   margin-top: 2px;
@@ -80,10 +77,54 @@ button {
   padding: 0px 10px;
 }
 
+#clock.time {
+  color: #CDCDCD;
+  background-color: #0E1723;
+  padding: 0px 8px;
+  margin: 2px 0px;
+  border-radius: 16px;
+}
+
+#clock.date {
+  color: #CDCDCD;
+  background-color: #0E1723;
+  padding: 4px 8px;
+  margin: 2px 0px 2px 0px;
+  border-radius: 16px;
+}
+
+#battery {
+  color: #CDCDCD;
+  background-color: #0E1723;
+  padding: 0px 8px;
+  margin: 2px 4px;
+  border-radius: 16px;
+}
+
 #network {
-  margin: 4px 10px 6px 0px;
-  padding: 0px 10px 0px 10px;
-  color: #FFFFFF;
+  color: #CDCDCD;
+  background-color: #0E1723;
+  padding: 0px 16px;
+  margin: 2px 0px 2px 0px;
+  /* margin: 4px 10px 6px 0px; */
+  /* padding: 0px 10px 0px 10px; */
+  border-radius: 16px;
+}
+
+#bluetooth {
+  color: #CDCDCD;
+  background-color: #0E1723;
+  padding: 0px 16px;
+  margin: 2px 4px;
+  border-radius: 16px;
+}
+
+#backlight {
+  color: #CDCDCD;
+  background-color: #0E1723;
+  padding: 0px 20px 0px 14px;
+  margin: 2px 0px 2px 4px;
+  border-radius: 16px;
 }
 
 #custom-os_button,

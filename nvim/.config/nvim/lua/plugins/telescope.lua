@@ -79,7 +79,7 @@ return {
               height = { padding = 2 },
               preview_cutoff = 10,
               preview_width = 0.5,
-              },
+            },
             vertical = {
               mirror = true,
               prompt_position = "top",

@@ -1,6 +1,7 @@
 7zip
 amd-ucode
 android-file-transfer
+android-studio
 arch-wiki-docs
 ark
 audacity
@@ -27,6 +28,7 @@ docker
 docker-compose
 dotnet-runtime-8.0-bin
 drkonqi
+droidcam
 efibootmgr
 eslint
 eza
@@ -40,11 +42,15 @@ ghostty
 gimp
 git
 github-cli
+go-tools
 gopls
 gradle
 grub
 grub-btrfs
 gst-plugin-pipewire
+gthumb
+gvfs-mtp
+gvfs-smb
 helvum
 hypridle
 hyprland
@@ -63,6 +69,7 @@ iptables-nft
 jdbrowser-git
 jdk-openjdk
 jdk17-openjdk
+jdk21-openjdk
 jdtls
 kde-gtk-config
 kdeplasma-addons
@@ -70,6 +77,7 @@ kew
 keyd
 kgamma
 kinfocenter
+kotlin-language-server
 krdp
 kscreen
 ksshaskpass

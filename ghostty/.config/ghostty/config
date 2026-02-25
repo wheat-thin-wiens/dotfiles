@@ -5,8 +5,8 @@ background-blur = true
 window-padding-x = 10
 window-padding-y = 10
 window-inherit-working-directory = true
-window-decoration = false
-title = "ghostty"
+window-decoration = true
+# title = "ghostty"
 
 font-family = Jetbrains Mono
 font-style = bold
@@ -17,7 +17,7 @@ clipboard-write = allow
 
 mouse-hide-while-typing = true
 cursor-style = block
-shell-integration-features = no-cursor, no-title
+shell-integration-features = no-cursor
 confirm-close-surface = false
 
 keybind = ctrl+enter=ignore

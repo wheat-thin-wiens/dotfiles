@@ -22,7 +22,12 @@ return {
     vim.lsp.config['gopls'] = {
       cmd = { 'gopls' },
       filetypes = { 'go' },
-      root_markers = { 'go.mod', 'go.sum' }
+      root_markers = { 'go.mod', 'go.sum' },
+      settings = {
+        gopls = {
+          completionBudget = "500ms",
+        }
+      }
     }
 
     vim.lsp.enable('gopls')
@@ -61,6 +66,14 @@ return {
     }
 
     vim.lsp.enable('jsonls')
+
+    -- Kotlin LSP
+    vim.lsp.config['kotlin'] = {
+      cmd = { 'kotlin-language-server' },
+      filetypes = { 'kotlin' }
+    }
+
+    vim.lsp.enable('kotlin')
 
     -- Lua LSP
     vim.lsp.config['luals'] = {
