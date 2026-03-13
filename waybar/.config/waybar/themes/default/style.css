@@ -36,7 +36,8 @@ button {
 
 #workspaces button {
   color: #FFFFFF;
-  /* padding: 0px 4px; */
+  padding: 0px 8px;
+  margin: 4px 0px;
 }
 
 #workspaces button:hover {
@@ -47,7 +48,8 @@ button {
 #workspaces button.active {
   color: rgba(0, 0, 0, 1);
   background-color: #FFFFFF;
-  padding: 0px 12px;
+  padding: 0px 16px;
+  margin: 4px 0px;
   transition: 0.1s ease-in-out;
 }
 

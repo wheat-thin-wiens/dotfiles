@@ -65,6 +65,7 @@ i3lock
 i3status
 ifuse
 inkscape
+inotify-tools
 iptables-nft
 jdbrowser-git
 jdk-openjdk
@@ -106,6 +107,7 @@ mpvpaper
 mtpfs
 mullvad-vpn-bin
 nautilus
+ncdu
 nemo
 neofetch
 neovim-nightly-bin
@@ -180,7 +182,7 @@ tagger
 tealdeer
 thunar
 thunderbird
-tidal-hifi
+tidal-hifi-bin
 timeshift
 timeshift-systemd-timer
 tmux
@@ -209,6 +211,7 @@ wlsunset
 wmctrl
 woff2-font-awesome
 wofi
+xclip
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
 xdotool

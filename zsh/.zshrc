@@ -48,7 +48,7 @@ export NVM_DIR="$HOME/.nvm"
 # Alias
 alias vim='nvim'
 alias ls='eza'
-alias grupdate="sudo grub-mkconfig -o /boot/grub.grub.cfg"
+alias grupdate="sudo grub-mkconfig -o /boot/grub/grub.cfg"
 alias scrupdate="xrandr --output DP-1 --auto --same-as eDP-1"
 alias skullz="bash /home/ewiens/dotfiles/scripts/skullz.sh"
 # alias timeshift-launcher="sudo -E timeshift-gtk"
