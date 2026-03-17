@@ -23,8 +23,8 @@ bindkey "^R" history-incremental-search-backward
     https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
 source ~/clones/znap/znap.zsh
 
-znap source marlonrichert/zsh-autocomplete
-# znap source hlissner/zsh-autopair
+# znap source marlonrichert/zsh-autocomplete
+znap source hlissner/zsh-autopair
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-syntax-highlighting
