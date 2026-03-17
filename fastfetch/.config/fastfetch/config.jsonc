@@ -1,0 +1,49 @@
+{
+  "$schema": "https://github.com/fastfetch-cli/fastfetch/raw/master/doc/json_schema.json",
+  "logo": {
+    "type": "auto",
+    "source": "$HOME/.config/fastfetch/art/steam.txt",
+    "color": {
+      "1": "blue",
+      "2": "white",
+    },
+  },
+  "display": {
+    "separator": " - ",
+    "color": {
+      "keys": "blue",
+      "title": "blue",
+    },
+  },
+  "modules": [
+    "title",
+    "separator",
+    "os",
+    // "host",
+    // "kernel",
+    // "uptime",
+    // "packages",
+    "shell",
+    // "display",
+    // "de",
+    // "wm",
+    // "wmtheme",
+    // "theme",
+    // "icons",
+    // "font",
+    // "cursor",
+    // "terminal",
+    // "terminalfont",
+    "cpu",
+    "gpu",
+    "memory",
+    // "swap",
+    "disk",
+    "localip",
+    // "battery",
+    // "poweradapter",
+    // "locale",
+    "break",
+    "colors"
+  ]
+}

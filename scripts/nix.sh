@@ -40,3 +40,9 @@ function nix-clean() {
 
   nix-collect-garbage -d
 }
+
+function nix-update() {
+  echo "please wait until task is finished"
+  nix-env --upgrade
+  echo "done"
+}
