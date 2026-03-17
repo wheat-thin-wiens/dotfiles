@@ -8,6 +8,7 @@ base-devel
 bash-completion
 bat
 bats
+bchunk
 bluez
 bluez-utils
 breeze-grub
@@ -46,10 +47,11 @@ fwupd-minimal
 galileo-mura
 gamemode
 gamescope
+ghostty
 github-cli
-go
+gnome-disk-utility
 gocryptfs
-gopls
+gparted
 gpu-trace
 grub
 gst-plugin-pipewire
@@ -110,6 +112,7 @@ libva-mesa-driver
 libwireplumber
 linux-firmware-neptune
 linux-neptune-611
+linux-neptune-611-headers
 lua-language-server
 maliit-keyboard
 mandoc
@@ -117,6 +120,7 @@ mangohud
 mesa-utils
 mesa-vdpau
 mkinitcpio
+mullvad-vpn-bin
 nano
 ncdu
 nemo
@@ -153,7 +157,6 @@ powertop
 qt5-tools
 renderdoc-minimal
 ripgrep
-rofi
 rtkit
 rxvt-unicode-terminfo
 sddm
@@ -180,6 +183,7 @@ steamos-tweak-mtu-probing
 stow
 strace
 sudo
+tailscale
 tailwindcss-language-server
 thunar
 tk
@@ -187,7 +191,6 @@ tmux
 tree
 ttf-dejavu
 ttf-twemoji-default
-typescript-language-server
 udisks2-btrfs
 udisks2-lvm2
 umr
@@ -200,6 +203,7 @@ vpower
 vulkan-radeon
 wakehook
 webrtc-audio-processing-1
+wezterm
 wget
 which
 wireguard-tools
@@ -217,7 +221,6 @@ xorg-xrandr
 xorg-xwayland
 xorg-xwininfo
 xterm
-yarn
 yay-bin
 yay-bin-debug
 yazi

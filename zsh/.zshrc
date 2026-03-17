@@ -18,20 +18,33 @@ bindkey '^[[B' history-search-forward
 bindkey "^R" history-incremental-search-backward
 
 # Plugins
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-# source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+[[ -r ~/clones/znap/znap.zsh ]] ||
+  git clone --depth 1 -- \
+    https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
+source ~/clones/znap/znap.zsh
+
+znap source marlonrichert/zsh-autocomplete
+znap source hlissner/zsh-autopair
+znap source zsh-users/zsh-autosuggestions
+znap source zsh-users/zsh-completions
+znap source zsh-users/zsh-syntax-highlighting
+
 eval "$(starship init zsh)"
-# eval $(thefuck --alias)
+
+# Distrobox
+export PATH=$HOME/distrobox/bin:$PATH
+export PATH=$HOME/distrobox/podman-launcher-amd64:$PATH
 
 # PNPM
-export PNPM_HOME="/home/ewiens/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
+# export PNPM_HOME="/home/ewiens/.local/share/pnpm"
+# case ":$PATH:" in
+#   *":$PNPM_HOME:"*) ;;
+#   *) export PATH="$PNPM_HOME:$PATH" ;;
+# esac
 
 # Additional Functions
+source $HOME/dotfiles/scripts/git.sh
+source $HOME/dotfiles/scripts/nix.sh
 source ~/dotfiles/scripts/pystart.sh
 
 # Language Support
@@ -41,20 +54,17 @@ export NVM_DIR="$HOME/.nvm"
 
 # Alias
 # alias vim='nvim'
-alias ls='eza'
-alias grupdate="sudo grub-mkconfig -o /boot/grub.grub.cfg"
-alias scrupdate="xrandr --output DP-1 --auto --same-as eDP-1"
-alias skullz="bash /home/ewiens/dotfiles/scripts/skullz.sh"
+# alias ls='eza'
+# alias grupdate="sudo grub-mkconfig -o /boot/grub.grub.cfg"
+# alias scrupdate="xrandr --output DP-1 --auto --same-as eDP-1"
+# alias skullz="bash /home/ewiens/dotfiles/scripts/skullz.sh"
 # alias timeshift-launcher="sudo -E timeshift-gtk"
 
 # Keybindings
 bindkey              '^I'         menu-complete
 bindkey "$terminfo[kcbt]" reverse-menu-complete
 
-# Auto Run on Startup
+# Auto Run tmux on Startup
 if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
  exec tmux
 fi
-
-#tmux
-neofetch

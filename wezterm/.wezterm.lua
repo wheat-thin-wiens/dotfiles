@@ -7,12 +7,10 @@ local act = wezterm.action
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 config.color_scheme = "rei"
 
+-- config.font_dirs = { 'fonts' }
 -- config.font = wezterm.font(
-  -- "Fantasque Sans Mono",
-  -- "MesloLGS Nerd Font Mono",
-  -- "Jetbrains Mono",
-  -- "SauceCodePro Nerd Font",
-  -- { weight = "Bold", italic = false }
+--   "Jetbrains Mono",
+--   { weight = "Bold", italic = false }
 -- )
 config.font_size = 11
 config.enable_tab_bar = false
