@@ -18,22 +18,22 @@ bindkey '^[[B' history-search-forward
 bindkey "^R" history-incremental-search-backward
 
 # Plugins
-# [[ -r ~/clones/znap/znap.zsh ]] ||
-#   git clone --depth 1 -- \
-#     https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
-# source ~/clones/znap/znap.zsh
+[[ -r ~/clones/znap/znap.zsh ]] ||
+  git clone --depth 1 -- \
+    https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
+source ~/clones/znap/znap.zsh
 
-# znap source marlonrichert/zsh-autocomplete
+znap source marlonrichert/zsh-autocomplete
 # znap source hlissner/zsh-autopair
-# znap source zsh-users/zsh-autosuggestions
-# znap source zsh-users/zsh-completions
-# znap source zsh-users/zsh-syntax-highlighting
+znap source zsh-users/zsh-autosuggestions
+znap source zsh-users/zsh-completions
+znap source zsh-users/zsh-syntax-highlighting
 
-source $HOME/clones/hlissner/zsh-autopair/zsh-autopair.plugin.zsh
-source $HOME/clones/marlonrichert/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-source $HOME/clones/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-source $HOME/clones/zsh-users/zsh-completions/zsh-completions.plugin.zsh
-source $HOME/clones/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
+# source $HOME/clones/hlissner/zsh-autopair/zsh-autopair.plugin.zsh
+# source $HOME/clones/marlonrichert/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+# source $HOME/clones/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
+# source $HOME/clones/zsh-users/zsh-completions/zsh-completions.plugin.zsh
+# source $HOME/clones/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 eval "$(starship init zsh)"
 
