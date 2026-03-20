@@ -57,32 +57,32 @@ return {
       })
     end
   },
-  {
-    "rose-pine/neovim",
-    name = 'rose-pine',
-    config = function()
-      require("rose-pine").setup({
-        variant = "main"
-      })
-    end
-  },
-  {
-    "bluz71/vim-moonfly-colors",
-    name = 'moonfly',
-    lazy = false,
-    priority = 1000,
-  },
-  {
-    "xeind/nightingale.nvim",
-    lazy = false,
-    priority = 1000
-  },
-  {
-    "nyoom-engineering/oxocarbon.nvim"
-  },
-  {
-    "mcauley-penney/techbase.nvim",
-  },
+  -- {
+  --   "rose-pine/neovim",
+  --   name = 'rose-pine',
+  --   config = function()
+  --     require("rose-pine").setup({
+  --       variant = "main"
+  --     })
+  --   end
+  -- },
+  -- {
+  --   "bluz71/vim-moonfly-colors",
+  --   name = 'moonfly',
+  --   lazy = false,
+  --   priority = 1000,
+  -- },
+  -- {
+  --   "xeind/nightingale.nvim",
+  --   lazy = false,
+  --   priority = 1000
+  -- },
+  -- {
+  --   "nyoom-engineering/oxocarbon.nvim"
+  -- },
+  -- {
+  --   "mcauley-penney/techbase.nvim",
+  -- },
   --   "folke/tokyonight.nvim",
   --   lazy = false,
   --   priority = 1000,

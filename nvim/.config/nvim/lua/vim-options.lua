@@ -22,10 +22,7 @@ vim.opt.wrap = false
 vim.opt.showmode = false
 
 -- Additional Settings
--- vim.lsp.document_color.enable()
-
--- Disable deprecated function warning
--- vim.deprecate = function() end
+-- vim.lsp.document_color.enable() -- nvim >= 0.12 only
 
 -- Appearance
 vim.cmd.colorscheme('rei')

@@ -7,12 +7,12 @@ local act = wezterm.action
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 config.color_scheme = "rei"
 
--- config.font_dirs = { "~/.config/wezterm/fonts" }
--- config.font = wezterm.font(
---   "Jetbrains Mono",
---   { weight = "Bold", italic = false }
--- )
-config.font_size = 11
+config.font_dirs = { "~/.config/wezterm/fonts" }
+config.font = wezterm.font(
+  "JetBrains Mono",
+  { weight = "Bold", italic = false }
+)
+config.font_size = 10.5
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
 
