@@ -23,26 +23,13 @@ bindkey "^R" history-incremental-search-backward
     https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
 source ~/clones/znap/znap.zsh
 
-# znap source marlonrichert/zsh-autocomplete
+# znap source marlonrichert/zsh-autocomplete <- this plugin effects command output for some reason. leave disabled
 znap source hlissner/zsh-autopair
 znap source zsh-users/zsh-autosuggestions
 znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-syntax-highlighting
 
-# source $HOME/clones/hlissner/zsh-autopair/zsh-autopair.plugin.zsh
-# source $HOME/clones/marlonrichert/zsh-autocomplete/zsh-autocomplete.plugin.zsh
-# source $HOME/clones/zsh-users/zsh-autosuggestions/zsh-autosuggestions.plugin.zsh
-# source $HOME/clones/zsh-users/zsh-completions/zsh-completions.plugin.zsh
-# source $HOME/clones/zsh-users/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
-
 eval "$(starship init zsh)"
-
-# PNPM
-# export PNPM_HOME="/home/ewiens/.local/share/pnpm"
-# case ":$PATH:" in
-#   *":$PNPM_HOME:"*) ;;
-#   *) export PATH="$PNPM_HOME:$PATH" ;;
-# esac
 
 # Additional Functions
 source $HOME/dotfiles/scripts/git.sh
@@ -55,12 +42,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Alias
-# alias vim='nvim'
-# alias ls='eza'
-# alias grupdate="sudo grub-mkconfig -o /boot/grub.grub.cfg"
-# alias scrupdate="xrandr --output DP-1 --auto --same-as eDP-1"
-# alias skullz="bash /home/ewiens/dotfiles/scripts/skullz.sh"
-# alias timeshift-launcher="sudo -E timeshift-gtk"
+alias ls='eza'
 
 # Keybindings
 bindkey              '^I'         menu-complete

@@ -7,7 +7,7 @@ local act = wezterm.action
 config.color_scheme_dirs = { "~/.config/wezterm/colors" }
 config.color_scheme = "rei"
 
--- config.font_dirs = { 'fonts' }
+-- config.font_dirs = { "~/.config/wezterm/fonts" }
 -- config.font = wezterm.font(
 --   "Jetbrains Mono",
 --   { weight = "Bold", italic = false }
@@ -28,7 +28,7 @@ config.keys = {
     key = 'n',
     mods = 'CTRL|SHIFT',
     action = act.DisableDefaultAssignment,
-  }
+  },
 }
 
 return config

@@ -15,7 +15,9 @@ function nix-pkg() {
 function nix-install-pkgs() {
   sudo systemctl enable --now nix-daemon
 
+  nix-env -iA nixpkgs.bat
   nix-env -iA nixpkgs.eza
+  nix-env -iA nixpkgs.fastfetch
   nix-env -iA nixpkgs.gcc-wrapper
   nix-env -iA nixpkgs.gh
   nix-env -iA nixpkgs.go

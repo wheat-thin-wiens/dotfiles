@@ -41,3 +41,29 @@ btop++ needs an interactive shell to run.
 
 2026/03/17 (10:45:49) | ===> btop++ v.1.4.0
 2026/03/17 (10:45:49) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2026/03/17 (16:05:04) | ===> btop++ v.1.4.0
+2026/03/17 (16:05:04) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2026/03/18 (09:09:50) | ===> btop++ v.1.4.0
+2026/03/18 (09:09:50) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+2026/03/18 (16:34:07) | ERROR: Couldn't determine terminal size of "STDOUT_FILENO"!
+2026/03/18 (16:34:07) | ERROR: Couldn't determine terminal size of "/dev/tty"!
+
+2026/03/19 (08:10:46) | ===> btop++ v.1.4.0
+2026/03/19 (08:10:46) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2026/03/19 (12:40:14) | ===> btop++ v.1.4.0
+2026/03/19 (12:40:14) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2026/03/19 (13:51:22) | ===> btop++ v.1.4.0
+2026/03/19 (13:51:22) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2026/03/20 (09:25:21) | ===> btop++ v.1.4.0
+2026/03/20 (09:25:21) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2026/03/20 (14:37:34) | ===> btop++ v.1.4.0
+2026/03/20 (14:37:34) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
+
+2026/03/20 (14:47:00) | ===> btop++ v.1.4.0
+2026/03/20 (14:47:00) | WARNING: No good candidate for cpu sensor found, using random from all found sensors.
