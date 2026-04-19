@@ -11,7 +11,7 @@ return {
       extras = {
         transparency = true,
         -- high_contrast = true,
-        telescope_theme = "default",
+        telescope_theme = "borderless",
       },
     }
   },

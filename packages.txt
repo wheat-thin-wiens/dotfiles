@@ -2,10 +2,12 @@ abcde
 amberol
 amd-ucode
 android-file-transfer
+android-studio
 arch-install-scripts
 arch-wiki-docs
 ark
 aspnet-runtime-9.0
+awww
 base
 base-devel
 bat
@@ -19,10 +21,15 @@ breeze-plymouth
 btop
 btrfs-progs
 caddy
+calibre
 cbonsai
 cdrtools
+certbot
+certbot-dns-cloudflare
+certbot-nginx
 chromium
 clang
+deno
 discord
 dkms
 dmg2img
@@ -31,6 +38,7 @@ docker
 docker-compose
 dolphin-emu
 drkonqi
+droidcam
 dysk
 easytag
 efibootmgr
@@ -38,7 +46,6 @@ emulationstation-de
 exfatprogs
 eza
 feh
-feishin
 filelight
 flatpak-kcm
 fusee-nano
@@ -71,7 +78,8 @@ i3-wm
 ifuse
 inetutils
 inkscape
-iptables-nft
+inotify-tools
+iptables
 itch-bin
 jdk-openjdk
 jdk17-openjdk
@@ -79,7 +87,6 @@ jdtls
 jellyfin-media-player
 jellyfin-server
 jellyfin-web
-jre11-openjdk
 kactivitymanagerd
 kde-cli-tools
 kde-gtk-config
@@ -91,6 +98,7 @@ kgamma
 kglobalacceld
 kinfocenter
 kmenuedit
+kotlin-language-server
 kpipewire
 krdp
 kscreen
@@ -105,6 +113,7 @@ kwrited
 layer-shell-qt
 lazydocker
 lazygit
+ldns
 lib32-libgudev
 lib32-libnm
 lib32-nvidia-utils
@@ -162,12 +171,14 @@ ly
 maven
 milou
 mirage
+mkcert
 mpv
 mullvad-vpn-bin
 mupen64plus
 musescore
 mypy
 navidrome
+ncdu
 nemo
 neofetch
 neovim-nightly-bin
@@ -187,6 +198,7 @@ obsidian
 ocean-sound-theme
 okular
 opencode-bin
+openldap
 openresolv
 openvpn
 oxygen
@@ -194,6 +206,7 @@ oxygen-sounds
 partitionmanager
 pavucontrol
 picom
+pipes.sh
 pipewire
 pipewire-alsa
 pipewire-jack
@@ -257,7 +270,6 @@ steam
 stow
 stylua
 swaync
-swww
 syncthing
 syncthing-gtk
 systemsettings
@@ -269,7 +281,7 @@ tesseract
 thefuck
 thunar
 thunderbird
-tidal-hifi
+tidal-hifi-bin
 tigervnc
 timeshift
 timeshift-systemd-timer
@@ -304,6 +316,3 @@ yt-dlp
 zen-browser-bin
 zram-generator
 zsh
-zsh-autocomplete
-zsh-autosuggestions
-zsh-syntax-highlighting

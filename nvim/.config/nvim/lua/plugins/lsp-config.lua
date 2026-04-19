@@ -48,6 +48,14 @@ return {
 
     vim.lsp.enable('jsonls')
 
+    -- Kotlin LSP
+    vim.lsp.config['kotlin'] = {
+      cmd = { 'kotlin-language-server' },
+      filetypes = { 'kotlin' },
+    }
+
+    vim.lsp.enable('kotlin')
+
     -- Lua LSP
     vim.lsp.config['luals'] = {
       cmd = { 'lua-language-server' },
