@@ -27,6 +27,7 @@ function nix-install-pkgs() {
   nix-env -iA nixpkgs.lua-language-server
   nix-env -iA nixpkgs.mypy
   nix-env -iA nixpkgs.neovim
+  nix-env -iA nixpkgs.opencode
   nix-env -iA nixpkgs.python312
   nix-env -iA nixpkgs.sqlite
   nix-env -iA nixpkgs.starship
