@@ -1,8 +1,8 @@
 {
   "position": "top",
-  "margin-top": 2,
-  "margin-left": 2,
-  "margin-right": 2,
+  // "margin-top": 5,
+  // "margin-left": 5,
+  // "margin-right": 5,
   "spacing": 5,
   "reload_style_on_change": true,
   "modules-left": [
@@ -30,7 +30,7 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "network": {
-    "format-wifi": "<span size='13000'>{icon}</span>",
+    "format-wifi": "<span size='13000'>{icon} </span>",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format-ethernet": "<span size='13000'>󰈁</span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
@@ -85,7 +85,7 @@
   //   "actions": {}
   // },
   "custom/power_button": {
-    "format": "⏻",
+    "format": " ⏻ ",
     "on-click": "shutdown now",
     "tooltip-format": "Shutdown"
   },
