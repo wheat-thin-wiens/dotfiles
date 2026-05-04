@@ -6,10 +6,25 @@
     /etc/nixos/hardware-configuration.nix
   ];
 
-  # Bootloader.
-  boot.loader.grub.enable = true;
-  boot.loader.grub.device = "/dev/vda";
-  boot.loader.grub.useOSProber = true;
+  # Bootloader
+  boot.loader = {
+    efi = {
+      canTouchEfiVariables = true;
+      efiSysMountPoint = "/boot";
+    };
+    grub = {
+      enable = true;
+      device = "nodev";
+      efiSupport = true;
+      # useOSProber = true;
+    };
+    systemd-boot = {
+      enable = false;
+    };
+  };
+  # boot.loader.grub.enable = true;
+  # boot.loader.grub.device = "/dev/vda";
+  # boot.loader.grub.useOSProber = true;
 
   # Graphics
   hardware.graphics = {
@@ -152,19 +167,31 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       bash
+      btop
       cargo
+      fzf
+      gh
+      ghostty
       gvfs
       home-manager
       hyprland
       i3
       javaPackages.compiler.openjdk21
       ly
+      neofetch
+      nerd-fonts.jetbrains-mono
       nodejs_24
       picom
       python312
+      ripgrep
       rustc
+      starship
+      stow
+      tmux
       udisks
       wayland
+      wezterm
+      yazi
     ];
   };
 

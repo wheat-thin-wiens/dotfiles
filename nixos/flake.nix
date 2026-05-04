@@ -41,7 +41,7 @@
         specialArgs = { inherit inputs;};
         modules = [ 
           ./configuration.nix
-          determinate.nixosModules.default
+          # determinate.nixosModules.default
           {
             nixpkgs.overlays = overlays;
           }
