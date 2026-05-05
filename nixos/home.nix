@@ -230,16 +230,13 @@ in
     #   tmux.autoStartLocal = true;
     # };
     initContent = ''
-      [[ -r ~/clones/znap/znap.zsh ]] ||
-        git clone --depth 1 -- \
-          https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
-      source ~/clones/znap/znap.zsh
-
       if [[ -o interactive ]]; then
         if [[ -z "$TMUX" && "$TERM" != screen* && "$TERM" != tmux* ]]; then
           exec ${pkgs.tmux}/bin/tmux
         fi
       fi
+
+      source ~/clones/znap/znap.zsh
 
       neofetch
     '';
