@@ -41,7 +41,7 @@ in
     pkgs.fira-code-symbols
     pkgs.font-awesome
     pkgs.fzf
-    pkgs.gh
+    # pkgs.gh
     pkgs.ghostty
     pkgs.gopls
     pkgs.gradle

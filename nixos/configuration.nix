@@ -185,7 +185,7 @@
       cargo
       # eza
       fzf
-      # gh
+      gh
       # ghostty
       gvfs
       home-manager
