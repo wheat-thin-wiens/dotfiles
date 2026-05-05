@@ -162,6 +162,11 @@ in
 
   programs.git = {
     enable = true;
+    settings.credential = {
+      helper = "manager";
+      "https://github.com".username = "wheat-thin-wiens";
+      credentialStore = "cache";
+    };
     # settings = {
     #   credential.helper = "cache --timeout=3600";
     #   credential."https://github.com" = {

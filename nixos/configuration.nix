@@ -32,6 +32,19 @@
     enable32Bit = true;
   };
 
+  # Bluetooth
+  hardware.bluetooth = {
+    enable = true;
+    powerOnBoot = true;
+    settings = {
+      # Experimental = true;
+      # FastConnectable = false;
+    };
+    # Policy = {
+    #   AutoEnable = true;
+    # };
+  };
+
   # Plymouth
   boot = {
     plymouth = {
@@ -183,6 +196,7 @@
       # neofetch
       nerd-fonts.jetbrains-mono
       nodejs_24
+      pavucontrol
       picom
       python312
       ripgrep
