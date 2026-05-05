@@ -167,31 +167,35 @@
     extraGroups = [ "networkmanager" "wheel" ];
     packages = with pkgs; [
       bash
-      btop
+      # bat
+      # btop
       cargo
+      # eza
       fzf
       gh
-      ghostty
+      # ghostty
       gvfs
       home-manager
       hyprland
       i3
       javaPackages.compiler.openjdk21
       ly
-      neofetch
+      # neofetch
       nerd-fonts.jetbrains-mono
       nodejs_24
       picom
       python312
       ripgrep
+      # rofi
       rustc
-      starship
-      stow
-      tmux
+      # starship
+      # stow
+      # tmux
       udisks
+      # waybar
       wayland
-      wezterm
-      yazi
+      # wezterm
+      # yazi
     ];
   };
 
@@ -240,7 +244,7 @@
   # List services that you want to enable:
 
   # Enable the OpenSSH daemon.
-  # services.openssh.enable = true;
+  services.openssh.enable = true;
 
   # Open ports in the firewall.
   # networking.firewall.allowedTCPPorts = [ ... ];

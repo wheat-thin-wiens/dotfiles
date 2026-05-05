@@ -79,11 +79,11 @@ in
     pkgs.waybar
     pkgs.wezterm
     pkgs.yazi
-    pkgs.zsh-autocomplete
-    pkgs.zsh-autosuggestions
-    pkgs.zsh-completions
-    pkgs.zsh-prezto
-    pkgs.zsh-syntax-highlighting
+    # pkgs.zsh-autocomplete
+    # pkgs.zsh-autosuggestions
+    # pkgs.zsh-completions
+    # pkgs.zsh-prezto
+    # pkgs.zsh-syntax-highlighting
 
     zen-browser.packages."${pkgs.system}".default
   ];
@@ -216,20 +216,25 @@ in
 
   programs.zsh = {
     enable = true;
-    autosuggestion.enable = true;
-    enableCompletion = true;
-    syntaxHighlighting.enable = true;
+    # autosuggestion.enable = true;
+    # enableCompletion = true;
+    # syntaxHighlighting.enable = true;
     history = {
       size = 10000;
     };
     shellAliases = {
       ls = "eza -a";
     };
-    prezto = {
-      enable = true;
-      tmux.autoStartLocal = true;
-    };
+    # prezto = {
+    #   enable = true;
+    #   tmux.autoStartLocal = true;
+    # };
     initContent = ''
+      [[ -r ~/clones/znap/znap.zsh ]] ||
+        git clone --depth 1 -- \
+          https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
+      source ~/clones/znap/znap.zsh
+
       if [[ -o interactive ]]; then
         if [[ -z "$TMUX" && "$TERM" != screen* && "$TERM" != tmux* ]]; then
           exec ${pkgs.tmux}/bin/tmux

@@ -15,6 +15,16 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # Plugins
+[[ -r ~/clones/znap/znap.sh ]] ||
+  git clone --depth 1 -- \
+    https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
+source ~/clones/znap/znap.zsh
+
+znap source hlissner/zsh-autopair
+znap source zsh-users/zsh-autosuggestions
+znap source zsh-users/zsh-completions
+znap source zsh-users/zsh-syntax-highlighting
+
 eval "$(starship init zsh)"
 # eval $(thefuck --alias)
 
@@ -26,7 +36,7 @@ case ":$PATH:" in
 esac
 
 # Additional Functions
-source ~/dev/bash/pystart.sh
+# source ~/dev/bash/pystart.sh
 # source ~/dev/c/cmake.sh
 # source ~/dotfiles/theme-picker.sh
 # source ~/dev/bash/nvimplug.sh
