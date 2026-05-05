@@ -45,7 +45,6 @@ in
     pkgs.ghostty
     pkgs.gopls
     pkgs.gradle
-    # pkgs.git
     pkgs.hyprpaper
     pkgs.hyprshot
     pkgs.jdt-language-server
@@ -163,12 +162,12 @@ in
 
   programs.git = {
     enable = true;
-    settings = {
-      # credential.helper = "cache --timeout=3600";
-      # credential."https://github.com" = {
-      #   helper = "!${pkgs.gh}/bin/gh auth git-helper";
-      # };
-    };
+    # settings = {
+    #   credential.helper = "cache --timeout=3600";
+    #   credential."https://github.com" = {
+    #     helper = "!${pkgs.gh}/bin/gh auth git-helper";
+    #   };
+    # };
   };
 
   programs.gh = {
@@ -238,24 +237,14 @@ in
 
       source ~/clones/znap/znap.zsh
 
+      znap source hlissner/zsh-autopair
+      znap source zsh-users/zsh-autosiggestions
+      znap source zsh-users/zsh-completions
+      znap source zsh-users/zsh-syntax-highlighting
+
       neofetch
     '';
   };
-
-  # services.keyd = {
-  #   enable = true;
-    # nodes = {
-    #   # change default to actual device from output of `keyd -l`
-    #   default = {
-    #     ids = [ "*" ];
-    #     settings = {
-    #       main = {
-    #         capslock = "overload(control, esc)";
-    #       };
-    #     };
-    #   };
-    # };
-  # };
 
   # Let Home Manager install and manage itself.
   programs.home-manager.enable = true;

@@ -15,9 +15,6 @@ bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
 # Plugins
-[[ -r ~/clones/znap/znap.sh ]] ||
-  git clone --depth 1 -- \
-    https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
 source ~/clones/znap/znap.zsh
 
 znap source hlissner/zsh-autopair
