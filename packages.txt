@@ -53,7 +53,6 @@ fuzzel
 ghostty
 git
 github-cli
-gnome-disk-utility
 go-tools
 gopls
 gpart
@@ -181,7 +180,7 @@ navidrome
 ncdu
 nemo
 neofetch
-neovim-nightly-bin
+neovim
 net-tools
 network-manager-applet
 networkmanager
@@ -296,7 +295,6 @@ vscode-css-languageserver
 vscode-json-languageserver
 waybar
 waypaper
-webkit2gtk-debug
 wezterm
 wikiman
 wine-gecko

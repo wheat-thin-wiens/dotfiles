@@ -18,7 +18,7 @@ return {
       cmd = { 'vscode-css-languageserver' },
     }
 
-    vim.lsp.enable('cssls')
+    -- vim.lsp.enable('cssls')
 
     -- Go LSP
     vim.lsp.config['gopls'] = {
@@ -46,7 +46,7 @@ return {
       cmd = { 'vscode-json-languageserver' },
     }
 
-    vim.lsp.enable('jsonls')
+    -- vim.lsp.enable('jsonls')
 
     -- Kotlin LSP
     vim.lsp.config['kotlin'] = {

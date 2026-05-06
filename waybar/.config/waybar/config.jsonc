@@ -9,6 +9,7 @@
     "group/power",
     "hyprland/workspaces",
     "hyprland/window"
+    // "window-title"
   ],
   "modules-center": [
     "clock#time"
@@ -21,6 +22,26 @@
     "network",
     "clock#date"
   ],
+  "hyprland/window": {
+    "format": "{title}",
+    // "format": "{icon}",
+    // "format-field": {
+    //   "title": "{title}",
+    //   "icon": "{title}",
+    // },
+    // "format-icons": {
+    //   "": " "
+    // },
+    "max-length": 50,
+    "separate-outputs": true
+  },
+  "window-title": {
+    "format": "{}",
+    "max-length": 60,
+    "exec": "hyprcl clients -j | jq -r '.[] | select(.focused=true) | .title' 2>/dev/null || echo''",
+    "interval": 0.5,
+    "return-type": "text"
+  },
   "clock#time": {
     "format": "<span></span>{:%I:%M}",
     "tooltip": false,

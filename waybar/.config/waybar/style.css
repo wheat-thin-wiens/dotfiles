@@ -21,6 +21,13 @@ window#waybar {
   margin-top: 2px;
   margin-bottom: 2px;
   padding: 0px 16px;
+  /* transition: all 0.1s ease-in-out; */
+}
+
+window#waybar.empty #window {
+  background: transparent;
+  opacity: 0;
+  /* transition: all 0.1s ease-in-out; */
 }
 
 #workspaces {
