@@ -83,7 +83,7 @@ return {
             vertical = {
               mirror = true,
               prompt_position = "top",
-              preview_cutoff = 10,
+              preview_cutoff = 50,
               preview_height = 0.4,
             },
           },

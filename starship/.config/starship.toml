@@ -1,7 +1,9 @@
 "$schema" = "https://starship.rs/config-scheme.json"
 
 format = """
-[](color_bg1)\
+[](color_black)\
+${custom.hostname}\
+[](bg:color_bg1 fg:color_black)\
 $directory\
 [](bg:color_red fg:color_bg1)\
 $git_branch\
@@ -26,6 +28,7 @@ color_purple = "#B9AEE6"
 color_red    = "#A87692"
 color_yellow = "#FCD0A1"
 color_white  = "#E9E3F2"
+color_black  = "#48445A"
 
 [os]
 disabled = false
@@ -90,3 +93,10 @@ vimcmd_symbol = '[❮](bold fg:color_green)'
 vimcmd_replace_one_symbol = '[❮](bold fg:color_purple)'
 vimcmd_replace_symbol = '[❮](bold fg:color_purple)'
 vimcmd_visual_symbol = '[❮](bold fg:color_yellow)'
+
+[custom.hostname]
+disabled = false
+when = 'test -z "$SSH_TTY"'
+command = 'echo "$USER@$HOST"'
+style = "fg:color_white bg:color_black"
+format = '[ $output ]($style)'
