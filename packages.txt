@@ -5,6 +5,7 @@ android-studio
 arch-wiki-docs
 ark
 audacity
+awww
 base
 base-devel
 bat
@@ -22,6 +23,7 @@ cbonsai
 ccls
 certbot
 chromium
+ddrescue
 discord
 dnsmasq
 docker
@@ -33,7 +35,6 @@ efibootmgr
 eslint
 eza
 feh
-feishin
 filelight
 flatpak-kcm
 fprintd
@@ -66,7 +67,7 @@ i3status
 ifuse
 inkscape
 inotify-tools
-iptables-nft
+iptables
 jdbrowser-git
 jdk-openjdk
 jdk17-openjdk
@@ -147,7 +148,6 @@ plasma-welcome
 plasma-workspace-wallpapers
 plymouth
 plymouth-kcm
-pnpm
 polybar
 posy-cursors
 prettier
@@ -176,7 +176,6 @@ starship
 stow
 sway
 swaync
-swww
 syncthing
 tagger
 tealdeer
