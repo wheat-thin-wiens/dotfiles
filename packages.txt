@@ -66,6 +66,7 @@ gthumb
 gufw
 gvfs-afc
 gvfs-gphoto2
+gvfs-smb
 handbrake
 hyprland
 hyprpaper
@@ -243,6 +244,8 @@ qemu-base
 qemu-full
 qemu-hw-usb-host
 qqc2-breeze-style
+qt5-graphicaleffects
+qt5-quickcontrols2
 qt5-wayland
 qt6-multimedia-ffmpeg
 qt6-virtualkeyboard
