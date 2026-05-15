@@ -111,7 +111,7 @@ nautilus
 ncdu
 nemo
 neofetch
-neovim-nightly-bin
+neovim
 network-manager-applet
 networkmanager
 nginx
@@ -166,6 +166,7 @@ sddm
 sddm-kcm
 seahorse
 sof-firmware
+sound-juicer
 sox
 spectacle
 speedtest-cli
@@ -178,7 +179,9 @@ sway
 swaync
 syncthing
 tagger
+tailscale
 tealdeer
+thefuck
 thunar
 thunderbird
 tidal-hifi-bin
@@ -221,7 +224,3 @@ yazi
 yt-dlp
 zen-browser-bin
 zram-generator
-zsh-autocomplete
-zsh-autosuggestions
-zsh-completions
-zsh-syntax-highlighting

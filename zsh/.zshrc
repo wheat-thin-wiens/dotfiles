@@ -2,8 +2,6 @@
 export SYSTEMD_EDITOR='nvim'
 export EDITOR='nvim'
 export VISUAL='nvim'
-export MANPAGER="nvim +Man!"
-export TERMINAL="ghostty"
 
 # History Config
 HISTFILE=$HOME/.zhistory
@@ -15,14 +13,20 @@ setopt hist_ignore_dups
 setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
-bindkey "^R" history-incremental-search-backward
 
 # Plugins
-source /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /usr/share/zsh/plugins/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+[[ -r ~/clones/znap/znap.zsh ]] ||
+  git clone --depth 1 -- \
+    https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
+source ~/clones/znap/znap.zsh
+
+znap source hlissner/zsh-autopair
+znap source zsh-users/zsh-autosuggestions
+znap source zsh-users/zsh-completions
+znap source zsh-users/zsh-syntax-highlighting
+
 eval "$(starship init zsh)"
-# eval $(thefuck --alias)
+eval $(thefuck --alias)
 
 # PNPM
 export PNPM_HOME="/home/ewiens/.local/share/pnpm"
@@ -33,12 +37,14 @@ esac
 
 # Java
 # export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
-# export JAVA_HOME="/usr/lib/jvm/java-25-openjdk"
-export JAVA_HOME="/usr/lib/jvm/java-21-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-25-openjdk"
 export PATH="$JAVA_HOME/bin:$PATH"
 
 # Additional Functions
-source ~/dotfiles/scripts/pystart.sh
+source ~/dev/bash/pystart.sh
+# source ~/dev/c/cmake.sh
+# source ~/dotfiles/theme-picker.sh
+# source ~/dev/bash/nvimplug.sh
 
 # Language Support
 export NVM_DIR="$HOME/.nvm"
@@ -48,10 +54,11 @@ export NVM_DIR="$HOME/.nvm"
 # Alias
 alias vim='nvim'
 alias ls='eza'
-alias grupdate="sudo grub-mkconfig -o /boot/grub/grub.cfg"
-alias scrupdate="xrandr --output DP-1 --auto --same-as eDP-1"
-alias skullz="bash /home/ewiens/dotfiles/scripts/skullz.sh"
-# alias timeshift-launcher="sudo -E timeshift-gtk"
+alias grupdate='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
+alias avocado="~/dev/java/java.sh"
+alias gogogo="~/dev/dotnet/C#.sh"
+alias mc="mc --nosubshell"
 
 # Keybindings
 bindkey              '^I'         menu-complete
