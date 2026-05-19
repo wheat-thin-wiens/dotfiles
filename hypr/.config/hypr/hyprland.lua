@@ -42,14 +42,17 @@ hl.workspace_rule({
 -- Look + Feel
 hl.config({
   general = {
-    gaps_in = 2,
-    gaps_out = 4,
+    gaps_in = 4,
+    gaps_out = 8,
     border_size = 1,
 
     col = {
       active_border = { colors = { "rgb(d1d5db)" }, angle = 45 },
       inactive_border = { colors = { "rgba(121212cc)" }, angle = 45}
     },
+
+    allow_tearing = false,
+    layout = "master", -- dwindle
   },
 
   decoration = {

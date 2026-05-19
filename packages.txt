@@ -44,6 +44,7 @@ efibootmgr
 emulationstation-de
 exfatprogs
 eza
+fd
 feh
 filelight
 flatpak-kcm
@@ -288,6 +289,7 @@ tigervnc
 timeshift
 timeshift-systemd-timer
 tmux
+tree-sitter-cli
 ttf-nerd-fonts-symbols-mono
 typescript-language-server
 ufw

@@ -1,4 +1,6 @@
 return {
+
+  -- COLORTILS
   {
     "max397574/colortils.nvim",
     cmd = "Colortils",
@@ -11,6 +13,8 @@ return {
       })
     end,
   },
+
+  -- RENDER MARKDOWN
   {
     "MeanderingProgrammer/render-markdown.nvim",
     main = "render-markdown",
@@ -22,17 +26,21 @@ return {
       "echasnovski/mini.nvim"
     },
   },
-  {
-    "luckasRanarison/tailwind-tools.nvim",
-    name = "tailwind-tools",
-    build = ":UpdateRemotePlugins",
-    dependencies = {
-      "nvim-treesitter/nvim-treesitter",
-      "nvim-telescope/telescope.nvim",
-      "neovim/nvim-lspconfig",
-    },
-    opts = {}
-  },
+
+  -- TAILWIND TOOLS
+  -- {
+  --   "luckasRanarison/tailwind-tools.nvim",
+  --   name = "tailwind-tools",
+  --   build = ":UpdateRemotePlugins",
+  --   dependencies = {
+  --     "nvim-treesitter/nvim-treesitter",
+  --     "nvim-telescope/telescope.nvim",
+  --     "neovim/nvim-lspconfig",
+  --   },
+  --   opts = {}
+  -- },
+
+  -- TROUBLE
   {
     "folke/trouble.nvim",
     opts = {},
