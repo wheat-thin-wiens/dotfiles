@@ -25,7 +25,9 @@ vim.opt.termguicolors = true
 require("lazy").setup("plugins")
 
 -- Source Additional Settings
-require("autocmd")
-require("colors")
-require("keymap")
-require("options")
+require("settings.autocmd")
+require("settings.colors")
+require("settings.keymap")
+require("settings.options")
+
+-- require("settings.test")

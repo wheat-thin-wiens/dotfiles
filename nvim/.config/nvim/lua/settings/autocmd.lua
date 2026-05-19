@@ -1,10 +1,11 @@
--- Auto Enable Tree-sitter Highlights
+-- Auto Enable Tree-sitter Highlights + Indents
 vim.api.nvim_create_autocmd('FileType', {
   pattern = {
     'go',
     'java',
     'javascript',
     'javascriptreact',
+    'json',
     'lua',
     'python',
     'sh',
