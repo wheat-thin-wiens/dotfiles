@@ -39,7 +39,9 @@ filelight
 flatpak-kcm
 fprintd
 fusee-nano
+fwupd
 ghostty
+ghostwriter
 gimp
 git
 github-cli
@@ -79,7 +81,6 @@ kew
 keyd
 kgamma
 kinfocenter
-kotlin-language-server
 krdp
 kscreen
 ksshaskpass
@@ -127,6 +128,7 @@ omnisharp-roslyn
 opencode-bin
 oxygen
 oxygen-sounds
+partitionmanager
 pavucontrol
 peaclock
 picom
@@ -141,7 +143,6 @@ plasma-firewall
 plasma-nm
 plasma-pa
 plasma-sdk
-plasma-systemmonitor
 plasma-thunderbolt
 plasma-vault
 plasma-welcome
