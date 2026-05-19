@@ -6,6 +6,8 @@ return {
     inlay_hints = { enabled = true },
   },
   config = function()
+    local util = require("lspconfig.util")
+
     -- C LSP
     -- vim.lsp.config['clangd'] = {
     --   cmd = { 'clangd' },
@@ -102,9 +104,20 @@ return {
     vim.lsp.enable('pyright')
 
     -- tailwind LSP
-    -- vim.lsp.config['tailwindcss'] = {
-    --   cmd = { 'tailwindcss-language-server' },
-    -- }
+    vim.lsp.config['tailwindcss'] = {
+      cmd = { 'tailwindcss-language-server' },
+      filetypes = { 'tsx', 'jsx' },
+      root_dir = function(fname)
+        local root_pattern = util.root_pattern(
+          'tailwind.config.js',
+          'tailwind.config.ts',
+          'postcss.config.js',
+          'package.json'
+        )
+        -- print(string.format("root directory set as %s", root_pattern(fname)))
+        return root_pattern(fname)
+      end
+    }
 
     vim.lsp.enable('tailwindcss')
 

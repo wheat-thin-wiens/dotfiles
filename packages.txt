@@ -2,7 +2,6 @@ abcde
 amberol
 amd-ucode
 android-file-transfer
-android-studio
 arch-install-scripts
 arch-wiki-docs
 ark
@@ -218,6 +217,7 @@ plasma-desktop
 plasma-disks
 plasma-firewall
 plasma-integration
+plasma-login-manager
 plasma-nm
 plasma-pa
 plasma-sdk
@@ -291,6 +291,7 @@ tmux
 ttf-nerd-fonts-symbols-mono
 typescript-language-server
 ufw
+unrar
 vectorchord-bin
 ventoy-bin
 virt-manager

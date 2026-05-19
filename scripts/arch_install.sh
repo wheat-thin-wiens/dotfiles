@@ -1,5 +1,14 @@
 #!/bin/bash
 
+partition_disk() {
+  local disk
+  lsblk
+  read -p "Enter disk to partition for install > " disk
+
+  # Returns number of partitions currently on disk
+  lsblk ($disk) -nl -o TYPE | grep -c "part"
+}
+
 set_hostname() {
   local host
   read -p "Enter hostname > " host
@@ -53,6 +62,65 @@ grub_init() {
   fi
 }
 
+package_install() {
+  local group
+  echo "Select package group:"
+  read -p "(1) hyprland \n (2)plasma" group
+
+  pacman -S --needed \
+    base-devel \
+    bluez \
+    bluez-utils \
+    curl \
+    ghostty \
+    git \
+    go \
+    ly \
+    neovim \
+    networkmanager \
+    pavucontrol \
+    pipewire \
+    pipewire-pulse \
+    reflector \
+    stow \
+    sudo \
+    ufw \
+    wget \
+    wireplumber \
+    xdg-user-dirs || {
+      echo "basic packages failed to install" >&2
+      return 1
+    }
+  
+  case "$group" in
+    1)
+      pacman -S \
+        ghostty \
+        hyprland \
+        rofi \
+        waybar || {
+          echo "hypr packages failed to install" >&2
+          return 1
+        }
+    2)
+      pacman -S \
+        bluedevil \
+        ghostty \
+        kde-gtk-config \
+        kinfocenter \
+        kscreen \
+        nemo \
+        plasma-desktop \
+        plasma-nm \
+        plasma-pa \
+        sddm || {
+          echo "plasma packages failed to install" >&2
+          return 1
+        }
+      
+  esac
+}
+
 package_basics() {
   pacman -S --needed \
     base-devel \
@@ -67,6 +135,7 @@ package_basics() {
     networkmanager \
     pavucontrol \
     pipewire \
+    pipewire-pulse \
     reflector \
     stow \
     sudo \
@@ -93,9 +162,13 @@ package_plasma() {
   pacman -S \
     bluedevil \
     ghostty \
+    kde-gtk-config \
+    kinfocenter \
+    kscreen \
     nemo \
     plasma-desktop \
     plasma-nm \
+    plasma-pa \
     sddm || {
       echo "plasma packages failed to install" >&2
       return 1
