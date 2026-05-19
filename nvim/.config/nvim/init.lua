@@ -21,5 +21,11 @@ vim.g.maplocalleader = " "
 -- Other Priority Settings
 vim.opt.termguicolors = true
 
+-- Source Plugins
 require("lazy").setup("plugins")
-require("vim-options")
+
+-- Source Additional Settings
+require("autocmd")
+require("colors")
+require("keymap")
+require("options")

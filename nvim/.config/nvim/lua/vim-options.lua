@@ -24,6 +24,9 @@ vim.opt.showmode = false
 -- Additional Settings
 vim.lsp.document_color.enable()
 
+-- LSP Options
+vim.diagnostic.config({ virtual_text = true })
+
 -- Disable deprecated function warning
 -- vim.deprecate = function() end
 
@@ -41,9 +44,6 @@ if vim.g.colors_name ~= "rei" then
   vim.api.nvim_set_hl(0, "LineNrBelow", { fg = LineNumBelow.fg })
   vim.api.nvim_set_hl(0, "EndOfBuffer", { fg = eobCol.fg })
 end
-
--- LSP Options
-vim.diagnostic.config({ virtual_text = true })
 
 -- Common Keymaps
 local opts = { noremap = true, silent = true }

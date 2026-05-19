@@ -34,6 +34,7 @@ droidcam
 efibootmgr
 eslint
 eza
+fd
 feh
 filelight
 flatpak-kcm
@@ -190,6 +191,7 @@ timeshift
 timeshift-systemd-timer
 tmux
 trayer
+tree-sitter-cli
 ttf-devicons
 ttf-jetbrains-mono
 ttf-meslo-nerd
@@ -198,6 +200,7 @@ typescript-language-server
 ufw
 unzip
 usbutils
+uwsm
 ventoy-bin
 virt-manager
 vscode-css-languageserver
