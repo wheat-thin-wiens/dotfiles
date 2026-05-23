@@ -92,6 +92,7 @@ lazygit
 lazysql
 libcava
 libfprint
+libgsf
 libpulse
 libreoffice-fresh
 libvirt
@@ -109,7 +110,6 @@ mpv
 mpvpaper
 mtpfs
 mullvad-vpn-bin
-nautilus
 ncdu
 nemo
 neofetch
@@ -181,7 +181,6 @@ sway
 swaync
 syncthing
 tagger
-tailscale
 tealdeer
 thefuck
 thunar

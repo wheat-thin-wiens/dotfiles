@@ -30,8 +30,17 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("blueman-applet")
   hl.exec_cmd("nm-applet")
   hl.exec_cmd("tmux setenv -g HYPRLAND_INSTANCE_SIGNATURE '$HYPRLAND_INSTANCE_SIGNATURE'")
-  hl.exec_cmd("waybar & hyprpaper & hypridle")
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
+
+  hl.exec_cmd("hypridle")
+  hl.exec_cmd("waybar")
+
+  -- Static wallpaper
+  -- hl.exec_cmd("hyprpaper")
+
+  -- Animated wallpaper
+  hl.exec_cmd("awww-daemon")
+  hl.exec_cmd("awww img /home/ewiens/dotfiles/backgrounds/animated/japanrain.gif")
 end)
 
 -- Env Vars

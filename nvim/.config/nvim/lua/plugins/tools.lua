@@ -1,9 +1,11 @@
 return {
+  --
   -- Autopairs
   {
     "windwp/nvim-autopairs",
     config = true,
   },
+
   -- Autotags
   {
     "windwp/nvim-ts-autotag",
@@ -16,6 +18,7 @@ return {
       })
     end
   },
+
   -- Colortils
   {
     "max397574/colortils.nvim",
@@ -29,11 +32,13 @@ return {
       })
     end,
   },
+
   -- Git Signs
   {
     "lewis6991/gitsigns.nvim",
     opts = {}
   },
+
   -- Indent Blankline
   {
     "lukas-reineke/indent-blankline.nvim",
@@ -42,6 +47,7 @@ return {
       require("ibl").setup({})
     end
   },
+
   -- Markdown
   {
     "MeanderingProgrammer/render-markdown.nvim",
@@ -54,10 +60,25 @@ return {
       "echasnovski/mini.nvim"
     },
   },
+
+  -- Treesitter Manager
+  {
+    "romus204/tree-sitter-manager.nvim",
+    dependencies = {},
+    config = function()
+      require("tree-sitter-manager").setup({
+        ensure_installed = { "lua" },
+        auto_install = true,
+        highlight = true,
+      })
+    end
+  },
+
   -- NVIM / TMUX Navigator
   {
     "christoomey/vim-tmux-navigator",
   },
+
   -- Tailwind
   -- {
   --   "luckasRanarison/tailwind-tools.nvim",

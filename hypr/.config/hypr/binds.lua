@@ -8,6 +8,7 @@ close_window:set_enabled(true)
 hl.bind(main_mod .. " + P", hl.dsp.exec_cmd("hyprshot -m output -m eDP-1"))
 hl.bind(main_mod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/launch.sh"))
 hl.bind(main_mod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(main_mod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- Programs
 hl.bind(main_mod .. " + SPACE", hl.dsp.exec_cmd("rofi -show drun"))
@@ -42,5 +43,8 @@ hl.bind("XF86AudioMicMute",     hl.dsp.exec_cmd("pactl set-mute @DEFAULT_AUDIO_S
 
 hl.bind("XF86MonBrightnessUp",  hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%+"),                  { locked = true, repeating = true })
 hl.bind("XF86MonBrightnessDown",hl.dsp.exec_cmd("brightnessctl -e4 -n2 set 5%-"),                  { locked = true, repeating = true })
+
+hl.bind("ALT + XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -d *::kbd_backlight set +1"))
+hl.bind("ALT + XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -d *::kbd_backlight set 1-"))
 
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
