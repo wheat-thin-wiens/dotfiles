@@ -1,4 +1,5 @@
 abcde
+accounts-qml-module-debug
 amberol
 amd-ucode
 android-file-transfer
@@ -17,6 +18,7 @@ bluez-utils
 breeze
 breeze-gtk
 breeze-plymouth
+brightnessctl
 btop
 btrfs-progs
 caddy
@@ -68,11 +70,13 @@ gvfs-afc
 gvfs-gphoto2
 gvfs-smb
 handbrake
+headscale
 hyprland
 hyprpaper
 hyprpicker
 hyprpolkitagent
 hyprshot
+hyprshutdown
 hyprsunset
 i3-wm
 ifuse
@@ -168,6 +172,7 @@ lua-language-server
 luarocks
 lutris
 ly
+mariadb
 maven
 milou
 mirage
@@ -185,6 +190,7 @@ neovim
 net-tools
 network-manager-applet
 networkmanager
+nextcloud
 nfs-utils
 nginx
 nil-git
@@ -205,6 +211,7 @@ oxygen
 oxygen-sounds
 partitionmanager
 pavucontrol
+php-legacy-imagick
 picom
 pipes.sh
 pipewire
@@ -238,6 +245,7 @@ prettier
 print-manager
 pyright
 python-black
+python-poetry
 python-wxpython
 python312
 qbittorrent

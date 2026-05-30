@@ -1,13 +1,6 @@
 require("binds")
 require("input")
-
--- Monitors
-hl.monitor({
-  output   = "DP-1",
-  mode     = "1920x1080@165",
-  position = "auto",
-  scale    = 1
-})
+require("monitors")
 
 -- Autostart
 hl.on("hyprland.start", function()
@@ -21,8 +14,14 @@ hl.on("hyprland.start", function()
   -- Wallpaper
   -- hl.exec_cmd("hyprpaper")
 
+  -- Animated Wallpaper
+  local paper_file = "japanrain.gif"
+  local paper_path = "$HOME/dotfiles/backgrounds/animted/" .. paper_file
   hl.exec_cmd("awww-daemon")
-  hl.exec_cmd("awww img /home/ewiens/dotfiles/backgrounds/animated/eveninglights.gif")
+  hl.exec_cmd("awww img -o DP-1" .. paper_path)
+  hl.exec_cmd("awww img -o HDMI-A-1" .. paper_path)
+
+
 end)
 
 -- Env Vars
@@ -56,7 +55,7 @@ hl.config({
   },
 
   decoration = {
-    rounding = 4,
+    rounding = 12,
 
     blur = {
       enabled = true,

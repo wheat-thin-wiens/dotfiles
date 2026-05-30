@@ -51,16 +51,16 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "network": {
-    "format-wifi": "<span size='11000'>{icon} - {essid}</span>",
+    "format-wifi": "<span size='13000'>{icon}</span>",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
-    "format-ethernet": "<span size='13000'>󰈁</span>",
+    "format-ethernet": "<span size='13000'>󰈁</span> Disconnected",
     "format-linked": "{ifname} (No IP) ",
     "format-disconnected": "<span size='13000'>󰤭  </span>Disconnected",
     "tooltip-format-wifi": "Network: {essid}\nSignal Strenght: {signalStrength}%",
     "on-click": "nmcli device wifi list"
   },
   "pulseaudio": {
-    "format": "{icon} - {volume}%",
+    "format": "{icon}",
     "format-muted": "",
     "format-icons": {
       "default": ["", ""]
@@ -79,9 +79,9 @@
     "sort-by-number": true
   },
   "bluetooth": {
-    "format-on": "󰂯 - {status}",
-    "format-off": "󰂲 - {status}",
-    "format-disabled": "󰂲 - {status}",
+    "format-on": "󰂯",
+    "format-off": "󰂲",
+    "format-disabled": "󰂲",
     "format-connected-battery": "󰥈 {device_alias} {device_battery_percentage}%",
     "tooltip-format-connected": "{controller_alias}\t{controller_address}\n\n{num_connections} connected",
     "on-click": "blueman-manager"

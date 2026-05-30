@@ -104,7 +104,11 @@ return {
             mappings = {},
             file_ignore_patterns = {
               "%.png",
+              "%.gif",
               "%.jpg",
+              "%.JPG",
+              "%.jpeg",
+              "%.glsl",
               ".DS_Store",
               "%.class",
               "%.idx",

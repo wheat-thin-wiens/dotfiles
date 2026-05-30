@@ -24,6 +24,9 @@ vim.opt.termguicolors = true
 -- Require Plugins
 require("lazy").setup("plugins")
 
+-- Require Local Plugins
+require("local.terminal")
+
 -- Require Additional Settings
 require("settings.autocmd")
 require("settings.colors")
