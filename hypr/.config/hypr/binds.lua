@@ -7,7 +7,8 @@ close_window:set_enabled(true)
 
 hl.bind(main_mod .. " + P", hl.dsp.exec_cmd("hyprshot -m output -m eDP-1"))
 hl.bind(main_mod .. " + R", hl.dsp.exec_cmd("~/.config/waybar/launch.sh"))
-hl.bind(main_mod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+-- hl.bind(main_mod .. " + M", hl.dsp.exec_cmd("command -v hyprshutdown >/dev/null 2>&1 && hyprshutdown || hyprctl dispatch 'hl.dsp.exit()'"))
+hl.bind(main_mod .. " + M", hl.dsp.exec_cmd("hyprshutdown"))
 hl.bind(main_mod .. " + SHIFT + L", hl.dsp.exec_cmd("hyprlock"))
 
 -- Programs

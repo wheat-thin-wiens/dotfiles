@@ -14,7 +14,7 @@ hl.monitor({
   mode      = "1920x1080@60",
   position  = "auto",
   scale     = 1,
-  mirror    = "eDP-1"
+  -- mirror    = "eDP-1"
 })
 
 hl.monitor({
@@ -22,7 +22,7 @@ hl.monitor({
   mode      = "1920x1080@60",
   position  = "auto",
   scale     = 1,
-  mirror    = "eDP-1"
+  -- mirror    = "eDP-1"
 })
 
 -- Autostart
@@ -39,8 +39,14 @@ hl.on("hyprland.start", function()
   -- hl.exec_cmd("hyprpaper")
 
   -- Animated wallpaper
+  local paper_file = "japanrain.gif"
+  local paper_path = "$HOME/dotfiles/backgrounds/animated/" .. paper_file
+
   hl.exec_cmd("awww-daemon")
-  hl.exec_cmd("awww img /home/ewiens/dotfiles/backgrounds/animated/japanrain.gif")
+  -- hl.exec_cmd("awww img /home/ewiens/dotfiles/backgrounds/animated/japanrain.gif")
+  hl.exec_cmd("awww img -o eDP-1 " .. paper_path)
+  hl.exec_cmd("awww img -o DP-4 " .. paper_path)
+  hl.exec_cmd("awww img -o DP-5 " .. paper_path)
 end)
 
 -- Env Vars

@@ -1,7 +1,6 @@
 7zip
 amd-ucode
 android-file-transfer
-android-studio
 arch-wiki-docs
 ark
 audacity
@@ -22,6 +21,7 @@ catppuccin-gtk-theme-mocha
 cbonsai
 ccls
 certbot
+certbot-nginx
 chromium
 ddrescue
 discord
@@ -30,9 +30,9 @@ docker
 docker-compose
 dotnet-runtime-8.0-bin
 drkonqi
-droidcam
 efibootmgr
 eslint
+exfatprogs
 eza
 fd
 feh
@@ -46,6 +46,7 @@ ghostwriter
 gimp
 git
 github-cli
+gnome-disk-utility
 go-tools
 gopls
 gradle
@@ -62,6 +63,7 @@ hyprlock
 hyprpaper
 hyprpicker
 hyprshot
+hyprshutdown
 hyprsunset
 i3-wm
 i3blocks
@@ -99,6 +101,7 @@ libvirt
 linux
 linux-firmware
 love
+lsof
 lua-language-server
 luarocks
 ly
@@ -121,6 +124,7 @@ nil-git
 nodejs
 noto-fonts-cjk
 npm
+ntfs-3g
 nxdumpclient
 obs-studio
 obsidian
@@ -164,8 +168,6 @@ qt5-quickcontrols2
 reflector
 rofi
 samba
-sddm
-sddm-kcm
 seahorse
 sof-firmware
 sound-juicer
@@ -177,12 +179,13 @@ sqlectron-gui
 sqlitebrowser
 starship
 stow
-sway
 swaync
 syncthing
 tagger
+tailscale
 tealdeer
 thefuck
+thinkfinger
 thunar
 thunderbird
 tidal-hifi-bin
@@ -200,7 +203,6 @@ ufw
 unzip
 usbutils
 uwsm
-ventoy-bin
 virt-manager
 vscode-css-languageserver
 vscode-json-languageserver

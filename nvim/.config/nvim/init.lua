@@ -24,6 +24,9 @@ vim.opt.termguicolors = true
 -- Source Plugins
 require("lazy").setup("plugins")
 
+-- Source Local Plugins
+require("local.float_term")
+
 -- Source Additional Settings
 require("settings.autocmd")
 require("settings.colors")
