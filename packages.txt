@@ -49,6 +49,7 @@ github-cli
 gnome-disk-utility
 go-tools
 gopls
+gparted
 gradle
 grub
 grub-btrfs
@@ -133,7 +134,6 @@ omnisharp-roslyn
 opencode-bin
 oxygen
 oxygen-sounds
-partitionmanager
 pavucontrol
 peaclock
 picom

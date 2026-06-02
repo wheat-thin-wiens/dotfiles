@@ -78,9 +78,10 @@ return {
             },
             workspace = {
               library = {
-                [vim.fn.expand "$VIMRUNTIME/lua"] = true,
+                [vim.fn.expand "$VIMRUNTIME/lua"]         = true,
                 [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
-                [vim.fn.expand "${3rd}/love2d/library"] = true,
+                [vim.fn.expand "${3rd}/love2d/library"]   = true,
+                [vim.fn.expand "/usr/share/hypr/stubs"]   =true,
               }
             }
           }
