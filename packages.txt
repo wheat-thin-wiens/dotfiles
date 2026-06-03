@@ -160,6 +160,7 @@ prettier
 print-manager
 pyright
 python-black
+python-colorama
 python312
 qbittorrent
 qemu-base
@@ -184,7 +185,6 @@ syncthing
 tagger
 tailscale
 tealdeer
-thefuck
 thinkfinger
 thunar
 thunderbird
@@ -203,6 +203,7 @@ ufw
 unzip
 usbutils
 uwsm
+ventoy-bin
 virt-manager
 vscode-css-languageserver
 vscode-json-languageserver

@@ -26,7 +26,6 @@ znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-syntax-highlighting
 
 eval "$(starship init zsh)"
-eval $(thefuck --alias)
 
 # PNPM
 export PNPM_HOME="/home/ewiens/.local/share/pnpm"
