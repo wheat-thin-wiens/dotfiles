@@ -50,3 +50,7 @@ hl.bind("SHIFT + " .. vol_down, hl.dsp.exec_cmd("ddcutil setvcp 10 - 5"))
 
 hl.bind(play, hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
 hl.bind(pause,  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
+
+-- Scripts
+local script_dir = "$HOME/.config/hypr/scripts/"
+hl.bind("ALT + W", hl.dsp.exec_cmd(script_dir .. "toggle_waybar.sh"))

@@ -1,5 +1,4 @@
 abcde
-accounts-qml-module-debug
 amberol
 amd-ucode
 android-file-transfer
@@ -211,6 +210,7 @@ oxygen
 oxygen-sounds
 partitionmanager
 pavucontrol
+perl-image-exiftool
 php-legacy-imagick
 picom
 pipes.sh
@@ -244,8 +244,18 @@ powerdevil
 prettier
 print-manager
 pyright
+python-aiodns
+python-aiofiles
+python-aiohttp
+python-aiolimiter
 python-black
+python-click-help-colors
+python-dataclasses-json
+python-deezer-py
 python-poetry
+python-pytest-asyncio
+python-pytest-mock
+python-simple-term-menu
 python-wxpython
 python312
 qbittorrent
@@ -292,6 +302,7 @@ tesseract
 thefuck
 thunar
 thunderbird
+tidal-dl-ng
 tidal-hifi-bin
 tigervnc
 timeshift

@@ -41,10 +41,8 @@ export JAVA_HOME="/usr/lib/jvm/java-25-openjdk"
 export PATH="$JAVA_HOME/bin:$PATH"
 
 # Additional Functions
+source ~/dotfiles/scripts/audio.sh
 source ~/dev/bash/pystart.sh
-# source ~/dev/c/cmake.sh
-# source ~/dotfiles/theme-picker.sh
-# source ~/dev/bash/nvimplug.sh
 
 # Language Support
 export NVM_DIR="$HOME/.nvm"
@@ -70,4 +68,4 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 #tmux
-neofetch
+# neofetch

@@ -1,6 +1,6 @@
 {
   "position": "top",
-  "margin-top": 2,
+  "margin-top": 4,
   "margin-left": 2,
   "margin-right": 2,
   "spacing": 5,
@@ -51,7 +51,7 @@
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
   },
   "network": {
-    "format-wifi": "<span size='11000'>{icon} - {essid}</span>",
+    "format-wifi": "<span size='10500'>{icon} - {essid}</span>",
     "format-icons": ["󰤯", "󰤟", "󰤢", "󰤥", "󰤨"],
     "format-ethernet": "<span size='13000'>󰈁</span>",
     "format-linked": "{ifname} (No IP) ",

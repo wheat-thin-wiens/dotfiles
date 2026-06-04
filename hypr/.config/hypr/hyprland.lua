@@ -1,6 +1,6 @@
-require("binds")
-require("input")
-require("monitors")
+require("modules.binds")
+require("modules.input")
+require("modules.monitors")
 
 -- Autostart
 hl.on("hyprland.start", function()

@@ -13,8 +13,8 @@ window#waybar {
   background-color: rgba(14, 23, 35, 0);
   border-radius: 20px;
 }
-#window,
-#workspaces,
+/* #window, */
+/* #workspaces, */
 
 
 #window {
@@ -53,18 +53,18 @@ button {
   padding: 0px 4px;
 }
 
-#workspaces button:hover {
-
-}
+/* #workspaces button:hover { */
+/**/
+/* } */
 
 #workspaces button.active {
   color: #FD9491;
   transition: 0.1s ease-in-out;
 }
 
-#workspaces button.active:hover {
-
-}
+/* #workspaces button.active:hover { */
+/**/
+/* } */
 
 #clock {
   margin: 2px 4px 2px 4px;
