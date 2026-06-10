@@ -185,7 +185,6 @@ syncthing
 tagger
 tailscale
 tealdeer
-thinkfinger
 thunar
 thunderbird
 tidal-hifi-bin
@@ -196,6 +195,7 @@ trayer
 tree-sitter-cli
 ttf-devicons
 ttf-jetbrains-mono
+ttf-jetbrains-mono-nerd
 ttf-meslo-nerd
 tumbler
 typescript-language-server

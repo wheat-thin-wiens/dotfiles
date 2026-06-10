@@ -53,3 +53,4 @@ hl.bind("ALT + XF86MonBrightnessUp", hl.dsp.exec_cmd("brightnessctl -d *::kbd_ba
 hl.bind("ALT + XF86MonBrightnessDown", hl.dsp.exec_cmd("brightnessctl -d *::kbd_backlight set 1-"))
 
 hl.bind("XF86AudioPlay",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
+hl.bind("ALT + RETURN",  hl.dsp.exec_cmd("playerctl play-pause"), { locked = true })
