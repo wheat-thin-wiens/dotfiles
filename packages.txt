@@ -17,7 +17,6 @@ breeze-plymouth
 brightnessctl
 btop
 btrfs-progs
-catppuccin-gtk-theme-mocha
 cbonsai
 ccls
 certbot

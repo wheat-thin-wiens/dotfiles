@@ -40,7 +40,7 @@ export JAVA_HOME="/usr/lib/jvm/java-26-openjdk"
 export PATH="$JAVA_HOME/bin:$PATH"
 
 # Additional Functions
-source ~/dev/bash/pystart.sh
+source ~/dev/scripts/pystart.sh
 # source ~/dev/c/cmake.sh
 # source ~/dotfiles/theme-picker.sh
 # source ~/dev/bash/nvimplug.sh

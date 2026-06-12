@@ -14,9 +14,10 @@ config.font = wezterm.font(
   -- "SauceCodePro Nerd Font",
   { weight = "Bold", italic = false }
 )
-config.font_size = 11
+config.font_size = 10.5
 config.enable_tab_bar = false
 config.window_decorations = "RESIZE"
+config.audible_bell = "Disabled"
 
 config.window_background_opacity = 0.9
 -- config.macos_window_background_blur = 30
