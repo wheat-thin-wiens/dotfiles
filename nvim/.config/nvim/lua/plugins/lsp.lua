@@ -71,6 +71,10 @@ return {
       vim.lsp.config['luals'] = {
         cmd = { 'lua-language-server' },
         filetypes = { 'lua' },
+        root_markers = {
+          '.luarc.json',
+          '.luarc.jsonc',
+        },
         settings = {
           Lua = {
             diagnostics = {
@@ -81,7 +85,7 @@ return {
                 [vim.fn.expand "$VIMRUNTIME/lua"]         = true,
                 [vim.fn.expand "$VIMRUNTIME/lua/vim/lsp"] = true,
                 [vim.fn.expand "${3rd}/love2d/library"]   = true,
-                [vim.fn.expand "/usr/share/hypr/stubs"]   =true,
+                [vim.fn.expand "/usr/share/hypr/stubs"]   = true,
               }
             }
           }
@@ -167,8 +171,14 @@ return {
             end,
           },
           window = {
-            completion = cmp.config.window.bordered({}),
-            documentation = cmp.config.window.bordered(),
+            completion = {
+              border = 'rounded',
+            },
+            documentation = {
+              border = 'rounded',
+            },
+            -- completion = cmp.config.window.bordered({}),
+            -- documentation = cmp.config.window.bordered(),
           },
           formatting = {
             fields = { "kind", "abbr", "menu" },

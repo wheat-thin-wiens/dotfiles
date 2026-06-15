@@ -2,6 +2,7 @@
 export SYSTEMD_EDITOR='nvim'
 export EDITOR='nvim'
 export VISUAL='nvim'
+export MANPAGER='nvim +Man!'
 
 # History Config
 HISTFILE=$HOME/.zhistory
@@ -41,9 +42,7 @@ export PATH="$JAVA_HOME/bin:$PATH"
 
 # Additional Functions
 source ~/dev/scripts/pystart.sh
-# source ~/dev/c/cmake.sh
 # source ~/dotfiles/theme-picker.sh
-# source ~/dev/bash/nvimplug.sh
 
 # Language Support
 export NVM_DIR="$HOME/.nvm"
@@ -51,7 +50,7 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
 # Alias
-alias vim='nvim'
+# alias vim='nvim'
 alias ls='eza'
 alias grupdate='sudo grub-mkconfig -o /boot/grub/grub.cfg'
 

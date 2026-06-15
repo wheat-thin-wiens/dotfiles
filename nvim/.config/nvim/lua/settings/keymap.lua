@@ -9,6 +9,7 @@ vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
 -- save
 vim.keymap.set("n", "<C-s>", "<cmd> w <CR>")
+vim.keymap.set("n", "<leader>wqa", "<cmd> wqa! <CR>")
 
 -- copy to system clipboard
 vim.keymap.set("n", "<leader>y", "\"+y", {})
