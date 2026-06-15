@@ -7,4 +7,10 @@ Target = *
 [Action]
 Description = Updating package list...
 When = PostTransaction
+<<<<<<< HEAD
 Exec = /bin/sh -c "pacman -Qqe > /home/ewiens/dotfiles/packages.txt"
+=======
+Exec = /usr/bin/bash -c "pacman -Qqe > /home/ewiens/dotfiles/packages.txt"
+Depends = pacman
+Depends = bash
+>>>>>>> refs/remotes/origin/thinkpad

@@ -9,7 +9,6 @@ base
 base-devel
 bat
 bluedevil
-blueman
 bluez
 bluez-utils
 breeze-gtk
@@ -46,6 +45,7 @@ gimp
 git
 github-cli
 gnome-disk-utility
+go
 go-tools
 gopls
 gparted
@@ -72,7 +72,6 @@ i3status
 ifuse
 inkscape
 inotify-tools
-iptables
 jdbrowser-git
 jdk-openjdk
 jdk17-openjdk
@@ -95,7 +94,6 @@ lazysql
 libcava
 libfprint
 libgsf
-libpulse
 libreoffice-fresh
 libvirt
 linux
@@ -106,6 +104,7 @@ lua-language-server
 luarocks
 ly
 man-db
+man-pages
 maven
 mirage
 mpd
@@ -122,6 +121,7 @@ networkmanager
 nginx
 nil-git
 nodejs
+noto-fonts
 noto-fonts-cjk
 npm
 ntfs-3g
@@ -131,14 +131,16 @@ obsidian
 okular
 omnisharp-roslyn
 opencode-bin
+openssh
+os-prober
 oxygen
 oxygen-sounds
 pavucontrol
 peaclock
 picom
+pipes.sh
 pipewire
 pipewire-alsa
-pipewire-jack
 pipewire-pulse
 plasma-browser-integration
 plasma-desktop
@@ -179,9 +181,9 @@ sqlectron-gui
 sqlitebrowser
 starship
 stow
+sudo
 swaync
 syncthing
-tagger
 tailscale
 tealdeer
 thunar
@@ -192,8 +194,6 @@ timeshift-systemd-timer
 tmux
 trayer
 tree-sitter-cli
-ttf-devicons
-ttf-jetbrains-mono
 ttf-jetbrains-mono-nerd
 ttf-meslo-nerd
 tumbler
@@ -221,11 +221,14 @@ wofi
 xclip
 xdg-desktop-portal-hyprland
 xdg-desktop-portal-wlr
+xdg-user-dirs
 xdotool
 xorg-xhost
 xorg-xinput
+yarn
 yay
 yazi
 yt-dlp
 zen-browser-bin
 zram-generator
+zsh
