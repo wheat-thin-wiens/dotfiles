@@ -5,8 +5,8 @@ require("modules.rules")
 
 -- Autostart
 hl.on("hyprland.start", function()
-  hl.exec_cmd("blueman-applet")
-  hl.exec_cmd("nm-applet")
+  -- hl.exec_cmd("blueman-applet")
+  -- hl.exec_cmd("nm-applet")
   hl.exec_cmd("tmux setenv -g HYPRLAND_INSTANCE_SIGNATURE '$HYPRLAND_INSTANCE_SIGNATURE'")
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 
@@ -25,6 +25,11 @@ hl.on("hyprland.start", function()
   hl.exec_cmd("awww img -o eDP-1 " .. paper_path)
   hl.exec_cmd("awww img -o DP-4 " .. paper_path)
   hl.exec_cmd("awww img -o DP-5 " .. paper_path)
+
+  -- Scripts
+  local script_dir = "$HOME/.config/hypr/scripts/"
+
+  hl.exec_cmd("bash " .. script_dir .. "xdg_portal.sh")
 end)
 
 -- Env Vars

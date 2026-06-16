@@ -12,6 +12,7 @@ return {
         hrsh7th_cmp = {
           italic_highlight = true,
         },
+        mason = { enabled = false },
         telescope = {
           theme = "default"
         }
