@@ -104,7 +104,7 @@ return {
       vim.lsp.enable('ts_ls')
 
       -- Keymaps
-      vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
+      vim.keymap.set('n', 'K', function() vim.lsp.buf.hover { border = "single" } end, {})
       vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {desc = "[G]et [D]efinition"})
       vim.keymap.set("n", "<leader>gr", vim.lsp.buf.references, {desc = "[G]et [R]eferences"})
       vim.keymap.set("n", "<leader>ca", vim.lsp.buf.code_action, {desc = "[C]ode [A]ctions"})
