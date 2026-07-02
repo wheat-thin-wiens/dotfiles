@@ -8,10 +8,18 @@ return {
         loops = { italic = true },
         comments = { italic = true },
       },
+      integrations = {
+        hrsh7th_cmp = {
+          italic_highlight = true,
+        },
+        telescope = {
+          theme = "default",
+        }
+      },
       extras = {
         transparency = true,
         -- high_contrast = true,
-        telescope_theme = "default",
+        -- telescope_theme = "default",
       },
     }
   },

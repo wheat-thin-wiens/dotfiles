@@ -126,8 +126,8 @@
     "tooltip-format": "Lock screen"
   },
   "custom/os_button": {
-    // "format": "",
-    "format": "󰣇",
+    "format": "  ",
+    // "format": "󰣇",
     "on-click": "",
     "tooltip-format": "arch btw"
   },

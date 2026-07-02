@@ -2,6 +2,9 @@
 export SYSTEMD_EDITOR='nvim'
 export EDITOR='nvim'
 export VISUAL='nvim'
+export MANPAGER='nvim +Man!'
+
+export HOSTNAME='archlinux'
 
 # History Config
 HISTFILE=$HOME/.zhistory

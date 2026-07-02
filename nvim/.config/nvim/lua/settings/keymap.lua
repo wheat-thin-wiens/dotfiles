@@ -3,14 +3,29 @@ local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<Esc>", "<Esc>", opts)
 vim.keymap.set("i", "<Esc>", "<Esc>", opts)
 
+-- Quick Scrolling
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
+
+-- Write File
 vim.keymap.set("n", "<C-s>", "<cmd> w <CR>")
+
+-- Copy to System Clipboard
 vim.keymap.set("n", "<leader>y", "\"+y", {})
 vim.keymap.set("v", "<leader>y", "\"+y", {})
+
+-- Clear Highlights
 vim.keymap.set("n", "<leader>n", "<cmd> noh <CR>")
+
+-- Close Buffer
 vim.keymap.set("n", "<leader>bw", "<cmd> bw <CR>")
+
+-- NetRW
 vim.keymap.set('n', '<leader>pf', '<cmd> Ex <CR>')
+
+-- Close Terminal
+vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
+
 -- vim.keymap.set('n', '<', '<S-<><')
 
 -- LSP Keymaps

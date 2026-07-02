@@ -49,6 +49,7 @@ fd
 feh
 filelight
 flatpak-kcm
+flite
 fusee-nano
 fuzzel
 ghostty
@@ -71,6 +72,7 @@ gvfs-smb
 handbrake
 headscale
 hyprland
+hyprlock
 hyprpaper
 hyprpicker
 hyprpolkitagent
@@ -82,6 +84,7 @@ ifuse
 inetutils
 inkscape
 inotify-tools
+iozone
 iptables
 itch-bin
 jdk-openjdk
@@ -97,6 +100,7 @@ kdeconnect
 kdecoration
 kdenlive
 kdeplasma-addons
+keyd
 kgamma
 kglobalacceld
 kinfocenter
@@ -171,6 +175,7 @@ lua-language-server
 luarocks
 lutris
 ly
+man-pages
 mariadb
 maven
 milou
@@ -250,8 +255,8 @@ python-aiohttp
 python-aiolimiter
 python-black
 python-click-help-colors
-python-dataclasses-json
 python-deezer-py
+python-playwright
 python-poetry
 python-pytest-asyncio
 python-pytest-mock
@@ -302,13 +307,13 @@ tesseract
 thefuck
 thunar
 thunderbird
-tidal-dl-ng
 tidal-hifi-bin
 tigervnc
 timeshift
 timeshift-systemd-timer
 tmux
 tree-sitter-cli
+ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols-mono
 typescript-language-server
 ufw

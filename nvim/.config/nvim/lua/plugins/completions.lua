@@ -1,3 +1,52 @@
+local abbreviateString = function(str, maxwidth, ellipsis_char)
+  if vim.fn.strchars(str) > maxwidth then
+    return vim.fn.strcharpart(str, 0, maxwidth) .. ellipsis_char
+  end
+
+  return str
+end
+
+local cmp_format = function(opts)
+  opts = opts or {}
+  -- if opts.preset or opts.symbol_map then
+  --   opt_symbol_map(opts)
+  -- end
+
+  if not opts.maxwidth or type(opts.maxwidth) == "number" or type(opts.maxwidth) == "function" then
+    opts.maxwidth = {
+      abbr = opts.maxwidth,
+      menu = opts.maxwidth,
+    }
+  end
+
+  return function(entry, vim_item)
+    if opts.before then
+      vim_item = opts.before(entry, vim_item)
+    end
+
+    if opts.menu then
+      vim_item.menu = (opts.menu[entry.source.name] ~= nil and opts.menu[entry.source.name] or "")
+      .. ((opts.show_labelDetails and vim_item.menu ~= nil) and vim_item.menu or "")
+    end
+
+    local ellipsis_char = opts.ellipsis_char or ""
+
+    if opts.maxwidth.menu then
+      local maxwidth = opts.maxwidth.menu
+      maxwidth = type(maxwidth) == "function" and maxwidth() or maxwidth
+      vim_item.menu = abbreviateString(vim_item.menu, maxwidth, ellipsis_char)
+    end
+
+    if opts.maxwidth.abbr then
+      local maxwidth = opts.maxwidth.abbr
+      maxwidth = type(maxwidth) == "function" and maxwidth() or maxwidth
+      vim_item.abbr = abbreviateString(vim_item.abbr, maxwidth, ellipsis_char)
+    end
+    
+    return vim_item
+  end
+end
+
 return {
 	{
 		"L3MON4D3/LuaSnip",
@@ -67,13 +116,19 @@ return {
 					end,
 				},
 				window = {
+          completion = {
+            border = "rounded",
+          },
+          documentation = {
+            border = "rounded",
+          },
           -- completion = {
           --   winhighlight = "Normal:Pmenu,FloatBorder:None,Search:None",
           --   col_offset = -3,
           --   side_padding = 0
           -- },
-  				completion = cmp.config.window.bordered({}),
-					documentation = cmp.config.window.bordered(),
+  			  -- completion = cmp.config.window.bordered({}),
+					-- documentation = cmp.config.window.bordered(),
 				},
         formatting = {
           fields = { "kind", "abbr", "menu" },
