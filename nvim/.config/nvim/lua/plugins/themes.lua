@@ -63,6 +63,12 @@ return {
     config = function()
       require('nvim-tundra').setup({
         transparent_background = false,
+        plugins = {
+          cmp = true,
+          telescope = true,
+          nvimtree = true,
+          gitsigns = true,
+        },
       })
     end
   },

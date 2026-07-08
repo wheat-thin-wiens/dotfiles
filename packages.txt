@@ -1,6 +1,7 @@
 7zip
 amd-ucode
 android-file-transfer
+arch-install-scripts
 arch-wiki-docs
 ark
 audacity
@@ -8,6 +9,7 @@ awww
 base
 base-devel
 bat
+bind
 bluedevil
 bluez
 bluez-utils
@@ -21,6 +23,7 @@ ccls
 certbot
 certbot-nginx
 chromium
+corepack
 ddrescue
 discord
 dnsmasq
@@ -90,7 +93,6 @@ kwallet-pam
 kwalletmanager
 kwrited
 lazygit
-lazysql
 libcava
 libfprint
 libgsf
@@ -185,6 +187,7 @@ sudo
 swaync
 syncthing
 tailscale
+tailwindcss-language-server
 tealdeer
 thunar
 thunderbird
@@ -192,6 +195,7 @@ tidal-hifi-bin
 timeshift
 timeshift-systemd-timer
 tmux
+traceroute
 trayer
 tree-sitter-cli
 ttf-jetbrains-mono-nerd

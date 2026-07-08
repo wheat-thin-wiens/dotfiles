@@ -1,102 +1,49 @@
-"$schema" = "https://starship.rs/config-scheme.json"
+"$schema" = 'https://starship.rs/config-schema.json'
 
 format = """
-[](color_black)\
-${custom.hostname}\
-[](bg:color_bg1 fg:color_black)\
+$username\
+$hostname\
 $directory\
-[](bg:color_red fg:color_bg1)\
 $git_branch\
+$git_state\
 $git_status\
-[](fg:color_red bg:color_green)\
-$time\
-[ ](fg:color_green)\
-$line_break$character"""
-
-palette = 'rei'
-command_timeout = 250
-
-[palettes.rei]
-color_fg0    = "#CDCDCD"
-color_bg1    = "#465467"
-color_bg3    = "#0E1723"
-color_blue   = "#91B8E9"
-color_aqua   = "#9DBCD0"
-color_green  = "#809FA1"
-color_orange = "#FD9491"
-color_purple = "#B9AEE6"
-color_red    = "#A87692"
-color_yellow = "#FCD0A1"
-color_white  = "#E9E3F2"
-color_black  = "#48445A"
-
-[os]
-disabled = false
-style = "bg:color.bg1 fg:color_white"
-
-[os.symbols]
-Windows = "󰍲"
-Ubuntu = "󰕈"
-SUSE = ""
-Raspbian = "󰐿"
-Mint = "󰣭"
-Macos = "󰀵"
-Manjaro = ""
-Linux = "󰌽"
-Gentoo = "󰣨"
-Fedora = "󰣛"
-Alpine = ""
-Amazon = ""
-Android = ""
-Arch = "󰣇"
-Artix = "󰣇"
-CentOS = ""
-Debian = "󰣚"
-Redhat = "󱄛"
-RedHatEnterprise = "󱄛"
-
-[username]
-show_always = true
-style_user = "bg:color_bg1 fg:color_white"
-style_root = "bg:color_bg1 fg:color_white"
-format = '[ $user ]($style)'
+$cmd_duration\
+$line_break\
+$character"""
 
 [directory]
-style = "fg:color_white bg:color_bg1"
-format = "[ $path ]($style)"
-truncation_length = 2
-truncation_symbol = "…/"
-
-[git_branch]
-symbol = ""
-style = "bg:color_red"
-format = '[[ $symbol $branch ](fg:color_white bg:color_red)]($style)'
-
-[git_status]
-style = "bg:color_red"
-format = '[[($all_status$ahead_behind )](fg:color_white bg:color_red)]($style)'
-
-[time]
-disabled = false
-time_format = "%R"
-style = "bg:color_green"
-format = '[[ $time ](fg:color_white bg:color_green)]($style)'
-
-[line_break]
-disabled = false
+style = "blue"
 
 [character]
-disabled = false
-success_symbol = '[❯](bold fg:color_green)'
-error_symbol = '[❯](bold fg:color_red)'
-vimcmd_symbol = '[❮](bold fg:color_green)'
-vimcmd_replace_one_symbol = '[❮](bold fg:color_purple)'
-vimcmd_replace_symbol = '[❮](bold fg:color_purple)'
-vimcmd_visual_symbol = '[❮](bold fg:color_yellow)'
+success_symbol = "[❯](purple)"
+error_symbol = "[❯](red)"
+vimcmd_symbol = "[❮](green)"
 
-[custom.hostname]
-disabled = false
-when = 'test -z "$SSH_TTY"'
-command = 'echo "$USER@$HOST"'
-style = "fg:color_white bg:color_black"
-format = '[ $output ]($style)'
+[git_branch]
+format = "[$branch]($style)"
+style = "bright-black"
+
+[git_status]
+format = "[[(*$conflicted$untracked$modified$staged$renamed$deleted)](218) ($ahead_behind$stashed)]($style)"
+style = "cyan"
+conflicted = "​"
+untracked = "​"
+modified = "​"
+staged = "​"
+renamed = "​"
+deleted = "​"
+stashed = "≡"
+
+[git_state]
+format = '\([$state( $progress_current/$progress_total)]($style)\) '
+style = "bright-black"
+
+[cmd_duration]
+format = "[$duration]($style) "
+style = "yellow"
+
+[python]
+format = "[$virtualenv]($style) "
+style = "bright-black"
+detect_extensions = []
+detect_files = []
