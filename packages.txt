@@ -312,6 +312,7 @@ tigervnc
 timeshift
 timeshift-systemd-timer
 tmux
+traceroute
 tree-sitter-cli
 ttf-jetbrains-mono-nerd
 ttf-nerd-fonts-symbols-mono
