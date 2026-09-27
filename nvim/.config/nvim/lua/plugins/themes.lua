@@ -1,4 +1,29 @@
 return {
+  {
+    "rei.nvim",
+    dev = true,
+    opts = {
+      styles = {
+        functions = { italic = true, bold = true },
+        loops = { italic = true },
+        comments = { italic = true },
+      },
+      integrations = {
+        hrsh7th_cmp = {
+          italic_highlight = true,
+        },
+        mason = { enabled = false },
+        telescope = {
+          theme = "default"
+        }
+      },
+      extras = {
+        transparency = true,
+        -- high_contrast = true,
+        -- telescope_theme = "default",
+      },
+    }
+  },
 	{
 		"EdenEast/nightfox.nvim",
 	},
@@ -7,7 +32,7 @@ return {
   	name = "catppuccin",
 		priority = 1000,
     opts = {
-      transparent_background = true,
+      -- transparent_background = true,
       styles = {
         comments = { 'italic' },
         functions = { 'italic' },
@@ -16,55 +41,69 @@ return {
     }
 	},
   {
-    "sam4llis/nvim-tundra",
-    name = "tundra",
-    config = function()
-      require('nvim-tundra').setup({
-        transparent_background = false,
-      })
-    end
-  },
-  {
     "dgox16/oldworld.nvim",
     lazy = false,
     priority = 1000,
     config = function()
       require("oldworld").setup({
-          styles = {
-            comments = { italic = true },
-            functions = { italic = true },
-            loops = { italic = true },
-          }
-        })
-      end
-  },
-  -- {
-  --   "oxfist/night-owl.nvim",
-  --   priority = 1000,
-  --   config = function ()
-  --     require("night-owl").setup()
-  --   end,
-  -- },
-  {
-    "rei.nvim",
-    dev = true,
-    opts = {
-      styles ={
-        functions = { italic = true, bold = true },
-        comments = { italic = true },
-        loops = { italic = true }
-      },
-      integrations = {
-        telescope = "borderless",
-      },
-      transparency = true,
-      highlight_overrides = {}
-    }
+        styles = {
+          comments = { italic = true },
+          functions = { italic = true },
+          loops = { italic = true },
+        },
+        highlight_overrides = {
+          ["@constructor.go"] = { fg = "#85b5ba" }
+        },
+      })
+    end
   },
   {
-    "folke/tokyonight.nvim",
+    "sam4llis/nvim-tundra",
+    name = "tundra",
+    config = function()
+      require('nvim-tundra').setup({
+        transparent_background = false,
+        plugins = {
+          cmp = true,
+          telescope = true,
+          nvimtree = true,
+          gitsigns = true,
+        },
+      })
+    end
+  },
+  {
+    "rose-pine/neovim",
+    name = "rose-pine",
+    config = function()
+      require("rose-pine").setup({
+        variant = "main"
+      })
+    end
+  },
+  {
+    "bluz71/vim-moonfly-colors",
+    name = 'moonfly',
     lazy = false,
     priority = 1000,
-    opts = {}
-  }
+  },
+  {
+    "xeind/nightingale.nvim",
+    lazy = false,
+    priority = 1000
+  },
+  {
+    "nyoom-engineering/oxocarbon.nvim"
+  },
+  {
+    "mcauley-penney/techbase.nvim",
+  },
+  --   "folke/tokyonight.nvim",
+  --   lazy = false,
+  --   priority = 1000,
+  --   opts = {}
+  -- },
+  -- {
+  --   "sainnhe/everforest",
+  -- },
 }

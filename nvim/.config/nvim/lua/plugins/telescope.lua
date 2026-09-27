@@ -2,6 +2,7 @@ local telescope = require("telescope")
 local builtin = require("telescope.builtin")
 local actions = require("telescope.actions")
 local action_state = require("telescope.actions.state")
+local sorters = require("telescope.sorters")
 
 -- local function fb_actions(f)
 --   return function(b)
@@ -50,7 +51,7 @@ end
 return {
 	{
 		"nvim-telescope/telescope.nvim",
-		tag = "0.1.6",
+		-- tag = "0.1.6",
 		dependencies = {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
@@ -61,6 +62,7 @@ return {
       telescope.setup({
         defaults = {
           prompt_prefix = "   ",
+          -- selection_caret = " ",
           sorting_strategy = "descending",
           path_display = path_display,
           -- path_display = {
@@ -77,7 +79,7 @@ return {
               height = { padding = 2 },
               preview_cutoff = 10,
               preview_width = 0.5,
-              },
+            },
             vertical = {
               mirror = true,
               prompt_position = "top",
@@ -107,8 +109,7 @@ return {
               "%.class",
               "%.idx",
               "%.pack",
-              "^.git/",
-              "^spotify.py",
+              ".git/",
             },
           },
         },

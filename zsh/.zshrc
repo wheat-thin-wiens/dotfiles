@@ -1,3 +1,9 @@
+# Config
+export SYSTEMD_EDITOR='nvim'
+export EDITOR='nvim'
+export VISUAL='nvim'
+export MANPAGER='nvim +Man!'
+
 # History Config
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -9,44 +15,48 @@ setopt hist_verify
 bindkey '^[[A' history-search-backward
 bindkey '^[[B' history-search-forward
 
-# Homebrew Settings
-export HOMEBREW_NO_AUTO_UPDATE=1
-export HOMEBREW_NO_ENV_HINTS=1
-export PATH="/opt/homebrew/opt/python/libexec/bin:$PATH"
-
 # Plugins
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-source /opt/homebrew/share/zsh-autocomplete/zsh-autocomplete.plugin.zsh
+[[ -r ~/clones/znap/znap.zsh ]] ||
+  git clone --depth 1 -- \
+    https://github.com/marlonrichert/zsh-snap.git ~/clones/znap
+source ~/clones/znap/znap.zsh
+
+znap source hlissner/zsh-autopair
+znap source zsh-users/zsh-autosuggestions
+znap source zsh-users/zsh-completions
+znap source zsh-users/zsh-syntax-highlighting
+
 eval "$(starship init zsh)"
-eval $(thefuck --alias)
+
+# PNPM
+export PNPM_HOME="/home/ewiens/.local/share/pnpm"
+case ":$PATH:" in
+  *":$PNPM_HOME:"*) ;;
+  *) export PATH="$PNPM_HOME:$PATH" ;;
+esac
+
+# Java
+# export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
+export JAVA_HOME="/usr/lib/jvm/java-26-openjdk"
+export PATH="$JAVA_HOME/bin:$PATH"
 
 # Additional Functions
-source ~/dev/python/launch_python.sh
-source ~/dev/google_python/launch.sh
-source ~/dev/c/make_c.sh
-source ~/dev/cpp/cppmake.sh
-source ~/dotfiles/theme-picker.sh
-source ~/dev/bash/nvimplug.sh
+source ~/dev/scripts/pystart.sh
+# source ~/dotfiles/theme-picker.sh
 
 # Language Support
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-source /opt/homebrew/Cellar/chruby/0.3.9/share/chruby/auto.sh
-source /opt/homebrew/Cellar/chruby/0.3.9/share/chruby/chruby.sh
-chruby 3.3.3
-
 # Alias
+# alias vim='nvim'
 alias ls='eza'
-alias vim='nvim'
+alias grupdate='sudo grub-mkconfig -o /boot/grub/grub.cfg'
+
 alias avocado="~/dev/java/java.sh"
 alias gogogo="~/dev/dotnet/C#.sh"
-# alias mc="mc --nosubshell"
-# alias launch_python=". ~/dev/python/launch_python.sh"
-alias matrix=". ~/dotfiles/matrix.sh"
-# alias run-ladybird="open -W --stdout $(tty) --stderr $(tty) .~/ladybird/Build/ladybird/bin/Ladybird.app"
+alias mc="mc --nosubshell"
 
 # Keybindings
 bindkey              '^I'         menu-complete
@@ -58,4 +68,4 @@ if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] &&
 fi
 
 #tmux
-neofetch
+# neofetch

@@ -14,12 +14,6 @@ M.config = function()
     end,
   }
 
-  local git_icon = {
-    function()
-      return ""
-    end
-  }
-
   local branch_name = function()
     local name = vim.fn.system("git branch --show-current 2> /dev/null | tr -d '\n'")
     local symbol = ""
@@ -58,39 +52,41 @@ M.config = function()
     colored = true,
   }
 
-  local function getLspName()
-    local msg = "No active LSP"
-    -- local buf_ft = vim.api.nvim_buf_get_option(0, 'filetype')
-    local buf_ft = vim.bo.filetype
-    local clients = vim.lsp.get_clients()
+  -- local function getLspName()
+  --   local msg = "No active LSP"
+  --   local buf_ft = vim.api.nvim_get_option_value(0, 'filetype')
+  --   local clients = vim.lsp.get_clients()
+  --
+  --   if next(clients) == nil then
+  --     return msg
+  --   end
+  --   for _, client in ipairs(clients) do
+  --     local filetypes = client.config.filetypes
+  --     if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
+  --       return client.name  --""
+  --     end
+  --   end
+  --   return msg
+  -- end
 
-    if next(clients) == nil then
-      return msg
-    end
-    for _, client in ipairs(clients) do
-      local filetypes = client.config.filetypes
-      if filetypes and vim.fn.index(filetypes, buf_ft) ~= -1 then
-        return client.name  --""
-      end
-    end
-    return msg
-  end
+  -- local lsp = {
+  --   function()
+  --     return getLspName()
+  --   end
+  -- }
 
-  local lsp = {
-    function()
-      return getLspName()
-    end
-  }
+  local blank_sep = { left = " ", right = " " }
+  local line_sep = { left = "|", right = "|" }
+  local rounded_sep = { left = "", right = "" }
+  local angled_sep = { left = "", right = "" }
 
   require("lualine").setup {
     options = {
       icons_enabled = true,
       theme = 'auto',
-      disabled_filetypes = {"neo-tree"},
-      section_separators = { left = "", right = "" },
-      -- section_separators = { left = "", right = "" },
-      component_separators = { left = "", right = "" },
-      -- component_separators = { left = "|", right = "|" },
+      disabled_filetypes = { "neo-tree" },
+      section_separators = blank_sep,
+      component_separators = line_sep,
     },
     sections = {
       lualine_a = { vim_icons, 'filename', },
@@ -98,7 +94,7 @@ M.config = function()
       lualine_c = { branch, 'diff' },
       lualine_x = { 'diagnostics', filetype, },
       lualine_y = {},
-      lualine_z = { lsp, 'location', },
+      lualine_z = { 'location', },
     },
     inactive_sections = {
       lualine_a = { window },
