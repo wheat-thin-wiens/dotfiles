@@ -38,13 +38,13 @@ return {
         })
       end
   },
-  {
-    "oxfist/night-owl.nvim",
-    priority = 1000,
-    config = function ()
-      require("night-owl").setup()
-    end,
-  },
+  -- {
+  --   "oxfist/night-owl.nvim",
+  --   priority = 1000,
+  --   config = function ()
+  --     require("night-owl").setup()
+  --   end,
+  -- },
   {
     "rei.nvim",
     dev = true,
