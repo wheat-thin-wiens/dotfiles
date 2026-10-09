@@ -1,8 +1,8 @@
 local telescope = require("telescope")
--- local builtin = require("telescope.builtin")
--- local actions = require("telescope.actions")
--- local action_state = require("telescope.actions.state")
--- local sorters = require("telescope.sorters")
+local builtin = require("telescope.builtin")
+local actions = require("telescope.actions")
+local action_state = require("telescope.actions.state")
+local sorters = require("telescope.sorters")
 
 -- local function fb_actions(f)
 --   return function(b)
@@ -56,6 +56,7 @@ return {
       "nvim-lua/plenary.nvim",
       "nvim-telescope/telescope-ui-select.nvim",
       "debugloop/telescope-undo.nvim",
+      "nvim-tree/nvim-web-devicons",
       -- "nvim-telescope/telescope-file-browser.nvim",
     },
 		config = function()
@@ -71,13 +72,13 @@ return {
           dynamic_preview_title = true,
           layout_strategy = "flex",
           layout_config = {
-            flex = { flip_columns = 150 },
+            flex = { flip_columns = 140 },
             horizontal = {
               mirror = false,
               prompt_position = "top",
               width = { padding = 20 },
               height = { padding = 2 },
-              preview_cutoff = 150,
+              preview_cutoff = 10,
               preview_width = 0.5,
             },
             vertical = {
@@ -104,11 +105,7 @@ return {
             mappings = {},
             file_ignore_patterns = {
               "%.png",
-              "%.gif",
               "%.jpg",
-              "%.JPG",
-              "%.jpeg",
-              "%.glsl",
               ".DS_Store",
               "%.class",
               "%.idx",
@@ -139,3 +136,4 @@ return {
     end,
 	}
 }
+

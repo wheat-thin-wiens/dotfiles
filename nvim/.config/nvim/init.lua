@@ -6,8 +6,8 @@ if not (vim.uv or vim.loop).fs_stat(lazypath) then
     "clone",
     "--filter=blob:none",
     "https://github.com/folke/lazy.nvim.git",
-    "--branch=stable", -- latest stable release
-    lazypath,
+    "--branch=stable",
+    lazypath
   })
 end
 vim.opt.rtp:prepend(lazypath)
@@ -18,19 +18,9 @@ vim.deprecate = function() end
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
--- Other Priority Settings
-vim.opt.termguicolors = true
-
 -- Require Plugins
 require("lazy").setup("plugins")
 
--- Require Local Plugins
-require("local.terminal")
-
 -- Require Additional Settings
-require("settings.autocmd")
-require("settings.colors")
 require("settings.keymap")
 require("settings.options")
-
--- require("vim-options")

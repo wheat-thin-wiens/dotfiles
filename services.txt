@@ -1,8 +1,0 @@
-bluetooth.service
-jellyfin.service
-mullvad-daemon.service
-NetworkManager.service
-nginx.service
-nmb.service
-polkit.service
-sddm.service

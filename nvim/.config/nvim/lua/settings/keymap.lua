@@ -1,44 +1,28 @@
--- Common Keymaps
+-- Common Keymaps --
 local opts = { noremap = true, silent = true }
 vim.keymap.set("n", "<Esc>", "<Esc>", opts)
 vim.keymap.set("i", "<Esc>", "<Esc>", opts)
 
--- Quick Scrolling
+-- quick scrolling
 vim.keymap.set("n", "<C-d>", "<C-d>zz")
 vim.keymap.set("n", "<C-u>", "<C-u>zz")
 
--- Write File
+-- save
 vim.keymap.set("n", "<C-s>", "<cmd> w <CR>")
+vim.keymap.set("n", "<leader>wqa", "<cmd> wqa! <CR>")
 
--- Copy to System Clipboard
+-- copy to system clipboard
 vim.keymap.set("n", "<leader>y", "\"+y", {})
 vim.keymap.set("v", "<leader>y", "\"+y", {})
 
--- Clear Highlights
+-- remove highlighted text from search
 vim.keymap.set("n", "<leader>n", "<cmd> noh <CR>")
 
--- Close Buffer
+-- close buffer
 vim.keymap.set("n", "<leader>bw", "<cmd> bw <CR>")
 
--- NetRW
-vim.keymap.set('n', '<leader>pf', '<cmd> Ex <CR>')
-
--- Close Terminal
+-- close terminal
 vim.keymap.set("t", "<esc><esc>", "<c-\\><c-n>")
-
--- vim.keymap.set('n', '<', '<S-<><')
-
--- LSP Keymaps
--- vim.keymap.set("n", "K", vim.lsp.buf.hover, {})
--- vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {desc = "[G]et [D]efintion"})
--- vim.keymap.set({ "n" }, "<leader>ca", vim.lsp.buf.code_action, {desc = "[C]ode [A]ction"})
--- vim.keymap.set({ "n" }, "<leader>vrn", vim.lsp.buf.rename, {desc = "[V]im [R]e[N]ame"})
-
--- NVIM / TMUX Navigator
-vim.keymap.set("n", "<C-h>", "<cmd> TmuxNavigateLeft<CR>")
-vim.keymap.set("n", "<C-j>", "<cmd> TmuxNavigateDown<CR>")
-vim.keymap.set("n", "<C-k>", "<cmd> TmuxNavigateUp<CR>")
-vim.keymap.set("n", "<C-l>", "<cmd> TmuxNavigateRight<CR>")
 
 -- Telescope
 local builtin = require("telescope.builtin")
@@ -60,21 +44,3 @@ vim.keymap.set("n", "<leader>th", "<cmd> Telescope highlights <CR>", { desc = "[
 
 -- Neotree
 vim.keymap.set("n", "<C-n>", "<cmd> Neotree toggle <CR>", {})
-
--- Searchbox
--- vim.keymap.set('n', '<leader>ff', ':SearchBoxIncSearch<CR>', {desc = "[FF]ind", noremap = true})
--- vim.keymap.set('n', '<leader>fr', ':SearchBoxReplace <CR>', {desc = "[F]ind [R]eplace", noremap = true})
--- vim.keymap.set('n', '<leader>fc', ':SearchBoxReplace confirm=menu <CR>', {desc = "[F]ind [C]onfirm"})
-
--- Colortils
--- vim.keymap.set("n", "<leader>ct", "<cmd> Colortils <CR>")
--- vim.keymap.set("n", "<leader>cd", "<cmd> Colortils darken <CR>")
--- vim.keymap.set("n", "<leader>cl", "<cmd> Colortils lighten <CR>")
--- vim.keymap.set("n", "<leader>cg", "<cmd> Colortils greyscale <CR>")
-
--- Live Server
--- vim.keymap.set("n", "<leader>ss", "<cmd> LiveServerStart <CR>", { desc = "[S]erver [S]tart" })
--- vim.keymap.set("n", "<leader>sq", "<cmd> LiveServerStop <CR>", { desc = "[S]erver [Q]uit" })
-
--- Stat Bastard
--- vim.keymap.set("n", "<leader>sbf", "<cmd> StatBastardFile <CR>", {})
