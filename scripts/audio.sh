@@ -52,12 +52,21 @@ remove_custom() {
   echo "Verify the files. You can then manually replace the originals with the files in '$TEMP_DIR'."
 }
 
-remove_chapters() {
+remove_mp3_chapters() {
   mkdir temp_no_chapters && \
   for f in *.mp3; do
     ffmpeg -i "$f" -codec copy -map_chapters -1 "temp_no_chapters/$f"
   done && \
   mv temp_no_chapters/*.mp3 . && \
+  rmdir temp_no_chapters
+}
+
+remove_flac_chapters() {
+  mkdir temp_no_chapters && \
+  for f in *.flac; do
+    ffmpeg -i "$f" -codec copy -map_chapters -1 "temp_no_chapters/$f"
+  done && \
+  mv temp_no_chapters/*.flac . && \
   rmdir temp_no_chapters
 }
 
@@ -181,4 +190,8 @@ add_album_art() {
 
   echo "----------------------------------------"
   echo "Finished processing all files!"
+}
+
+flac_to_wav() {
+  for f in *.flac; do ffmpeg -i "$f" "${f%.flac}.wav"; done
 }

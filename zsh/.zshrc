@@ -46,6 +46,7 @@ export PATH="$JAVA_HOME/bin:$PATH"
 # Additional Functions
 source ~/dotfiles/scripts/audio.sh
 source ~/dev/bash/pystart.sh
+source ~/Applications/vortex\ stuff/skyrim-post-deploy.sh
 
 # Language Support
 export NVM_DIR="$HOME/.nvm"

@@ -12,6 +12,7 @@ base
 base-devel
 bat
 bchunk
+bind
 bluedevil
 blueman
 bluez-utils
@@ -24,6 +25,7 @@ btrfs-progs
 caddy
 calibre
 cbonsai
+cdrdao
 cdrtools
 certbot
 certbot-dns-cloudflare
@@ -31,9 +33,11 @@ certbot-nginx
 chromium
 clang
 cliamp
-delfin
+cups
+cups-pdf
 deno
 discord
+discover
 dkms
 dmg2img
 dnsmasq
@@ -58,6 +62,7 @@ fuzzel
 ghostty
 git
 github-cli
+glfw
 go-tools
 gopls
 gpart
@@ -74,6 +79,7 @@ gvfs-gphoto2
 gvfs-smb
 handbrake
 headscale
+hermes-agent-desktop-bin
 hyprland
 hyprlock
 hyprpaper
@@ -96,10 +102,10 @@ jdtls
 jellyfin-media-player
 jellyfin-server
 jellyfin-web
+k3b
 kactivitymanagerd
 kde-cli-tools
 kde-gtk-config
-kdeconnect
 kdecoration
 kdenlive
 kdeplasma-addons
@@ -115,7 +121,6 @@ kscreen
 kscreenlocker
 ksshaskpass
 ksystemstats
-ktailctl
 kwallet-pam
 kwayland
 kwin
@@ -172,8 +177,10 @@ libretro-snes9x
 libretro-yabause
 libva-utils
 libvirt
+libwebp-utils
 linux
 linux-firmware
+linux-headers
 love
 lua-language-server
 luarocks
@@ -186,6 +193,7 @@ milou
 mirage
 mkcert
 mpv
+mpvpaper
 mullvad-vpn-bin
 mupen64plus
 musescore
@@ -203,6 +211,7 @@ nginx
 nil-git
 noto-fonts-cjk
 npm
+nss-mdns
 nvidia-open
 nwg-look
 nxdumpclient
@@ -210,9 +219,11 @@ obs-studio
 obsidian
 ocean-sound-theme
 okular
+open-android-backup
 opencode-bin
 openldap
 openresolv
+openrgb
 openvpn
 oxygen
 oxygen-sounds
@@ -220,7 +231,6 @@ partitionmanager
 pavucontrol
 perl-image-exiftool
 php-legacy-imagick
-picom
 pipes.sh
 pipewire
 pipewire-alsa
@@ -228,13 +238,11 @@ pipewire-jack
 pipewire-pulse
 plasma-activities
 plasma-activities-stats
-plasma-bigscreen
 plasma-browser-integration
 plasma-desktop
 plasma-disks
 plasma-firewall
 plasma-integration
-plasma-login-manager
 plasma-nm
 plasma-pa
 plasma-sdk
@@ -244,6 +252,7 @@ plasma-welcome
 plasma-workspace
 plasma-workspace-wallpapers
 plasma5support
+plezy
 plymouth-kcm
 pnpm
 polkit-kde-agent
@@ -252,6 +261,7 @@ posy-improved-cursors
 powerdevil
 prettier
 print-manager
+prismlauncher
 pyright
 python-aiodns
 python-aiofiles
@@ -277,6 +287,8 @@ qt5-quickcontrols2
 qt5-wayland
 qt6-multimedia-ffmpeg
 qt6-virtualkeyboard
+quickshell
+razergenie
 rbutil
 reflector
 retroarch
@@ -290,6 +302,7 @@ screen
 sddm
 sddm-kcm
 shntool
+signal-desktop
 sound-juicer
 sox
 spectacle
@@ -303,6 +316,8 @@ stylua
 swaync
 syncthing
 syncthing-gtk
+synology-assistant
+system-config-printer
 systemsettings
 tagger
 tailscale
@@ -312,7 +327,6 @@ tesseract
 thefuck
 thunar
 thunderbird
-tidal-hifi-bin
 tigervnc
 timeshift
 timeshift-systemd-timer
@@ -325,7 +339,6 @@ typescript-language-server
 ufw
 unrar
 vectorchord-bin
-ventoy-bin
 virt-manager
 vscode-css-languageserver
 vscode-json-languageserver

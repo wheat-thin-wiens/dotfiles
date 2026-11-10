@@ -77,15 +77,22 @@ return {
     lazy = false,
     priority = 1000,
   },
-  {
-    "nyoom-engineering/oxocarbon.nvim"
-  },
-  {
-    "mcauley-penney/techbase.nvim",
-  },
+
+  -- oxocarbon
+  -- {
+  --   "nyoom-engineering/oxocarbon.nvim"
+  -- },
+
+  -- Techbase
+  -- {
+  --   "mcauley-penney/techbase.nvim",
+  -- },
+
+  -- Vague
   {
     "vague2k/vague.nvim",
   },
+
   -- {
   --   "folke/tokyonight.nvim",
   --   lazy = false,

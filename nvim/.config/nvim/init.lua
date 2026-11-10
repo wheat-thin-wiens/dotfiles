@@ -22,7 +22,12 @@ vim.g.maplocalleader = " "
 vim.opt.termguicolors = true
 
 -- Require Plugins
-require("lazy").setup("plugins")
+-- require("lazy").setup("plugins")
+require("lazy").setup("plugins", {
+  git = {
+    timeout = 600
+  }
+})
 
 -- Require Local Plugins
 require("local.terminal")

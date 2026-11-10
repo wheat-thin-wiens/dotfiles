@@ -11,16 +11,26 @@ hl.on("hyprland.start", function()
 
   hl.exec_cmd("waybar")
 
+  -- Notification Daemon
+  hl.exec_cmd("swaync")
+
   -- Wallpaper
   -- hl.exec_cmd("hyprpaper")
 
   -- Animated Wallpaper
-  local paper_file = "japanrain.gif"
-  local paper_path = "$HOME/dotfiles/backgrounds/animted/" .. paper_file
-  hl.exec_cmd("awww-daemon")
-  hl.exec_cmd("awww img -o DP-1" .. paper_path)
-  hl.exec_cmd("awww img -o HDMI-A-1" .. paper_path)
+  local paper_file = "veiled_monolith.mp4"
+  local paper_path = "/home/ewiens/dotfiles/backgrounds/animated/" .. paper_file
+  hl.exec_cmd(string.format(
+    "sh -c 'sleep 2; exec mpvpaper -o \"no-audio loop hwdec=auto panscan=1.0\" ALL %q > /home/ewiens/.log/mpvpaper.log 2>&1'",
+    paper_path
+  ))
+  -- hl.exec_cmd("mpvpaper -o 'no-audio loop hwdec=auto panscan=1.0' ALL " .. paper_path)
+  -- hl.exec_cmd("awww-daemon")
+  -- hl.exec_cmd("awww img -o DP-1" .. paper_path)
+  -- hl.exec_cmd("awww img -o HDMI-A-1" .. paper_path)
 
+  -- Cursor
+  hl.exec_cmd("hyprctl setcursor hyprcursor_posys_cursor_scalable 24")
 
 end)
 
@@ -30,8 +40,9 @@ hl.env("XDG_SESSION_TYPE", "wayland")
 hl.env("__GLX_VENDOR_LIBRARY_NAME", "nvidia")
 hl.env("NVD_BACKEND", "direct")
 
-hl.env("HYPRCURSOR_THEME", "Posy_Cursor_Black")
-hl.env("HYPRCURSOR_SIZE", "24")
+-- hl.env("HYPRCURSOR_THEME", "hyprcursor_posys_cursor_scalable")
+-- hl.env("HYPRCURSOR_THEME", "Posy_Cursor_Black")
+-- hl.env("HYPRCURSOR_SIZE", "24")
 
 -- Screen Sharing
 hl.workspace_rule({
