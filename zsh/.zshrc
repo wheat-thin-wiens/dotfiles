@@ -4,8 +4,6 @@ export EDITOR='nvim'
 export VISUAL='nvim'
 export MANPAGER='nvim +Man!'
 
-export HOSTNAME='archlinux'
-
 # History Config
 HISTFILE=$HOME/.zhistory
 SAVEHIST=1000
@@ -29,46 +27,13 @@ znap source zsh-users/zsh-completions
 znap source zsh-users/zsh-syntax-highlighting
 
 eval "$(starship init zsh)"
-eval $(thefuck --alias)
-
-# PNPM
-export PNPM_HOME="/home/ewiens/.local/share/pnpm"
-case ":$PATH:" in
-  *":$PNPM_HOME:"*) ;;
-  *) export PATH="$PNPM_HOME:$PATH" ;;
-esac
-
-# Java
-# export JAVA_HOME="/usr/lib/jvm/java-17-openjdk"
-export JAVA_HOME="/usr/lib/jvm/java-25-openjdk"
-export PATH="$JAVA_HOME/bin:$PATH"
-
-# Additional Functions
-source ~/dotfiles/scripts/audio.sh
-source ~/dev/bash/pystart.sh
 
 # Language Support
 export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# Alias
-alias vim='nvim'
-alias ls='eza'
-alias grupdate='sudo grub-mkconfig -o /boot/grub/grub.cfg'
-
-alias avocado="~/dev/java/java.sh"
-alias gogogo="~/dev/dotnet/C#.sh"
-alias mc="mc --nosubshell"
-
 # Keybindings
 bindkey              '^I'         menu-complete
 bindkey "$terminfo[kcbt]" reverse-menu-complete
 
-# Auto Run on Startup
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
- exec tmux
-fi
-
-#tmux
-# neofetch

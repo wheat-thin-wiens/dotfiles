@@ -15,7 +15,7 @@ iptables -t nat -A PREROUTING -d 10.208.1.10/32 -p tcp --dport 443 -j DNAT --to-
 iptables -t nat -A POSTROUTING -d 10.208.1.24 -p tcp -m multiport --dports 80,443 -m conntrack --ctstate DNAT -j MASQUERADE
 
 # Restart Tailscale
-systemctl restart tailscale
+systemctl restart tailscaled
 
 # Old Rules
 # iptables -t nat -A PREROUTING -d 10.208.1.10 -p tcp --dport 80 -j DNAT --to-destination 10.208.1.24:80
