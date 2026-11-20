@@ -6,9 +6,12 @@ require("modules.monitors")
 hl.on("hyprland.start", function()
   hl.exec_cmd("blueman-applet")
   hl.exec_cmd("nm-applet")
-  hl.exec_cmd("tmux setenv -g HYPRLAND_INSTANCE_SIGNATURE '$HYPRLAND_INSTANCE_SIGNATURE'")
+  hl.exec_cmd("tmux setenv -g HYPRLAND_INSTANCE_SIGNATURE \"$HYPRLAND_INSTANCE_SIGNATURE\"")
   hl.exec_cmd("dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP")
 
+  -- Bar
+  -- local quickshell_theme = "rei"
+  -- hl.exec_cmd("quickshell -c" .. quickshell_theme)
   hl.exec_cmd("waybar")
 
   -- Notification Daemon
@@ -22,7 +25,7 @@ hl.on("hyprland.start", function()
   local paper_path = "/home/ewiens/dotfiles/backgrounds/animated/" .. paper_file
   hl.exec_cmd(string.format(
     "sh -c 'sleep 2; exec mpvpaper -o \"no-audio loop hwdec=auto panscan=1.0\" ALL %q > /home/ewiens/.log/mpvpaper.log 2>&1'",
-    paper_path
+    "/home/ewiens/veiled_monolith.mp4"
   ))
   -- hl.exec_cmd("mpvpaper -o 'no-audio loop hwdec=auto panscan=1.0' ALL " .. paper_path)
   -- hl.exec_cmd("awww-daemon")

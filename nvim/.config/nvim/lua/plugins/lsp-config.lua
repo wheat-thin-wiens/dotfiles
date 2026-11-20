@@ -103,6 +103,7 @@ return {
     --   cmd = { 'pyright' },
     -- }
 
+    -- Python
     vim.lsp.enable('pyright')
 
     -- tailwind LSP
@@ -134,6 +135,13 @@ return {
     --   capabilities = capabilities,
     --   cmd = { "dotnet", "/Users/ethanwiens/.local/share/nvim/mason/packages/omnisharp/libexec/OmniSharp.dll"},
     -- })
+
+    -- QML
+    vim.lsp.config['qmlls'] = {
+      cmd = { 'qmlls6' },
+    }
+
+    vim.lsp.enable('qmlls')
 
     vim.keymap.set('n', 'K', vim.lsp.buf.hover, {})
     vim.keymap.set("n", "<leader>gd", vim.lsp.buf.definition, {desc = "[G]et [D]efinition"})
